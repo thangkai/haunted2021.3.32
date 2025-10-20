@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4323261473e51f4283da4d106ba4258, type: 3}
+  m_Name: Data_Info_Trap
+  m_EditorClassIdentifier: 
+  type_Turret: 9
+  model_Names:
+  - name_EN: Bear trap
+    name_VI: "B\u1EABy"
+  description_EN: 'It has 50% chance to trap vampire when they try to run away. <br>CD:
+    2s'
+  description_VI: "50% t\u1EC9 l\u1EC7 gi\u1EEF ch\xE2n 3s khi vampire ch\u1EA1y.<br>CD:
+    2s"
+  model_Skills: []
+  m_All_Price_Upgrades:
+  - price_Coin: 0
+    price_Energy: 512
+  m_Requirement_Upgrades: []

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cfaf7c5ee1673747b3bcdce46037c9b, type: 3}
+  m_Name: Data_Effect
+  m_EditorClassIdentifier: 
+  m_Pref_Effect_Smoke: {fileID: 159235076553093932, guid: f233d30749e0f924ca81afa689489be4, type: 3}
+  m_Pref_Effect_Smoke_Orange: {fileID: 8295873658462329791, guid: dc875ba70f3439c47852e33e05728cd9, type: 3}
+  m_Pref_Effect_Toa_Sang: {fileID: 1493035725729556168, guid: cb06661b99bbaa443873d9766a41f608, type: 3}
+  m_Pref_Effect_Destroy_Turret: {fileID: 3246583239170591278, guid: e491e207df04e974bad11d6fc9b9570a, type: 3}
+  m_Pref_Effect_Stun: {fileID: 4510352010693214482, guid: a6715f526de394045a87d78419b5aa7f, type: 3}
+  m_Pref_Effect_Holy_Water: {fileID: 5666824545580641327, guid: 22cd0707441096b4dafb1ad11b5fe337, type: 3}
+  m_Pref_Effect_Electric: {fileID: 1208602611794922080, guid: 25f43cd49afb4a142bcfbe05e91a2bf8, type: 3}
+  m_Pref_Effect_Trap: {fileID: 6736690856375579972, guid: 17d74d57982dec94ca99987b1d84211c, type: 3}
+  m_Pref_Effect_Stun_By_Item_SP: {fileID: 4510352010693214482, guid: a6715f526de394045a87d78419b5aa7f, type: 3}
+  m_Pref_Effect_Cross: {fileID: 8458503709115055557, guid: 09716621d44154f45acdc98f4611f054, type: 3}
+  m_Pref_Effect_Air_Condition: {fileID: 3765275410154114547, guid: 5797ac7e1642e044aa8a1a4986ec036e, type: 3}
+  m_Pref_Effect_Scare: {fileID: 7368603593467084900, guid: 382970ad51452db48b1c208a01569e69, type: 3}
+  m_Pref_Effect_Explosion_Poison: {fileID: 1730986055952711020, guid: 181ed1abbe693264cbf7593df173b72c, type: 3}
+  m_Pref_Effect_Lighting: {fileID: 8359606034024071547, guid: 886d0c23ff5d77246962eb73c2ecc0a1, type: 3}
+  m_Pref_Effect_Burn_Health: {fileID: 2878748170976785162, guid: 8df2dd240178c404fa7598ede445bee6, type: 3}
+  m_Pref_Effect_Charm: {fileID: 4561001442033481510, guid: d68a677d96936f64887d3173b919cc01, type: 3}
+  m_Pref_Effect_Health_Fly: {fileID: 5971774027102823988, guid: c16794972d47c07479487cdd22c59673, type: 3}
+  m_Pref_Thien_Thach: {fileID: 5376331515463911538, guid: 00794e2ab63efc14288e56803449e735, type: 3}
+  m_Pref_Effect_Explosion_Thien_Thach: {fileID: 7590966065184283465, guid: afc2a814665110740996b7ea50078506, type: 3}
+  m_Pref_Effect_Coin: {fileID: 7916190271498094099, guid: 75f2125cded5b9e44bb65dec8aecc64b, type: 3}
+  m_Pref_Effect_Shield: {fileID: 8458503709115055557, guid: 21f485c137013394897cb703c9dcc863, type: 3}
+  m_Pref_Effect_Burn_Door: {fileID: 836282877673831694, guid: 057a710e4b0f1b94dad496788e708056, type: 3}
+  m_Pref_Effect_Burn_DoorWid: {fileID: 836282877673831694, guid: 7838108e3ae093842b3230922909bc65, type: 3}
+  m_Pref_Effect_Calida: {fileID: 8458503709115055557, guid: a2a79b6fd4b29aa4c85a7525420b4bb7, type: 3}
+  m_Pref_Effect_Heal_Calida: {fileID: 152868847150049255, guid: 14da1e4b6d2ac22408f08551ee215ff1, type: 3}
+  m_Pref_Effect_Eilif: {fileID: 8458503709115055557, guid: c6488cb6e256abf42a8aed95ddc968f3, type: 3}
+  m_Pref_Effect_Heal_Eilif: {fileID: 152868847150049255, guid: a049e99312f1a3a459589971d600f354, type: 3}
+  m_Pref_Effect_Fire: {fileID: 8458503709115055557, guid: 6c8a2a39fe359804996698036fdf499e, type: 3}
+  m_Pref_Effect_Explosion_Fire: {fileID: 8458503709115055557, guid: a3c554fb8c55907419bfaa7ad01abc69, type: 3}
+  m_Pref_Effect_Coin_Mining_Machine: {fileID: 4292383520744493550, guid: aa49d2b0268142d459a047e53d5223c0, type: 3}
+  m_Pref_Effect_Stun_By_Safeguard: {fileID: 4510352010693214482, guid: 99bc677c09f2d28448b40beca0549378, type: 3}
+  m_Pref_Effect_Rocket: {fileID: 3669430098346546373, guid: 99073c9d22ac7e74f86b3821c21abc98, type: 3}
+  m_Pref_Effect_Buff_Health_Pet: {fileID: 2016179313869414083, guid: 14ab8742671cc7b40b00dc0e71381a27, type: 3}
+  m_Pref_Effect_Buff_Health_Pet_SeaAngle: {fileID: 569598440565140537, guid: 18d1d7376ee17c94c878aee35686b38c, type: 3}
+  m_Pref_Effect_Buff_Health_Pet_Spine: {fileID: 1448911221182530642, guid: 0439cf43bf602ec4993b34e0e8d74d87, type: 3}
+  m_Pref_Effect_Smoke_Temp_Door: {fileID: 0}

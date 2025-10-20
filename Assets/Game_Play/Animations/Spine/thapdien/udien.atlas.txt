@@ -1,0 +1,95 @@
+udien.png
+size:964,824
+filter:Linear,Linear
+pma:true
+scale:0.45
+U2
+bounds:824,277,50,64
+U3
+bounds:824,343,68,68
+U4
+bounds:687,66,59,71
+electric/0
+bounds:2,687,135,135
+electric/1
+bounds:2,687,135,135
+electric/12
+bounds:2,550,135,135
+electric/14
+bounds:139,687,135,135
+electric/3
+bounds:2,413,135,135
+electric/5
+bounds:139,550,135,135
+electric/6
+bounds:276,687,135,135
+electric/8
+bounds:2,276,135,135
+electric/Comp 1_00000
+bounds:139,413,135,135
+electric/Comp 1_00001
+bounds:139,413,135,135
+electric/Comp 1_00003
+bounds:276,550,135,135
+electric/Comp 1_00005
+bounds:413,687,135,135
+electric/Comp 1_00006
+bounds:2,139,135,135
+electric/Comp 1_00008
+bounds:139,276,135,135
+electric/Comp 1_00012
+bounds:276,413,135,135
+electric/Comp 1_00014
+bounds:413,550,135,135
+electric/Comp 2/0
+bounds:550,687,135,135
+electric/Comp 2/10
+bounds:2,2,135,135
+electric/Comp 2/13
+bounds:139,139,135,135
+electric/Comp 2/17
+bounds:276,276,135,135
+electric/Comp 2/19
+bounds:413,413,135,135
+electric/Comp 2/22
+bounds:550,550,135,135
+electric/Comp 2/24
+bounds:687,687,135,135
+electric/Comp 2/25
+bounds:139,2,135,135
+electric/Comp 2/3
+bounds:139,2,135,135
+electric/Comp 2/27
+bounds:276,139,135,135
+electric/Comp 2/29
+bounds:413,276,135,135
+electric/Comp 2/5
+bounds:550,413,135,135
+electric/Comp 2/8
+bounds:687,550,135,135
+electric/Comp 2/Comp 2_00000
+bounds:824,687,135,135
+electric/Comp 2/Comp 2_00003
+bounds:276,2,135,135
+electric/Comp 2/Comp 2_00025
+bounds:276,2,135,135
+electric/Comp 2/Comp 2_00005
+bounds:413,139,135,135
+electric/Comp 2/Comp 2_00008
+bounds:550,276,135,135
+electric/Comp 2/Comp 2_00010
+bounds:687,413,135,135
+electric/Comp 2/Comp 2_00013
+bounds:824,550,135,135
+electric/Comp 2/Comp 2_00017
+bounds:413,2,135,135
+electric/Comp 2/Comp 2_00019
+bounds:550,139,135,135
+electric/Comp 2/Comp 2_00022
+bounds:687,276,135,135
+electric/Comp 2/Comp 2_00024
+bounds:824,413,135,135
+electric/Comp 2/Comp 2_00027
+bounds:550,2,135,135
+electric/Comp 2/Comp 2_00029
+bounds:687,139,135,135

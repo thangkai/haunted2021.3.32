@@ -1,0 +1,58 @@
+explosion.png
+size:920,308
+filter:Linear,Linear
+pma:true
+Comp 1_00002
+bounds:2,206,100,100
+Comp 1_00003
+bounds:2,104,100,100
+Comp 1_00004
+bounds:104,206,100,100
+Comp 1_00005
+bounds:2,2,100,100
+Comp 1_00006
+bounds:104,104,100,100
+Comp 1_00007
+bounds:206,206,100,100
+Comp 1_00008
+bounds:104,2,100,100
+Comp 1_00009
+bounds:206,104,100,100
+Comp 1_00010
+bounds:308,206,100,100
+Comp 1_00011
+bounds:206,2,100,100
+Comp 1_00012
+bounds:308,104,100,100
+Comp 1_00013
+bounds:410,206,100,100
+Comp 1_00014
+bounds:308,2,100,100
+Comp 1_00015
+bounds:410,104,100,100
+Comp 1_00016
+bounds:512,206,100,100
+Comp 1_00017
+bounds:410,2,100,100
+Comp 1_00018
+bounds:512,104,100,100
+Comp 1_00019
+bounds:614,206,100,100
+Comp 1_00020
+bounds:512,2,100,100
+Comp 1_00021
+bounds:614,104,100,100
+Comp 1_00022
+bounds:716,206,100,100
+Comp 1_00023
+bounds:614,2,100,100
+Comp 1_00024
+bounds:716,104,100,100
+Comp 1_00025
+bounds:818,206,100,100
+Comp 1_00026
+bounds:818,206,100,100
+Comp 1_00027
+bounds:716,2,100,100
+Comp 1_00028
+bounds:818,104,100,100

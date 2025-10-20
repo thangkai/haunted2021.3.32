@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1296bf699b6820d469bb79c177350937, type: 3}
+  m_Name: Data_Max_Turret_Can_Build
+  m_EditorClassIdentifier: 
+  m_All_Case_Max_Turret:
+  - m_Case_Max_Turret:
+    - amount: 5
+      type_Max_Turret: 1
+  - m_Case_Max_Turret:
+    - amount: 4
+      type_Max_Turret: 1
+    - amount: 1
+      type_Max_Turret: 2
+  - m_Case_Max_Turret:
+    - amount: 4
+      type_Max_Turret: 1
+    - amount: 1
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 3
+      type_Max_Turret: 1
+    - amount: 2
+      type_Max_Turret: 2
+  - m_Case_Max_Turret:
+    - amount: 3
+      type_Max_Turret: 1
+    - amount: 1
+      type_Max_Turret: 2
+    - amount: 1
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 3
+      type_Max_Turret: 1
+    - amount: 2
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 2
+      type_Max_Turret: 1
+    - amount: 1
+      type_Max_Turret: 2
+    - amount: 2
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 2
+      type_Max_Turret: 1
+    - amount: 2
+      type_Max_Turret: 2
+    - amount: 1
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 2
+      type_Max_Turret: 1
+    - amount: 3
+      type_Max_Turret: 2
+  - m_Case_Max_Turret:
+    - amount: 2
+      type_Max_Turret: 1
+    - amount: 3
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 1
+      type_Max_Turret: 1
+    - amount: 1
+      type_Max_Turret: 2
+    - amount: 3
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 1
+      type_Max_Turret: 1
+    - amount: 3
+      type_Max_Turret: 2
+    - amount: 1
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 1
+      type_Max_Turret: 1
+    - amount: 2
+      type_Max_Turret: 2
+    - amount: 2
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 1
+      type_Max_Turret: 1
+    - amount: 4
+      type_Max_Turret: 2
+  - m_Case_Max_Turret:
+    - amount: 1
+      type_Max_Turret: 1
+    - amount: 4
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 5
+      type_Max_Turret: 2
+  - m_Case_Max_Turret:
+    - amount: 4
+      type_Max_Turret: 2
+    - amount: 1
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 3
+      type_Max_Turret: 2
+    - amount: 2
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 2
+      type_Max_Turret: 2
+    - amount: 3
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 1
+      type_Max_Turret: 2
+    - amount: 4
+      type_Max_Turret: 3
+  - m_Case_Max_Turret:
+    - amount: 5
+      type_Max_Turret: 3

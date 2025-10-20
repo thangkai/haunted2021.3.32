@@ -1,0 +1,6 @@
+garlic.png
+size:200,200
+filter:Linear,Linear
+pma:true
+garlic
+bounds:2,2,77,108

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64fb7f437fde544ea583baa989e5dbc, type: 3}
+  m_Name: Data_Info_Boss_Succubus
+  m_EditorClassIdentifier: 
+  name_Boss: Succubus
+  name_Boss_V2: Rainbow Purple
+  type_Boss: 101
+  speed_Attack: 1
+  XP_By_Levels: 140000001400000014000000
+  m_Pool_Skill: 000000000100000002000000030000000400000005000000060000000700000009000000
+  m_Stat_Boss_By_Level:
+  - HP: 1200
+    damage: 14
+    Amor: 5
+  - HP: 1400
+    damage: 20
+    Amor: 15
+  - HP: 2000
+    damage: 24
+    Amor: 40
+  - HP: 2400
+    damage: 30
+    Amor: 80
+  - HP: 4400
+    damage: 60
+    Amor: 100
+  - HP: 8400
+    damage: 120
+    Amor: 150
+  m_Stat_Boss_Very_Hard_By_Level:
+  - HP: 1200
+    damage: 20
+    Amor: 5
+  - HP: 1400
+    damage: 24
+    Amor: 15
+  - HP: 2000
+    damage: 28
+    Amor: 40
+  - HP: 2400
+    damage: 36
+    Amor: 80
+  - HP: 4800
+    damage: 100
+    Amor: 100
+  - HP: 10080
+    damage: 190
+    Amor: 150
+  m_Amor: 5

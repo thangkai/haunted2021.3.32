@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &39604424104232832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39604424104232834}
+  - component: {fileID: 39604424104232835}
+  m_Layer: 0
+  m_Name: Data_Saved
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &39604424104232834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39604424104232832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &39604424104232835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39604424104232832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55ea29962c5a684081416af3d0f176e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Live_Data_Coin_Change: {fileID: 11400000, guid: 5c9aef51aaeeb6944a23230ca8dc5428, type: 2}
+  m_Live_Data_Blood_Change: {fileID: 11400000, guid: 012974e476c7bec45bd4eec6febc828a, type: 2}
+  m_Live_Data_Energy_Change: {fileID: 11400000, guid: 763ebc0714e9b4542af9b03aca21f4f5, type: 2}
+  m_Live_Data_Other_Player_Die: {fileID: 11400000, guid: 175b624aa0c8c9a44b98af67fe9df545, type: 2}
+  m_Live_Data_Index_Claimed_Mission_Tutorial: {fileID: 11400000, guid: f0e4bfa9e73cf104bb8f5cefb52c3d06, type: 2}
+  m_Live_Data_Can_Build_Crucific_Tutorial: {fileID: 11400000, guid: 6d7a70f46c72cf140b747015ad3b8818, type: 2}
+  m_Live_Data_Coin_In_Game_Change: {fileID: 11400000, guid: fac9ad338852d234fbc288b365aae8f7, type: 2}
+  m_Live_Data_Energy_In_Game_Change: {fileID: 11400000, guid: 30a73fb3de157ea4fa680248bfcdda9e, type: 2}
+  m_Live_Data_Show_Pack_Sales: {fileID: 11400000, guid: 363b3e898fcdc0c4bb95e8649a50913d, type: 2}

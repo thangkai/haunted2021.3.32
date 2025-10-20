@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64fb7f437fde544ea583baa989e5dbc, type: 3}
+  m_Name: Data_Info_Boss_Golin_Melee_Normal_Boss
+  m_EditorClassIdentifier: 
+  name_Boss: Goblin Melee
+  name_Boss_V2: Goblin Melee
+  type_Boss: 106
+  speed_Attack: 1
+  XP_By_Levels: 140000001400000014000000
+  m_Pool_Skill: 
+  m_Stat_Boss_By_Level:
+  - HP: 2000
+    damage: 8
+    Amor: 0
+  - HP: 500
+    damage: 4
+    Amor: 0
+  - HP: 500
+    damage: 4
+    Amor: 0
+  - HP: 500
+    damage: 4
+    Amor: 0
+  - HP: 500
+    damage: 4
+    Amor: 0
+  - HP: 500
+    damage: 4
+    Amor: 0
+  m_Stat_Boss_Very_Hard_By_Level:
+  - HP: 2550
+    damage: 21
+    Amor: 0
+  - HP: 850
+    damage: 7
+    Amor: 0
+  - HP: 850
+    damage: 7
+    Amor: 0
+  - HP: 850
+    damage: 7
+    Amor: 0
+  - HP: 850
+    damage: 7
+    Amor: 0
+  - HP: 850
+    damage: 7
+    Amor: 0
+  m_Amor: 0

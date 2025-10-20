@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e9d9de51baf074d90b5043719e29fc, type: 3}
+  m_Name: Data_Sprite_Turret_Bed
+  m_EditorClassIdentifier: 
+  type_Turret: 0
+  m_All_Sprite_By_Level:
+  - {fileID: 21300000, guid: d7c0b4691b4fbb249aa5a3c2c777c4fd, type: 3}
+  - {fileID: 21300000, guid: aedf91a31309f3d49a1b38dff1b47021, type: 3}
+  - {fileID: 21300000, guid: abf9ec5b758a5264cb40d1ef62ced907, type: 3}
+  - {fileID: 21300000, guid: c2980f6fe66850f4cad870ac49901b0b, type: 3}
+  - {fileID: 21300000, guid: 9572e62753a155d47bf736767dfdd4c1, type: 3}
+  - {fileID: 21300000, guid: 5eebbf3ca04231f49954c647a6bf5f51, type: 3}
+  - {fileID: 21300000, guid: 544b5d1a6dcd38d42acd18c48aa39fe4, type: 3}
+  - {fileID: 21300000, guid: 5b17627d2548b064a9b84788939c9b85, type: 3}
+  - {fileID: 21300000, guid: a0432865e5da24148832688a7c7522b5, type: 3}
+  - {fileID: 21300000, guid: 965c26936c5855b47b34a1fe9f5c105e, type: 3}

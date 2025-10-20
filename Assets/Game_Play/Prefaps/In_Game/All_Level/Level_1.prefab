@@ -1,0 +1,382 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1631913201196588193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1631913201196588199}
+  - component: {fileID: 1631913201196588192}
+  m_Layer: 0
+  m_Name: Level_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1631913201196588199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631913201196588193}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6, y: -6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1631913201196588192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631913201196588193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc855e22e8503274c955797a094be009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list_Prefap_Holder:
+  - type_Tile: 9
+    position: {x: 3, y: 1, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 6
+    position: {x: 4, y: 1, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 6
+    position: {x: 5, y: 1, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 6
+    position: {x: 6, y: 1, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 6
+    position: {x: 7, y: 1, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 6
+    position: {x: 8, y: 1, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 6
+    position: {x: 9, y: 1, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 6
+    position: {x: 10, y: 1, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 10
+    position: {x: 11, y: 1, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 3, y: 2, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 4, y: 2, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 5, y: 2, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 6, y: 2, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 7, y: 2, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 8, y: 2, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 9, y: 2, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 10, y: 2, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 11, y: 2, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 3, y: 3, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 4, y: 3, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 5, y: 3, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 1
+    position: {x: 6, y: 3, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 7, y: 3, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 8, y: 3, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 9, y: 3, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 10, y: 3, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 11, y: 3, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 3, y: 4, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 4, y: 4, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 5, y: 4, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 6, y: 4, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 7, y: 4, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 8, y: 4, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 9, y: 4, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 10, y: 4, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 11, y: 4, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 3, y: 5, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 4, y: 5, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 13
+    position: {x: 5, y: 5, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 6
+    position: {x: 6, y: 5, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 14
+    position: {x: 7, y: 5, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 8, y: 5, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 9, y: 5, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 10, y: 5, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 11, y: 5, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 3, y: 6, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 4, y: 6, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 5, y: 6, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 7, y: 6, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 8, y: 6, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 9, y: 6, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 10, y: 6, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 11, y: 6, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 7
+    position: {x: 3, y: 7, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 5
+    position: {x: 4, y: 7, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 8
+    position: {x: 5, y: 7, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 7, y: 7, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 8, y: 7, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 9, y: 7, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 10, y: 7, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 11, y: 7, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 7, y: 8, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 8, y: 8, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 9, y: 8, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 10, y: 8, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 11, y: 8, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 9
+    position: {x: 3, y: 9, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 6
+    position: {x: 4, y: 9, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 10
+    position: {x: 5, y: 9, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 7, y: 9, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 8, y: 9, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 9, y: 9, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 10, y: 9, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 11, y: 9, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 3, y: 10, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 4, y: 10, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 5, y: 10, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 7, y: 10, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 8, y: 10, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 9, y: 10, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 10, y: 10, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 11, y: 10, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 3, y: 11, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 4, y: 11, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 11
+    position: {x: 5, y: 11, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 6
+    position: {x: 6, y: 11, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 12
+    position: {x: 7, y: 11, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 8, y: 11, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 9, y: 11, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 10, y: 11, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 11, y: 11, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 3, y: 12, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 4, y: 12, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 5, y: 12, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 6, y: 12, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 7, y: 12, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 8, y: 12, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 9, y: 12, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 10, y: 12, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 4
+    position: {x: 11, y: 12, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 3
+    position: {x: 3, y: 13, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 0
+    position: {x: 4, y: 13, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 13
+    position: {x: 5, y: 13, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 5
+    position: {x: 6, y: 13, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 5
+    position: {x: 7, y: 13, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 5
+    position: {x: 8, y: 13, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 2
+    position: {x: 9, y: 13, z: 0}
+    type_Direction_Move_Door: 3
+  - type_Tile: 5
+    position: {x: 10, y: 13, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 8
+    position: {x: 11, y: 13, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 7
+    position: {x: 3, y: 14, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 5
+    position: {x: 4, y: 14, z: 0}
+    type_Direction_Move_Door: 0
+  - type_Tile: 8
+    position: {x: 5, y: 14, z: 0}
+    type_Direction_Move_Door: 0

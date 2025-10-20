@@ -1,0 +1,86 @@
+tho_suachua.png
+size:988,368
+filter:Linear,Linear
+pma:true
+Ellipse 3 copy 4
+bounds:601,308,243,58
+LD_l
+bounds:894,13,21,20
+rotate:90
+LD_r
+bounds:895,115,15,16
+Shape 243
+bounds:824,102,29,39
+rotate:90
+Shape 244
+bounds:914,109,96,71
+rotate:90
+Shape 245
+bounds:914,207,97,64
+rotate:90
+Shape 246
+bounds:2,60,306,473
+rotate:90
+Shape 247
+bounds:2,60,306,473
+rotate:90
+Shape 248
+bounds:2,60,306,473
+rotate:90
+Shape 249
+bounds:2,60,306,473
+rotate:90
+Shape 333
+bounds:894,36,18,29
+Shape 334
+bounds:743,97,79,60
+Shape 335
+bounds:242,13,95,45
+Shape 336
+bounds:757,2,93,39
+rotate:90
+Shape 344
+bounds:339,3,70,55
+arm_f
+bounds:585,12,77,170
+rotate:90
+body
+bounds:477,176,122,190
+calf_b
+bounds:747,159,84,147
+calf_b1
+bounds:846,306,60,111
+rotate:90
+calf_f
+bounds:833,133,79,171
+dau
+bounds:601,169,144,137
+eye_l
+bounds:532,11,42,37
+eye_r
+bounds:865,102,28,29
+eyebrown_l
+bounds:959,319,47,25
+rotate:90
+eyebrown_r
+bounds:894,67,33,21
+rotate:90
+hand_b1
+bounds:148,2,48,56
+hat_b
+bounds:411,4,58,54
+hat_f
+bounds:585,91,156,76
+kem
+bounds:2,9,49,144
+rotate:90
+mouth
+bounds:471,18,59,30
+nose
+bounds:198,2,42,56
+shoulder_b
+bounds:798,5,90,94
+rotate:90
+thatlung
+bounds:477,50,124,106
+rotate:90

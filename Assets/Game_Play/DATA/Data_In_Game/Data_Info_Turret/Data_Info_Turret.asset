@@ -1,0 +1,262 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4323261473e51f4283da4d106ba4258, type: 3}
+  m_Name: Data_Info_Turret
+  m_EditorClassIdentifier: 
+  type_Turret: 2
+  model_Names:
+  - name_EN: Plunger Turret
+    name_VI: "Th\xE1p plunger"
+  - name_EN: Broom Turret
+    name_VI: "Th\xE1p ch\u1ED5i"
+  - name_EN: Spoon Turret
+    name_VI: "Th\xE1p th\xECa"
+  - name_EN: Fork Turret
+    name_VI: "Th\xE1p d\u0129a"
+  - name_EN: Knife Turret
+    name_VI: "Th\xE1p dao"
+  - name_EN: Silver Arrow
+    name_VI: "Th\xE1p t\xEAn b\u1EA1c"
+  - name_EN: Gun Tower
+    name_VI: "Th\xE1p s\xFAng"
+  - name_EN: M24 Tower
+    name_VI: "Th\xE1p M24"
+  - name_EN: Guanlet Gun 1
+    name_VI: "Th\xE1p Guanlet 1"
+  - name_EN: Guanlet Gun 2
+    name_VI: "Th\xE1p Guanlet 2"
+  - name_EN: Holy Arrow 1
+    name_VI: "M\u0169i t\xEAn th\xE1nh 1"
+  - name_EN: Holy Arrow 2
+    name_VI: "M\u0169i t\xEAn th\xE1nh 2"
+  - name_EN: Holy Arrow 3
+    name_VI: "M\u0169i t\xEAn th\xE1nh 3"
+  - name_EN: Holy Sword 1
+    name_VI: "Th\xE1nh ki\u1EBFm 2"
+  - name_EN: Holy Sword 2
+    name_VI: "Th\xE1nh ki\u1EBFm 2"
+  - name_EN: Holy Sword 3
+    name_VI: "Th\xE1nh ki\u1EBFm 3"
+  - name_EN: Holy Spear 1
+    name_VI: "Th\u01B0\u01A1ng th\u1EA7n 1"
+  - name_EN: Holy Spear 2
+    name_VI: "Th\u01B0\u01A1ng th\u1EA7n 2"
+  - name_EN: Holy Spear 3
+    name_VI: "Th\u01B0\u01A1ng th\u1EA7n 3"
+  - name_EN: Holy Spear 4
+    name_VI: Holy Spear 4
+  description_EN: Vampire Attack Tower
+  description_VI: "Th\xE1p t\u1EA5n c\xF4ng vampire"
+  model_Skills:
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 8
+    range: 4
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 16
+    range: 4
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 32
+    range: 4.5
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 64
+    range: 4.5
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 128
+    range: 5
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 256
+    range: 5.5
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 512
+    range: 6
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 1024
+    range: 6.5
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 2048
+    range: 7
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 4096
+    range: 7.5
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 8192
+    range: 8
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 16384
+    range: 8.5
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 32768
+    range: 9
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 65536
+    range: 9.5
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 131072
+    range: 10
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 262144
+    range: 10.5
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 524288
+    range: 11
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 1048576
+    range: 11.5
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 2097152
+    range: 12
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 4194304
+    range: 12.5
+    speed: 1
+  m_All_Price_Upgrades:
+  - price_Coin: 10
+    price_Energy: 0
+  - price_Coin: 18
+    price_Energy: 0
+  - price_Coin: 35
+    price_Energy: 0
+  - price_Coin: 70
+    price_Energy: 0
+  - price_Coin: 280
+    price_Energy: 0
+  - price_Coin: 560
+    price_Energy: 0
+  - price_Coin: 1200
+    price_Energy: 32
+  - price_Coin: 2400
+    price_Energy: 64
+  - price_Coin: 4800
+    price_Energy: 128
+  - price_Coin: 9600
+    price_Energy: 256
+  - price_Coin: 19200
+    price_Energy: 512
+  - price_Coin: 38400
+    price_Energy: 1024
+  - price_Coin: 76800
+    price_Energy: 2048
+  - price_Coin: 153600
+    price_Energy: 4096
+  - price_Coin: 307200
+    price_Energy: 8192
+  - price_Coin: 614400
+    price_Energy: 16384
+  - price_Coin: 1228800
+    price_Energy: 32768
+  - price_Coin: 2457600
+    price_Energy: 65536
+  - price_Coin: 4915200
+    price_Energy: 131072
+  - price_Coin: 9830400
+    price_Energy: 262144
+  m_All_Price_Upgrades_4_Minutes:
+  - price_Coin: 5
+    price_Energy: 0
+  - price_Coin: 10
+    price_Energy: 0
+  - price_Coin: 18
+    price_Energy: 0
+  - price_Coin: 35
+    price_Energy: 0
+  - price_Coin: 70
+    price_Energy: 0
+  - price_Coin: 280
+    price_Energy: 0
+  - price_Coin: 560
+    price_Energy: 0
+  - price_Coin: 1200
+    price_Energy: 32
+  - price_Coin: 2400
+    price_Energy: 64
+  - price_Coin: 4800
+    price_Energy: 128
+  - price_Coin: 9600
+    price_Energy: 256
+  - price_Coin: 19200
+    price_Energy: 512
+  - price_Coin: 38400
+    price_Energy: 1024
+  - price_Coin: 76800
+    price_Energy: 2048
+  - price_Coin: 153600
+    price_Energy: 4096
+  - price_Coin: 307200
+    price_Energy: 8192
+  - price_Coin: 614400
+    price_Energy: 16384
+  - price_Coin: 1228800
+    price_Energy: 32768
+  - price_Coin: 2457600
+    price_Energy: 65536
+  - price_Coin: 4915200
+    price_Energy: 131072
+  m_Requirement_Upgrades: []

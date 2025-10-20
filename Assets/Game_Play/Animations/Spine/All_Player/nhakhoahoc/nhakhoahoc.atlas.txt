@@ -1,0 +1,98 @@
+nhakhoahoc.png
+size:956,960
+filter:Linear,Linear
+pma:true
+scale:0.75
+Comp 2/smk_00001
+bounds:2,770,188,188
+Comp 2/smk_00002
+bounds:192,770,188,188
+Comp 2/smk_00003
+bounds:382,770,188,188
+Comp 2/smk_00004
+bounds:572,770,188,188
+Comp 2/smk_00005
+bounds:762,770,188,188
+Comp 2/smk_00006
+bounds:2,580,188,188
+Comp 2/smk_00007
+bounds:192,580,188,188
+Comp 2/smk_00008
+bounds:382,580,188,188
+Comp 2/smk_00009
+bounds:572,580,188,188
+Comp 2/smk_00010
+bounds:762,580,188,188
+Comp 2/smk_00011
+bounds:2,390,188,188
+Comp 2/smk_00012
+bounds:192,390,188,188
+Comp 2/smk_00013
+bounds:382,390,188,188
+Comp 2/smk_00014
+bounds:572,390,188,188
+Comp 2/smk_00015
+bounds:762,390,188,188
+Comp 2/smk_00016
+bounds:2,200,188,188
+Comp 2/smk_00017
+bounds:192,200,188,188
+Comp 2/smk_00018
+bounds:382,200,188,188
+Comp 2/smk_00019
+bounds:572,200,188,188
+Comp 2/smk_00020
+bounds:762,200,188,188
+Comp 2/smk_00021
+bounds:2,10,188,188
+Comp 2/smk_00022
+bounds:192,10,188,188
+Group 14
+bounds:544,2,51,46
+Shape 223 copy
+bounds:837,24,47,77
+rotate:90
+Shape 226
+bounds:382,9,65,50
+Shape 237
+bounds:513,18,41,29
+rotate:90
+arm_b
+bounds:781,22,54,49
+arm_f
+bounds:449,9,62,50
+bear_h
+bounds:682,69,97,32
+bottom
+bounds:849,112,77,86
+bread
+bounds:549,91,131,107
+coat_b
+bounds:549,50,39,124
+rotate:90
+coat_f
+bounds:786,73,61,125
+glasses
+bounds:916,26,84,37
+rotate:90
+hair
+bounds:382,61,165,137
+head
+bounds:682,103,95,102
+rotate:90
+leg_b
+bounds:928,117,23,45
+leg_f
+bounds:849,85,25,44
+rotate:90
+mouth
+bounds:730,2,65,33
+rotate:90
+nose
+bounds:928,164,25,34
+shoulder_b
+bounds:597,7,41,57
+rotate:90
+shoulder_f
+bounds:675,18,49,53
+rotate:90

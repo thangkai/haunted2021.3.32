@@ -1,0 +1,13 @@
+atm.png
+size:528,396
+filter:Linear,Linear
+pma:true
+$
+bounds:494,324,32,25
+rotate:90
+$2
+bounds:494,358,36,31
+rotate:90
+atm
+bounds:2,2,392,490
+rotate:90

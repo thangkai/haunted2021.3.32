@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ceaf8eca8124345b029855decdcc13, type: 3}
+  m_Name: Data_Info_Character_Repairer
+  m_EditorClassIdentifier: 
+  type_Character: 2
+  name_Character:
+    name_EN: Mechanic
+    name_VI: "Th\u1EE3 s\u1EEDa ch\u1EEFa"
+  descriptions:
+    name_EN: Work...Work...Work
+    name_VI: "L\xE0m...L\xE0m...L\xE0m."
+  price: 7000
+  type_Money: 1
+  price_Use_EN: 
+  price_Use_VI: 
+  price_Skin_2: 100
+  descriptions_Skill_1:
+    name_EN: Increases door health by 10%.
+    name_VI: "T\u0103ng m\xE1u c\u1EE7a c\u1EEDa th\xEAm 10%."
+  descriptions_Skill_2:
+    name_EN: The door automatically repairs 2% of its health per second when taking
+      damage.
+    name_VI: "C\u1EEDa t\u1EF1 \u0111\u1ED9ng s\u1EEDa ch\u1EEFa 2% m\xE1u m\u1ED7i
+      gi\xE2y khi nh\u1EADn s\xE1t th\u01B0\u01A1ng."
+  price_Skill_2: 50
+  m_Is_Has_Skill_3: 0
+  price_Skill_3: 0
+  descriptions_Skill_3:
+    name_EN: 
+    name_VI: 
+  m_Hp: 140
+  m_Atk: 4
+  m_Rank_Character: 1
+  mTypeSkillIcons: 0700000008000000

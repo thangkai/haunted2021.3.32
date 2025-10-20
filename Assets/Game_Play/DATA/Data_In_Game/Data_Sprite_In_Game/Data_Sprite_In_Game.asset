@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ae759d17522f041858088b94805e1e, type: 3}
+  m_Name: Data_Sprite_In_Game
+  m_EditorClassIdentifier: 
+  m_Icon_Remove_Item: {fileID: 21300000, guid: 5881a304bbada814c9429db34cdf64aa, type: 3}
+  m_All_Sprite_Character_Sleep:
+  - {fileID: 21300000, guid: 0121d67ec170f0a4db055614a61c6c2b, type: 3}
+  - {fileID: 21300000, guid: f8f37bd5169dfa54e8b1f039c303f1e2, type: 3}
+  - {fileID: 21300000, guid: b162b8de9f9b0994aa7097a03adc60c1, type: 3}
+  - {fileID: 21300000, guid: b5c89f6ee58ee8645ade30f4c42bba08, type: 3}
+  - {fileID: 21300000, guid: 631bbe29ef6f16e48b283f4d9032716a, type: 3}
+  - {fileID: 21300000, guid: 42a305a962bc91d4c81817ffbe156122, type: 3}
+  - {fileID: 21300000, guid: def1487a2b5ca874d9051c70d88d5534, type: 3}
+  - {fileID: 21300000, guid: 7a5fa08f4254e2943aa6192fdbc43218, type: 3}
+  - {fileID: 21300000, guid: fdf607c0b9b0fcf49a851618be805126, type: 3}
+  - {fileID: 21300000, guid: dff1e31cf0dc6d94ba455a9ad72b8cae, type: 3}
+  - {fileID: 21300000, guid: c08fd41ec5039bf4987f91550c14b809, type: 3}
+  - {fileID: 21300000, guid: 780f97d7fc10cdb498928c914d1180a4, type: 3}
+  - {fileID: 21300000, guid: 5ab9a4f924eddda40a6a066eea27fce8, type: 3}
+  - {fileID: 21300000, guid: 64a60f6ca66dcbc41aa210f7fdfbd235, type: 3}
+  - {fileID: 21300000, guid: bbf370d8ea4eb2741bf571baa6e47a97, type: 3}
+  - {fileID: 21300000, guid: cc8900808031cb145b366f1ad024be8d, type: 3}
+  m_All_Sprite_Character_Sleep_V2:
+  - {fileID: 21300000, guid: 8afc479d189063f41b9583cae6af025b, type: 3}
+  - {fileID: 21300000, guid: 4e67fcdfdd95906479f3109ed784a443, type: 3}
+  - {fileID: 21300000, guid: 3b93f29f666796c44a4b813ed9984bc4, type: 3}
+  - {fileID: 21300000, guid: 5a3d2465a7c24ce4d9bac6e4cb77a5ba, type: 3}
+  - {fileID: 21300000, guid: 9afa544066d80644faa661e9e5a430ef, type: 3}
+  - {fileID: 21300000, guid: 067e96132cb65b34699c40e0c524086f, type: 3}
+  - {fileID: 21300000, guid: def1487a2b5ca874d9051c70d88d5534, type: 3}
+  - {fileID: 21300000, guid: 7a5fa08f4254e2943aa6192fdbc43218, type: 3}
+  - {fileID: 21300000, guid: fdf607c0b9b0fcf49a851618be805126, type: 3}
+  - {fileID: 21300000, guid: dff1e31cf0dc6d94ba455a9ad72b8cae, type: 3}
+  - {fileID: 21300000, guid: c08fd41ec5039bf4987f91550c14b809, type: 3}
+  - {fileID: 21300000, guid: 780f97d7fc10cdb498928c914d1180a4, type: 3}
+  - {fileID: 21300000, guid: 5ab9a4f924eddda40a6a066eea27fce8, type: 3}
+  - {fileID: 21300000, guid: 64a60f6ca66dcbc41aa210f7fdfbd235, type: 3}
+  - {fileID: 21300000, guid: bbf370d8ea4eb2741bf571baa6e47a97, type: 3}
+  - {fileID: 21300000, guid: cc8900808031cb145b366f1ad024be8d, type: 3}
+  m_All_Sprite_Bed_By_Levels:
+  - sprite_Bed: {fileID: 21300000, guid: 8e8f24f133e3ed149aa845febeeac4e8, type: 3}
+    sprite_Blanket: {fileID: 21300000, guid: c0b9240f0a4cdfe42b8f70f7b678913e, type: 3}
+  - sprite_Bed: {fileID: 21300000, guid: e14a05d505fb9524dad33d9f80e57605, type: 3}
+    sprite_Blanket: {fileID: 21300000, guid: 496f430e07c7b1a41b9d428e7912aed8, type: 3}
+  - sprite_Bed: {fileID: 21300000, guid: ac35f469b99d04d4ea91949b13f86010, type: 3}
+    sprite_Blanket: {fileID: 21300000, guid: a775c15d0f38bea49a498721d0f1084d, type: 3}
+  - sprite_Bed: {fileID: 21300000, guid: 171cfd7fa22809b47828bfe625f4e1b4, type: 3}
+    sprite_Blanket: {fileID: 21300000, guid: 107a962ab84684c4981735cd6a8206fc, type: 3}
+  - sprite_Bed: {fileID: 21300000, guid: 230672507187b8444a4492f450147093, type: 3}
+    sprite_Blanket: {fileID: 21300000, guid: 739807d92d9e8e947bf01682d2c71a6e, type: 3}
+  - sprite_Bed: {fileID: 21300000, guid: 195262f8bcb7de54b9c1a3b8122911ca, type: 3}
+    sprite_Blanket: {fileID: 21300000, guid: ca5b5c79816a7e242994fa3d4547204e, type: 3}
+  - sprite_Bed: {fileID: 21300000, guid: 82a9a6b064b31ee4aa2dfff19cdc06ed, type: 3}
+    sprite_Blanket: {fileID: 21300000, guid: ace7270361419c044a4f36dca09d582d, type: 3}
+  - sprite_Bed: {fileID: 21300000, guid: e53259ccedc2ecb4faf42212c26d46a8, type: 3}
+    sprite_Blanket: {fileID: 21300000, guid: 904330534192b25428c0f94599f83603, type: 3}
+  - sprite_Bed: {fileID: 21300000, guid: b95673c15d7628847959157b81bfa8d3, type: 3}
+    sprite_Blanket: {fileID: 21300000, guid: 7fd48bd4cb09ab0468cd542877e88f38, type: 3}
+  - sprite_Bed: {fileID: 21300000, guid: 115caba7f3309be4f9494be0714e1623, type: 3}
+    sprite_Blanket: {fileID: 21300000, guid: 64e7a66ce2086c54f95df1c91ed1911b, type: 3}
+  m_All_Sprite_Bullet_Player: {fileID: 11400000, guid: 3cf5ca91c3300344384ab0c615033724, type: 2}
+  m_All_Sprite_Bullet_Witch: {fileID: 11400000, guid: 4145d147254d91042858e876965b56a9, type: 2}
+  m_All_Sprite_Bullet_Onslaught: {fileID: 11400000, guid: ae19b7e68d21b1741a7334493f7f0af4, type: 2}
+  m_All_Icon_Bed: {fileID: 11400000, guid: 9f9152c94021ee444a760e18f28bc990, type: 2}
+  m_All_Icon_Door: {fileID: 11400000, guid: 26a926fd965376a40aa38b598291ea2c, type: 2}
+  m_All_Icon_Turret: {fileID: 11400000, guid: b24028984e8142942b28fd91cdc21424, type: 2}
+  m_All_Icon_Energy_Tower: {fileID: 11400000, guid: f5fb4c7c1ac5d3f4082baa2e78d782df, type: 2}
+  m_All_Data_Spite_Turret_Onslaught: {fileID: 11400000, guid: b96de41d631f70e45b614276200a791f, type: 2}
+  m_All_Sprite_Bullet_Pierce: {fileID: 11400000, guid: 201e9cf6539a6664b87f89652b25c911, type: 2}
+  m_All_Icon_Turrets:
+  - {fileID: 0}
+  - {fileID: 21300000, guid: b9dc976f02bd5d1429dea90d4d1ba87e, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 6129b3b113e74e144acd192957570a2b, type: 3}
+  - {fileID: 21300000, guid: ac0dc7c4144c75c418d66ee56033224e, type: 3}
+  - {fileID: 21300000, guid: 0cecea71e3577b940a0a0c6a5b4d82d4, type: 3}
+  - {fileID: 21300000, guid: 4bd0eedff16d5ff459e3f75ddc978176, type: 3}
+  - {fileID: 21300000, guid: 6403798d441534d47a67249e0a3f639a, type: 3}
+  - {fileID: 21300000, guid: 61a34484b300d92488a08e05c2aad1b1, type: 3}
+  - {fileID: 21300000, guid: 3486fd7365d96d940ab0591d52a0cb76, type: 3}
+  - {fileID: 21300000, guid: 4129d49439fd48047a8f8e76d868d2e6, type: 3}
+  - {fileID: 21300000, guid: ccff7310fef9c1f44a1dd60744181123, type: 3}
+  - {fileID: 21300000, guid: c13f9766d0759574a850c15bbbc45a3d, type: 3}
+  - {fileID: 21300000, guid: 59e98aef6a9b2794b976c5f052874b24, type: 3}
+  - {fileID: 21300000, guid: b2fcc359b48da504a864837beac157cc, type: 3}
+  - {fileID: 21300000, guid: a9e22e3a00caacf4a8b498913ae81183, type: 3}
+  - {fileID: 21300000, guid: 9a79827a87348fd4fb6d0266b8cad1aa, type: 3}
+  - {fileID: 21300000, guid: 41210b38549f85d4499665abef904ab4, type: 3}
+  m_All_Icon_Turret_Penetation: {fileID: 11400000, guid: 70646bbb1df49994ba90a55d9d599f9e, type: 2}
+  m_All_Chan_De_Turrets:
+  - {fileID: 21300000, guid: 46ceb8fdc6ed7bc4b8977c8c77ec4c16, type: 3}
+  - {fileID: 21300000, guid: 62d4f465179d35e4c93e199d7da80149, type: 3}
+  - {fileID: 21300000, guid: 144f8c19cdab2a047a16dfc60b48524f, type: 3}
+  - {fileID: 21300000, guid: 8c12ae809cb7e204d9863f6a049d452b, type: 3}
+  - {fileID: 21300000, guid: 0a110e71bff3bc3418600b1439ccb0e2, type: 3}
+  m_All_Chan_De_Turret_Penatation:
+  - {fileID: 21300000, guid: 62d4f465179d35e4c93e199d7da80149, type: 3}
+  - {fileID: 21300000, guid: 61d0376e445dee94a978c15d13b3f7d7, type: 3}
+  - {fileID: 21300000, guid: 46ceb8fdc6ed7bc4b8977c8c77ec4c16, type: 3}
+  - {fileID: 21300000, guid: 8c12ae809cb7e204d9863f6a049d452b, type: 3}
+  m_Data_Turret_By_Levels: {fileID: 11400000, guid: 99cec3403a0384f4d9c7ce6521769eaf, type: 2}
+  m_Data_Turret_Witch_By_Levels: {fileID: 11400000, guid: 688867a03ed707f4db09346c79b21887, type: 2}
+  m_Data_Turret_Onslaught_By_Levels: {fileID: 11400000, guid: 7eac24680c3b0c248b7cfe7444fa4d90, type: 2}
+  m_Data_Turret_Penetation_By_Levels: {fileID: 11400000, guid: 70646bbb1df49994ba90a55d9d599f9e, type: 2}
+  m_Data_Energy_Tower_By_Levels: {fileID: 11400000, guid: 5238792d7beec5a43b8c5883f06cb045, type: 2}
+  m_Data_Door_By_Levels: {fileID: 11400000, guid: be582c7f243e98b49b892e0831f38126, type: 2}
+  m_Data_Icon_Item_Support:
+  - {fileID: 21300000, guid: 5286ebaade682e14cb0f5e89d76e4e30, type: 3}
+  - {fileID: 21300000, guid: a1227b61555b8ba4281f7afb1ff75b5d, type: 3}
+  - {fileID: 21300000, guid: e1001a509c66e364685cc9de0c474c44, type: 3}
+  - {fileID: 21300000, guid: 75f2fb6323d118f48a40bba580b9ac67, type: 3}
+  - {fileID: 21300000, guid: fe5ba8d3304bfbc4ab11c0d828594a08, type: 3}

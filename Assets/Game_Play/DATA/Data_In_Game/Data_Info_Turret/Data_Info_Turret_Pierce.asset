@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4323261473e51f4283da4d106ba4258, type: 3}
+  m_Name: Data_Info_Turret_Pierce
+  m_EditorClassIdentifier: 
+  type_Turret: 22
+  model_Names:
+  - name_EN: Piercing Tower 1
+    name_VI: "Th\xE1p ph\xE1 gi\xE1p 1"
+  - name_EN: Piercing Tower 2
+    name_VI: "Th\xE1p ph\xE1 gi\xE1p 2"
+  - name_EN: Piercing Tower 3
+    name_VI: "Th\xE1p ph\xE1 gi\xE1p 3"
+  - name_EN: Piercing Tower 4
+    name_VI: "Th\xE1p ph\xE1 gi\xE1p 4"
+  description_EN: Electromagnetic armor-piercing tower with the ability to penetrate
+    vampire armor in 5 seconds
+  description_VI: "Th\xE1p ph\xE1 gi\xE1p b\u1EAFn ra \u0111i\u1EC7n t\u1EEB c\xF3
+    kh\u1EA3 n\u0103ng ph\xE1 gi\xE1p c\u1EE7a vampire trong 5s"
+  model_Skills:
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 0
+    range: 5
+    speed: 7
+    damage_Penetration: 0.25
+    time_Dame_Penetration: 5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 0
+    range: 6
+    speed: 7
+    damage_Penetration: 0.5
+    time_Dame_Penetration: 5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 0
+    range: 7
+    speed: 5
+    damage_Penetration: 0.75
+    time_Dame_Penetration: 5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 0
+    range: 8
+    speed: 5
+    damage_Penetration: 1
+    time_Dame_Penetration: 5
+  m_All_Price_Upgrades:
+  - price_Coin: 0
+    price_Energy: 128
+  - price_Coin: 0
+    price_Energy: 256
+  - price_Coin: 0
+    price_Energy: 512
+  - price_Coin: 0
+    price_Energy: 1024
+  m_All_Price_Upgrades_4_Minutes:
+  - price_Coin: 5
+    price_Energy: 0
+  - price_Coin: 10
+    price_Energy: 0
+  - price_Coin: 18
+    price_Energy: 0
+  - price_Coin: 35
+    price_Energy: 0
+  m_Requirement_Upgrades: []

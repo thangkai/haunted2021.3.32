@@ -1,0 +1,16 @@
+stun.png
+size:772,200
+filter:Linear,Linear
+pma:true
+0_00000
+bounds:2,2,126,126
+0_00001
+bounds:130,2,126,126
+0_00002
+bounds:258,2,126,126
+0_00003
+bounds:386,2,126,126
+0_00004
+bounds:514,2,126,126
+0_00005
+bounds:642,2,126,126

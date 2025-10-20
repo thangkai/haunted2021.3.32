@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b64ba204069c56640b1a59a388be0d87, type: 3}
+  m_Name: Data_Skill_Boss_A
+  m_EditorClassIdentifier: 
+  type_Skill_Boss: 0
+  name_Skills:
+    name_EN: Screaming
+    name_VI: "La h\xE9t"
+  name_Descriptions:
+    name_EN: Stuns all enemies for 1s
+    name_VI: "L\xE0m cho\xE1ng m\u1ECDi k\u1EBB \u0111\u1ECBch trong 1s"
+  time_Exist: 1
+  time_CD: 25
+  min_Level_Boss: 1
+  max_Number_Upgrade: 1
+  ratio: 0

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b64ba204069c56640b1a59a388be0d87, type: 3}
+  m_Name: Data_Skill_Boss_C
+  m_EditorClassIdentifier: 
+  type_Skill_Boss: 2
+  name_Skills:
+    name_EN: Slain
+    name_VI: "\u0110\u1ED3 s\xE1t"
+  name_Descriptions:
+    name_EN: Double damage for 5s
+    name_VI: "T\u0103ng g\u1EA5p \u0111\xF4i s\xE1t th\u01B0\u01A1ng trong 5s"
+  time_Exist: 5
+  time_CD: 60
+  min_Level_Boss: 1
+  max_Number_Upgrade: 1
+  ratio: 0

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64fb7f437fde544ea583baa989e5dbc, type: 3}
+  m_Name: Data_Info_Boss_Baital_Vampire
+  m_EditorClassIdentifier: 
+  name_Boss: Baital Vampire
+  name_Boss_V2: Rainbow Green
+  type_Boss: 102
+  speed_Attack: 1
+  XP_By_Levels: 140000001400000014000000
+  m_Pool_Skill: 00000000010000000200000003000000040000000500000006000000070000000a000000
+  m_Stat_Boss_By_Level:
+  - HP: 1600
+    damage: 8
+    Amor: 10
+  - HP: 1800
+    damage: 12
+    Amor: 40
+  - HP: 2400
+    damage: 16
+    Amor: 100
+  - HP: 3400
+    damage: 20
+    Amor: 150
+  - HP: 6400
+    damage: 40
+    Amor: 200
+  - HP: 16400
+    damage: 80
+    Amor: 300
+  m_Stat_Boss_Very_Hard_By_Level:
+  - HP: 1600
+    damage: 12
+    Amor: 10
+  - HP: 1800
+    damage: 16
+    Amor: 40
+  - HP: 2400
+    damage: 20
+    Amor: 100
+  - HP: 3400
+    damage: 24
+    Amor: 150
+  - HP: 7200
+    damage: 60
+    Amor: 200
+  - HP: 14920
+    damage: 110
+    Amor: 300
+  m_Amor: 5

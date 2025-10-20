@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503bf0a4854cf1c4cac1f81106623139, type: 3}
+  m_Name: Data_Ratio
+  m_EditorClassIdentifier: 
+  m_Ratio_H_W_Icon_Character:
+  - 0.4
+  - 0.87603307
+  - 0.6440678
+  - 0.93333334
+  - 0.6062992
+  - 0.76842105
+  - 0.9375
+  - 0.7478992
+  - 0.35338345
+  - 0.75
+  - 0.76521736
+  - 0.83898306
+  - 0.552
+  - 0.51666665
+  - 0.6349
+  - 0.689
+  m_Ratio_H_W_Icon_Character_V2:
+  - 0.9661017
+  - 0.9661017
+  - 0.9661017
+  - 0.9661017
+  - 0.9661017
+  - 0.9661017
+  - 0.9375
+  - 0.7478992
+  - 0.3533835
+  - 0.75
+  - 0.7652174
+  - 0.8389831
+  - 0.552
+  - 0.5166667
+  - 0.635
+  - 0.689
+  m_Ratio_H_W_Icon_Boss:
+  - 0.5171103
+  - 1.1636363
+  - 1.046875
+  - 0.83430797

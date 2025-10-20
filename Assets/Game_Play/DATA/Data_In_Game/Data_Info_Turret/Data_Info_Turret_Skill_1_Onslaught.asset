@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4323261473e51f4283da4d106ba4258, type: 3}
+  m_Name: Data_Info_Turret_Skill_1_Onslaught
+  m_EditorClassIdentifier: 
+  type_Turret: 20
+  model_Names:
+  - name_EN: Pluse brust 1
+    name_VI: "Th\xE1p plunger"
+  - name_EN: Pluse brust 2
+    name_VI: "Th\xE1p ch\u1ED5i"
+  - name_EN: Pluse brust 3
+    name_VI: "Th\xE1p th\xECa"
+  - name_EN: Dual brust 1
+    name_VI: "Th\xE1p d\u0129a"
+  - name_EN: Dual brust 2
+    name_VI: "Th\xE1p dao"
+  - name_EN: Dual brust 3
+    name_VI: "Th\xE1p t\xEAn b\u1EA1c"
+  - name_EN: Hyper pluse brust 1
+    name_VI: "Th\xE1p s\xFAng"
+  - name_EN: Hyper pluse brust 2
+    name_VI: "Th\xE1p M24"
+  - name_EN: Hyper pluse brust 3
+    name_VI: "Th\xE1p Guanlet 1"
+  - name_EN: Hyper pluse brust 4
+    name_VI: "Th\xE1p Guanlet 2"
+  description_EN: Vampire Attack Tower
+  description_VI: "Th\xE1p t\u1EA5n c\xF4ng vampire"
+  model_Skills:
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 30
+    range: 4
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 60
+    range: 4.5
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 120
+    range: 5
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 240
+    range: 5.5
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 480
+    range: 6
+    speed: 1
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 960
+    range: 6.5
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 1920
+    range: 7
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 3840
+    range: 7.5
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 7680
+    range: 8
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 15360
+    range: 8.5
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 18432
+    range: 9
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 36864
+    range: 9.5
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 73728
+    range: 10
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 147456
+    range: 10.5
+    speed: 0.5
+  - coin: 0
+    HP: 0
+    energy: 0
+    damage: 442368
+    range: 11
+    speed: 0.5
+  m_All_Price_Upgrades:
+  - price_Coin: 0
+    price_Energy: 0
+  - price_Coin: 100
+    price_Energy: 0
+  - price_Coin: 250
+    price_Energy: 0
+  - price_Coin: 500
+    price_Energy: 0
+  - price_Coin: 1000
+    price_Energy: 50
+  - price_Coin: 2000
+    price_Energy: 100
+  - price_Coin: 4000
+    price_Energy: 200
+  - price_Coin: 8000
+    price_Energy: 400
+  - price_Coin: 16000
+    price_Energy: 800
+  - price_Coin: 32000
+    price_Energy: 1600
+  - price_Coin: 51200
+    price_Energy: 5000
+  - price_Coin: 102400
+    price_Energy: 10000
+  - price_Coin: 204800
+    price_Energy: 20000
+  - price_Coin: 409600
+    price_Energy: 40000
+  - price_Coin: 819200
+    price_Energy: 80000
+  m_All_Price_Upgrades_4_Minutes:
+  - price_Coin: 5
+    price_Energy: 0
+  - price_Coin: 10
+    price_Energy: 0
+  - price_Coin: 18
+    price_Energy: 0
+  - price_Coin: 35
+    price_Energy: 0
+  - price_Coin: 70
+    price_Energy: 0
+  - price_Coin: 280
+    price_Energy: 0
+  - price_Coin: 560
+    price_Energy: 0
+  - price_Coin: 1200
+    price_Energy: 32
+  - price_Coin: 2400
+    price_Energy: 64
+  - price_Coin: 4800
+    price_Energy: 128
+  - price_Coin: 9600
+    price_Energy: 256
+  - price_Coin: 19200
+    price_Energy: 512
+  - price_Coin: 38400
+    price_Energy: 1024
+  - price_Coin: 76800
+    price_Energy: 2048
+  - price_Coin: 153600
+    price_Energy: 4096
+  - price_Coin: 307200
+    price_Energy: 8192
+  - price_Coin: 614400
+    price_Energy: 16384
+  - price_Coin: 1228800
+    price_Energy: 32768
+  - price_Coin: 2457600
+    price_Energy: 65536
+  - price_Coin: 4915200
+    price_Energy: 131072
+  m_Requirement_Upgrades: []

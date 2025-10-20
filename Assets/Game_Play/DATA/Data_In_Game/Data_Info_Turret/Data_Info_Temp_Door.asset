@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4323261473e51f4283da4d106ba4258, type: 3}
+  m_Name: Data_Info_Temp_Door
+  m_EditorClassIdentifier: 
+  type_Turret: 21
+  model_Names:
+  - name_EN: Temp Door
+    name_VI: "C\u1EEDa T\u1EA1m Th\u1EDDi"
+  description_EN: 
+  description_VI: 
+  model_Skills: []
+  m_All_Price_Upgrades:
+  - price_Coin: 0
+    price_Energy: 0
+  m_All_Price_Upgrades_4_Minutes: []
+  m_Requirement_Upgrades: []

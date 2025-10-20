@@ -1,0 +1,16 @@
+electric_gate.png
+size:312,320
+filter:Linear,Linear
+pma:true
+0
+bounds:2,216,152,100
+1
+bounds:2,114,152,100
+2
+bounds:156,216,152,100
+3
+bounds:2,12,152,100
+4
+bounds:156,114,152,100
+Electric gate
+bounds:156,2,120,110

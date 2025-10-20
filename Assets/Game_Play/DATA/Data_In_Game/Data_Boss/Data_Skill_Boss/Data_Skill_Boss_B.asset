@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b64ba204069c56640b1a59a388be0d87, type: 3}
+  m_Name: Data_Skill_Boss_B
+  m_EditorClassIdentifier: 
+  type_Skill_Boss: 1
+  name_Skills:
+    name_EN: Rage
+    name_VI: "Cu\u1ED3ng n\u1ED9"
+  name_Descriptions:
+    name_EN: Double attack speed for 5s
+    name_VI: "T\u0103ng g\u1EA5p \u0111\xF4i t\u1ED1c \u0111\xE1nh trong 5s"
+  time_Exist: 5
+  time_CD: 60
+  min_Level_Boss: 1
+  max_Number_Upgrade: 1
+  ratio: 0

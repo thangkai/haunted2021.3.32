@@ -1,0 +1,9 @@
+thanhgia.png
+size:340,200
+filter:Linear,Linear
+pma:true
+glow
+bounds:2,2,191,232
+rotate:90
+vien
+bounds:236,55,99,138

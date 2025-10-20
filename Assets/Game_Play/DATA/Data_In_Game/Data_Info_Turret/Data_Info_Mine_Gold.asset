@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4323261473e51f4283da4d106ba4258, type: 3}
+  m_Name: Data_Info_Mine_Gold
+  m_EditorClassIdentifier: 
+  type_Turret: 17
+  model_Names:
+  - name_EN: Diamond Mine
+    name_VI: "M\u1ECF kim c\u01B0\u01A1ng"
+  description_EN: Gain <color=green><b>128</b></color> gold/s
+  description_VI: "S\u1EA3n xu\u1EA5t <color=green><b>128</b></color> v\xE0ng/s"
+  model_Skills:
+  - coin: 128
+    HP: 0
+    energy: 0
+    damage: 0
+    range: 0
+    speed: 0
+  m_All_Price_Upgrades:
+  - price_Coin: 0
+    price_Energy: 2048
+  m_Requirement_Upgrades: []

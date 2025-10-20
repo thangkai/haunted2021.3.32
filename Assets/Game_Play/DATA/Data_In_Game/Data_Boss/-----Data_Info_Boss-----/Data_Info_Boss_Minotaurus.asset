@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64fb7f437fde544ea583baa989e5dbc, type: 3}
+  m_Name: Data_Info_Boss_Minotaurus
+  m_EditorClassIdentifier: 
+  name_Boss: Minotaurus
+  name_Boss_V2: Minotaurus
+  type_Boss: 104
+  speed_Attack: 1
+  XP_By_Levels: 140000001400000014000000
+  m_Pool_Skill: 00000000010000000200000003000000040000000500000006000000070000000c000000
+  m_Stat_Boss_By_Level:
+  - HP: 1500
+    damage: 10
+    Amor: 10
+  - HP: 1700
+    damage: 14
+    Amor: 30
+  - HP: 2300
+    damage: 18
+    Amor: 80
+  - HP: 3000
+    damage: 24
+    Amor: 140
+  - HP: 5600
+    damage: 48
+    Amor: 200
+  - HP: 10800
+    damage: 96
+    Amor: 270
+  m_Stat_Boss_Very_Hard_By_Level:
+  - HP: 1500
+    damage: 14
+    Amor: 10
+  - HP: 1700
+    damage: 18
+    Amor: 30
+  - HP: 2300
+    damage: 22
+    Amor: 80
+  - HP: 3000
+    damage: 28
+    Amor: 140
+  - HP: 6120
+    damage: 74
+    Amor: 200
+  - HP: 12980
+    damage: 140
+    Amor: 270
+  m_Amor: 5

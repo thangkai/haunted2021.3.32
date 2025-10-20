@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ceaf8eca8124345b029855decdcc13, type: 3}
+  m_Name: Data_Info_Character_Miner
+  m_EditorClassIdentifier: 
+  type_Character: 1
+  name_Character:
+    name_EN: Minner
+    name_VI: "Th\u1EE3 m\u1ECF"
+  descriptions:
+    name_EN: Nothing as well as a good night sleep.
+    name_VI: "Kh\xF4ng g\xEC t\u1ED1t h\u01A1n m\u1ED9t gi\u1EA5c ng\u1EE7 ngon."
+  price: 2000
+  type_Money: 1
+  price_Use_EN: 
+  price_Use_VI: 
+  price_Skin_2: 200
+  descriptions_Skill_1:
+    name_EN: Increases gold mine output by 50%.
+    name_VI: "T\u0103ng s\u1EA3n l\u01B0\u1EE3ng m\u1ECF v\xE0ng th\xEAm 50%."
+  descriptions_Skill_2:
+    name_EN: Reduces gold mine cost by 30%.
+    name_VI: "Gi\u1EA3m chi ph\xED m\u1ECF v\xE0ng \u0111i 30%."
+  price_Skill_2: 200
+  m_Is_Has_Skill_3: 0
+  price_Skill_3: 0
+  descriptions_Skill_3:
+    name_EN: 
+    name_VI: 
+  m_Hp: 32
+  m_Atk: 2
+  m_Rank_Character: 0
+  mTypeSkillIcons: 0300000004000000

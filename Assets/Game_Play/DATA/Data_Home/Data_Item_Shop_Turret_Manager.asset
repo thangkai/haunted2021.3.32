@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e16cc748888c34bbb7ec900649ddf9, type: 3}
+  m_Name: Data_Item_Shop_Turret_Manager
+  m_EditorClassIdentifier: 
+  m_All_Item_Shop_Turrets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: afb017e1c979d634584e44a9ef883ea7, type: 2}
+  - {fileID: 11400000, guid: 8134c3f712699ce44b06fdbe7a5d47ef, type: 2}
+  - {fileID: 11400000, guid: bdfdc879e3176dc4ca37a565d062cb08, type: 2}
+  - {fileID: 11400000, guid: 5752f52330b28d24cba70ffe52796136, type: 2}
+  - {fileID: 11400000, guid: 5187f8cac0da330469ca3487637c6db6, type: 2}
+  - {fileID: 11400000, guid: 0b0e8610509e32f48bcaea09ba91d6bd, type: 2}
+  - {fileID: 11400000, guid: 0221cb8b14d69ee43beeaa7062760ff9, type: 2}
+  - {fileID: 11400000, guid: 6fee6ecc9a97b4e41b1a31a21738ad06, type: 2}
+  - {fileID: 11400000, guid: d29bf718c410d6d489018454f3f4990a, type: 2}
+  - {fileID: 11400000, guid: 392defc1aa11e5c4aa342b3fd9bc4e05, type: 2}
+  - {fileID: 11400000, guid: 240fc04a2aa68c04883f79b4e72751f1, type: 2}

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ceaf8eca8124345b029855decdcc13, type: 3}
+  m_Name: Data_Info_Character_Student
+  m_EditorClassIdentifier: 
+  type_Character: 0
+  name_Character:
+    name_EN: The Girl
+    name_VI: "C\xF4 g\xE1i"
+  descriptions:
+    name_EN: So sleepy...
+    name_VI: "Bu\u1ED3n ng\u1EE7 qu\xE1..."
+  price: 0
+  type_Money: 1
+  price_Use_EN: 
+  price_Use_VI: 
+  price_Skin_2: 50
+  descriptions_Skill_1:
+    name_EN: Gain 1 extra gold per second.
+    name_VI: "Nh\u1EADn th\xEAm 1 v\xE0ng/s."
+  descriptions_Skill_2:
+    name_EN: 
+    name_VI: 
+  price_Skill_2: 0
+  m_Is_Has_Skill_3: 0
+  price_Skill_3: 0
+  descriptions_Skill_3:
+    name_EN: 
+    name_VI: 
+  m_Hp: 15
+  m_Atk: 2
+  m_Rank_Character: 0
+  mTypeSkillIcons: 00000000

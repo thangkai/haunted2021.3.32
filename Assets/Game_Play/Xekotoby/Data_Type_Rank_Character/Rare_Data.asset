@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2f84f9dc5e7b2d41a491d45533c2299, type: 3}
+  m_Name: Rare_Data
+  m_EditorClassIdentifier: 
+  m_Type_Rank_Character: 2
+  m_Info_Type_Rank:
+  - m_Health_Increase_With_Each_Level_Star: 10
+    m_Health_Increase_With_Each_Star: 0
+    m_Dame_Increase_With_Each_Level_Star: 1
+    m_Dame_Increase_With_Each_Star: 0
+    m_Gem_1_Update_Star: 20
+    m_Dollar_1_Each_level: 200
+    star: 0100000001000000010000000000000000000000
+  - m_Health_Increase_With_Each_Level_Star: 10
+    m_Health_Increase_With_Each_Star: 20
+    m_Dame_Increase_With_Each_Level_Star: 1
+    m_Dame_Increase_With_Each_Star: 2
+    m_Gem_1_Update_Star: 30
+    m_Dollar_1_Each_level: 500
+    star: 0100000001000000010000000100000000000000
+  - m_Health_Increase_With_Each_Level_Star: 15
+    m_Health_Increase_With_Each_Star: 20
+    m_Dame_Increase_With_Each_Level_Star: 2
+    m_Dame_Increase_With_Each_Star: 2
+    m_Gem_1_Update_Star: 0
+    m_Dollar_1_Each_level: 700
+    star: 0100000001000000010000000100000001000000

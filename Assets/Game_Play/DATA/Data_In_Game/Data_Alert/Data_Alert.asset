@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f672ecf95ef9fa49924d1f52c422923, type: 3}
+  m_Name: Data_Alert
+  m_EditorClassIdentifier: 
+  m_All_Des_Alert:
+  - name_EN: Monster are on the hunt
+    name_VI: "Qu\xE1i v\u1EADt b\u1EAFt \u0111\u1EA7u \u0111i s\u0103n"
+  - name_EN: Door Hp is lower than 50%
+    name_VI: "C\xE1nh c\u1EEDa c\xF2n d\u01B0\u1EDBi 50% m\xE1u"
+  - name_EN: Door Hp is lower than 30%
+    name_VI: "C\xE1nh c\u1EEDa c\xF2n d\u01B0\u1EDBi 30% m\xE1u"
+  - name_EN: use scream
+    name_VI: "s\u1EED d\u1EE5ng chi\xEAu la h\xE9t"
+  - name_EN: use rage
+    name_VI: "s\u1EED d\u1EE5ng chi\xEAu cu\u1ED3ng n\u1ED9"
+  - name_EN: use cruel
+    name_VI: "s\u1EED d\u1EE5ng chi\xEAu \u0111\u1ED3 s\xE1t"
+  - name_EN: use drinking blood
+    name_VI: "s\u1EED d\u1EE5ng chi\xEAu kh\xE1t m\xE1u"
+  - name_EN: use panic
+    name_VI: "s\u1EED d\u1EE5ng chi\xEAu ho\u1EA3ng s\u1EE3"
+  - name_EN: has escaped
+    name_VI: "\u0111\xE3 ch\u1EA1y tho\xE1t"
+  - name_EN: has upgraded to Lv.
+    name_VI: "\u0111\xE3 l\xEAn c\u1EA5p"
+  - name_EN: use charm
+    name_VI: "s\u1EED d\u1EE5ng chi\xEAu cu\u1ED1n h\xFAt"
+  - name_EN: use masochism
+    name_VI: "s\u1EED d\u1EE5ng chi\xEAu m\xE1u \u0111i\xEAn"
+  - name_EN: Summon Bat
+    name_VI: "Tri\u1EC7u H\u1ED3i D\u01A1i"

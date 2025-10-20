@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ceaf8eca8124345b029855decdcc13, type: 3}
+  m_Name: Data_Info_Character_Scientist
+  m_EditorClassIdentifier: 
+  type_Character: 5
+  name_Character:
+    name_EN: Scientist
+    name_VI: "Nh\xE0 khoa h\u1ECDc"
+  descriptions:
+    name_EN: Science is my life
+    name_VI: "Khoa h\u1ECDc l\xE0 cu\u1ED9c s\u1ED1ng c\u1EE7a t\xF4i."
+  price: 5000
+  type_Money: 1
+  price_Use_EN: 
+  price_Use_VI: 
+  price_Skin_2: 300
+  descriptions_Skill_1:
+    name_EN: Increases generator output by 50%.
+    name_VI: "T\u0103ng s\u1EA3n l\u01B0\u1EE3ng m\xE1y ph\xE1t \u0111i\u1EC7n th\xEAm
+      50%."
+  descriptions_Skill_2:
+    name_EN: Reduces generator cost by 50%.
+    name_VI: "Gi\u1EA3m chi ph\xED m\xE1y ph\xE1t \u0111i\u1EC7n \u0111i 50%."
+  price_Skill_2: 300
+  m_Is_Has_Skill_3: 0
+  price_Skill_3: 0
+  descriptions_Skill_3:
+    name_EN: 
+    name_VI: 
+  m_Hp: 28
+  m_Atk: 3
+  m_Rank_Character: 0
+  mTypeSkillIcons: 0100000002000000

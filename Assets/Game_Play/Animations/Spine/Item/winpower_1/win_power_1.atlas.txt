@@ -1,0 +1,8 @@
+win_power_1.png
+size:200,200
+filter:Linear,Linear
+pma:true
+Group 116
+bounds:2,2,111,107
+Group 137
+bounds:115,48,13,61

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6791526b01ccf3240b6511c6da9e5409, type: 3}
+  m_Name: Data_Tab_Buy_Turret_Manager
+  m_EditorClassIdentifier: 
+  m_All_Tab:
+  - {fileID: 11400000, guid: 572e8eaba72ffbd4381d7972ca1600bb, type: 2}
+  - {fileID: 11400000, guid: dd9ba73286145be46bb613afe1d30356, type: 2}
+  - {fileID: 11400000, guid: 8eea6b32874c47f4e8ba157595096181, type: 2}
+  - {fileID: 11400000, guid: b5d58d715656fd54ab95c61580e2754f, type: 2}
+  - {fileID: 11400000, guid: c6ec57ce16d4f9846810c600a572758a, type: 2}

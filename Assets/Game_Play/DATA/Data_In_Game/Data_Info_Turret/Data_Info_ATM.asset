@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4323261473e51f4283da4d106ba4258, type: 3}
+  m_Name: Data_Info_ATM
+  m_EditorClassIdentifier: 
+  type_Turret: 7
+  model_Names:
+  - name_EN: ATM
+    name_VI: ATM
+  description_EN: Get money when turret attack base on it tier
+  description_VI: "C\u1ED9ng ti\u1EC1n theo c\u1EA5p th\xE1p ph\xE1o khi th\xE1p
+    tr\u1EE5 t\u1EA5n c\xF4ng"
+  model_Skills: []
+  m_All_Price_Upgrades:
+  - price_Coin: 0
+    price_Energy: 128
+  m_Requirement_Upgrades: []

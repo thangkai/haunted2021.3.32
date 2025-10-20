@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e9d9de51baf074d90b5043719e29fc, type: 3}
+  m_Name: Data_Sprite_Energy_In_Game
+  m_EditorClassIdentifier: 
+  type_Turret: 3
+  m_All_Sprite_By_Level:
+  - {fileID: 21300000, guid: ab13f3f0b39c61c4b951ecbc4cc3cdc3, type: 3}
+  - {fileID: 21300000, guid: ab13f3f0b39c61c4b951ecbc4cc3cdc3, type: 3}
+  - {fileID: 21300000, guid: db05c6bb12c30fc4f936ec40620593b0, type: 3}
+  - {fileID: 21300000, guid: 0b6d4b490448e8145b6cba9e398b883d, type: 3}
+  - {fileID: 21300000, guid: f2241937cc671314d9aa21f635299503, type: 3}
+  - {fileID: 21300000, guid: a2eee972da191b147a43314da893772f, type: 3}
+  - {fileID: 21300000, guid: 0bed6bad64a57844e8a014b10d65b3e8, type: 3}
+  - {fileID: 21300000, guid: 5ab6587f9d7ac8845a3ed1dc462fe8d0, type: 3}
+  - {fileID: 21300000, guid: 0e7fbef6c17d5f54094fa2071b38d757, type: 3}
+  - {fileID: 21300000, guid: bddbfa314c4778a498bf54535b1b1a66, type: 3}

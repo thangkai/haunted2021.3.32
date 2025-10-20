@@ -1,0 +1,263 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4323261473e51f4283da4d106ba4258, type: 3}
+  m_Name: Data_Info_Energy_Tower
+  m_EditorClassIdentifier: 
+  type_Turret: 3
+  model_Names:
+  - name_EN: Wind energy 1
+    name_VI: "N\u0103ng l\u01B0\u1EE3ng gi\xF3 1"
+  - name_EN: Wind energy 2
+    name_VI: "N\u0103ng l\u01B0\u1EE3ng gi\xF3 2"
+  - name_EN: Solar Energy 1
+    name_VI: "N\u0103ng l\u01B0\u1EE3ng m\u1EB7t tr\u1EDDi 1"
+  - name_EN: Solar Energy 2
+    name_VI: "N\u0103ng l\u01B0\u1EE3ng m\u1EB7t tr\u1EDDi 2"
+  - name_EN: Coal Energy 1
+    name_VI: "Nhi\u1EC7t \u0111i\u1EC7n 1"
+  - name_EN: Coal Energy 2
+    name_VI: "Nhi\u1EC7t \u0111i\u1EC7n 2"
+  - name_EN: Hydroelectric 1
+    name_VI: "Th\u1EE7y \u0111i\u1EC7n 1"
+  - name_EN: Hydroelectric 2
+    name_VI: "Th\u1EE7y \u0111i\u1EC7n 2"
+  - name_EN: Nuclear power 1
+    name_VI: "\u0110i\u1EC7n h\u1EA1t nh\xE2n 1"
+  - name_EN: Nuclear power 2
+    name_VI: "\u0110i\u1EC7n h\u1EA1t nh\xE2n 2"
+  - name_EN: Nuclear power 3
+    name_VI: "\u0110i\u1EC7n h\u1EA1t nh\xE2n 3"
+  - name_EN: Nuclear power 4
+    name_VI: "\u0110i\u1EC7n h\u1EA1t nh\xE2n 4"
+  - name_EN: Nuclear power 5
+    name_VI: "\u0110i\u1EC7n h\u1EA1t nh\xE2n 5"
+  - name_EN: Nuclear power 6
+    name_VI: "\u0110i\u1EC7n h\u1EA1t nh\xE2n 6"
+  - name_EN: Nuclear power 7
+    name_VI: "\u0110i\u1EC7n h\u1EA1t nh\xE2n 7"
+  - name_EN: Nuclear power 8
+    name_VI: "\u0110i\u1EC7n h\u1EA1t nh\xE2n 8"
+  - name_EN: Nuclear power 9
+    name_VI: "\u0110i\u1EC7n h\u1EA1t nh\xE2n 9"
+  - name_EN: Nuclear power 10
+    name_VI: "\u0110i\u1EC7n h\u1EA1t nh\xE2n 10"
+  - name_EN: Nuclear power 11
+    name_VI: "\u0110i\u1EC7n h\u1EA1t nh\xE2n 11"
+  - name_EN: Nuclear power 12
+    name_VI: "\u0110i\u1EC7n h\u1EA1t nh\xE2n 12"
+  description_EN: Energy tower is the currency, used to upgrade
+  description_VI: "Th\xE1p t\u1EA1o n\u0103ng l\u01B0\u1EE3ng l\xE0 \u0111\u01A1n
+    v\u1ECB ti\u1EC1n t\u1EC7, s\u1EED d\u1EE5ng \u0111\u1EC3 n\xE2ng c\u1EA5p"
+  model_Skills:
+  - coin: 0
+    HP: 0
+    energy: 1
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 2
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 4
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 6
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 8
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 10
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 15
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 20
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 25
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 30
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 35
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 40
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 45
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 50
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 55
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 60
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 70
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 80
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 90
+    damage: 0
+    range: 0
+    speed: 0
+  - coin: 0
+    HP: 0
+    energy: 100
+    damage: 0
+    range: 0
+    speed: 0
+  m_All_Price_Upgrades:
+  - price_Coin: 200
+    price_Energy: 0
+  - price_Coin: 400
+    price_Energy: 0
+  - price_Coin: 800
+    price_Energy: 0
+  - price_Coin: 1600
+    price_Energy: 0
+  - price_Coin: 3200
+    price_Energy: 0
+  - price_Coin: 6400
+    price_Energy: 0
+  - price_Coin: 12800
+    price_Energy: 0
+  - price_Coin: 25600
+    price_Energy: 0
+  - price_Coin: 51200
+    price_Energy: 0
+  - price_Coin: 102400
+    price_Energy: 0
+  - price_Coin: 204800
+    price_Energy: 0
+  - price_Coin: 409600
+    price_Energy: 0
+  - price_Coin: 819200
+    price_Energy: 0
+  - price_Coin: 1638400
+    price_Energy: 0
+  - price_Coin: 3726800
+    price_Energy: 0
+  - price_Coin: 6553600
+    price_Energy: 0
+  - price_Coin: 13107200
+    price_Energy: 0
+  - price_Coin: 26214400
+    price_Energy: 0
+  - price_Coin: 52428800
+    price_Energy: 0
+  - price_Coin: 104857600
+    price_Energy: 0
+  m_All_Price_Upgrades_4_Minutes:
+  - price_Coin: 100
+    price_Energy: 0
+  - price_Coin: 200
+    price_Energy: 0
+  - price_Coin: 400
+    price_Energy: 0
+  - price_Coin: 800
+    price_Energy: 0
+  - price_Coin: 1600
+    price_Energy: 0
+  - price_Coin: 3200
+    price_Energy: 0
+  - price_Coin: 6400
+    price_Energy: 0
+  - price_Coin: 12800
+    price_Energy: 0
+  - price_Coin: 25600
+    price_Energy: 0
+  - price_Coin: 51200
+    price_Energy: 0
+  - price_Coin: 102400
+    price_Energy: 0
+  - price_Coin: 204800
+    price_Energy: 0
+  - price_Coin: 409600
+    price_Energy: 0
+  - price_Coin: 819200
+    price_Energy: 0
+  - price_Coin: 1638400
+    price_Energy: 0
+  - price_Coin: 3276800
+    price_Energy: 0
+  - price_Coin: 6553600
+    price_Energy: 0
+  - price_Coin: 13107200
+    price_Energy: 0
+  - price_Coin: 26214400
+    price_Energy: 0
+  - price_Coin: 52428800
+    price_Energy: 0
+  m_Requirement_Upgrades: []

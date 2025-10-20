@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4dde591d6447ed42a9394a6b5c2ab3d, type: 3}
+  m_Name: Data_Player_1
+  m_EditorClassIdentifier: 
+  type_Player: 0
+  m_Live_Data_Attacking: {fileID: 11400000, guid: f12cd81d8e86f4d40901dbd1619356d9, type: 2}
+  m_Live_Data_Attacking_Door: {fileID: 11400000, guid: 4ea784648849c8b42b3377603556f967, type: 2}
+  m_Live_Data_Die: {fileID: 11400000, guid: eb676bb09da39994e97b3d74126ff1c1, type: 2}
+  m_Live_Data_Enter_Room: {fileID: 11400000, guid: 40d059130e9b8944baae88831d31e11c, type: 2}
+  live_Data_Coin_Change: {fileID: 11400000, guid: e540e96271d984b49bfed3f2675c5f6d, type: 2}
+  live_Data_Energy_Change: {fileID: 11400000, guid: f8ee9d9a9e235ac4cadbdb7942cb0078, type: 2}
+  m_Live_Data_Repair_Station_Change: {fileID: 11400000, guid: e0dff0f5d0369ae4a87e771d6650ab35, type: 2}
+  m_Live_Data_Immortal_Change: {fileID: 11400000, guid: 9dbc0bfeca50e864a893a1a24d258c4b, type: 2}
+  m_Live_Data_Compass_Change: {fileID: 11400000, guid: b3792b11fc66bc840a0efde1e40d38a5, type: 2}
+  m_Live_Data_Bibble_Change: {fileID: 11400000, guid: a2188b8b6f002f74ab3cfbb04075b119, type: 2}
+  m_Live_Data_ATM_Change: {fileID: 11400000, guid: 2a66a2b7a55c2384ea8093321f25a138, type: 2}
+  m_Live_Data_Electric_Change: {fileID: 11400000, guid: 551d0ebd90920314e9ea739352d64283, type: 2}
+  m_Live_Data_Garlic_Change: {fileID: 11400000, guid: 64b2fcd13fbb12249ad56122305cb4ed, type: 2}
+  m_Live_Data_Active_Skill_1: {fileID: 11400000, guid: 8439700594ffaf142b3a1fad907d107e, type: 2}
+  m_Live_Data_Active_Skill_2: {fileID: 11400000, guid: f8034f58a08b7984f9b8202106a57c80, type: 2}
+  m_Live_Data_Air_Conditioner_Change: {fileID: 11400000, guid: 689f562ff1c6c884eb4a98942ebbfe0e, type: 2}
+  m_Live_Data_Sum_Turret_Change: {fileID: 11400000, guid: fae52025e31586a4e82ff06bba8ec2bb, type: 2}
+  m_Live_Data_Turret_Bed_Change: {fileID: 0}
+  m_Live_Data_Item_Support_Door_Protect_Change: {fileID: 11400000, guid: ac4c4adfe1dffe14e905aec4c7067312, type: 2}
+  m_Live_Data_Item_Support_Stun_Change: {fileID: 11400000, guid: 31a6981d95ac5694c9fe97b0e8b879bd, type: 2}
+  m_Live_Data_Item_Support_Speed_X2_Change: {fileID: 11400000, guid: 796b9c3907438c6489ff746767a6c90e, type: 2}
+  m_Live_Data_Item_Support_Meteorite_Change: {fileID: 11400000, guid: ae38e3f4db1725e4d81b56d973bbc3ba, type: 2}
+  m_Live_Data_Item_Support_Money_X2_Change: {fileID: 11400000, guid: dd1eda629f8f4e042a257b4d9bc39611, type: 2}
+  m_Live_Data_Check_Can_Active_Meteorite: {fileID: 11400000, guid: 2bdcd5af859d98f479b57d27a8c8df7f, type: 2}
+  m_Live_Data_Turret_Penetation_Change: {fileID: 11400000, guid: ca6c03d2ac36ffa41b6b0f9c112e0345, type: 2}
+  m_Live_Data_Heal_Hp_Door_Change: {fileID: 11400000, guid: d8feb35a63659f5499625c5605acd697, type: 2}
+  m_Live_Data_Room_Attack: {fileID: 0}
+  m_Live_Data_Item_Safeguard_Door_Shield_Change: {fileID: 0}
+  sum_Coin: 6
+  sum_Energy: 0
+  sum_Turret_Builded: 0
+  sum_Energy_Tower_Builded: 0
+  sum_Repair_Station_Builded: 0
+  sum_Garlic_Builded: 0
+  sum_Compass_Builded: 0
+  sum_Bibble_Builded: 0
+  sum_ATM_Builded: 0
+  sum_Electric_Builded: 0
+  sum_Air_Conditioner_Builded: 0
+  sum_Holy_Water_Builded: 0
+  sum_Mirror_Builded: 0
+  immortal: 0
+  sum_Turret_Bed_Builded: 0
+  sum_Turret_Penetation_Builded: 0
+  m_All_Turret_Player_Test:
+  - id: -382556
+    type_Turret: 1
+    level: 0
+  - id: -384686
+    type_Turret: 0
+    level: 0
+  m_Is_AI: 0
+  m_Is_Using_Skin_2: 0
+  m_Type_Character: 0
+  m_Phase_Curr: 0
+  m_Random_Target: 75.22153
+  m_Target_Build_Or_Update: 2
+  m_Price_Buy_Or_Upgrade:
+    price_Coin: 10
+    price_Energy: 0
+  m_Status_Action: 0
+  m_Max_Turret_Can_Build: 3
+  m_All_Condition:
+  - type_Turret: 2
+    min_Number_Builded: 5
+    min_Level: 0
+  - type_Turret: 0
+    min_Number_Builded: -1
+    min_Level: 5
+  m_All_Ratio_Turret:
+  - type_Turret: 0
+    ratio: 50
+    turret_Receive_Ratio: 1000
+  - type_Turret: 1
+    ratio: 10
+    turret_Receive_Ratio: 1000
+  - type_Turret: 2
+    ratio: 40
+    turret_Receive_Ratio: 1000

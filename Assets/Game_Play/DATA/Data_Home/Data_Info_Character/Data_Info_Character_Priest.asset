@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ceaf8eca8124345b029855decdcc13, type: 3}
+  m_Name: Data_Info_Character_Priest
+  m_EditorClassIdentifier: 
+  type_Character: 8
+  name_Character:
+    name_EN: Priest
+    name_VI: "M\u1EE5c s\u01B0"
+  descriptions:
+    name_EN: God will protect us
+    name_VI: "Ch\xFAa s\u1EBD b\u1EA3o v\u1EC7 ch\xFAng ta."
+  price: 5000
+  type_Money: 1
+  price_Use_EN: 
+  price_Use_VI: 
+  price_Skin_2: 500
+  descriptions_Skill_1:
+    name_EN: 'Always possesses 1 vial of holy water when sleeping (cannot be sold).
+      - Holy Water: Increases damage to dark creatures by 10% when they are below
+      25% health.'
+    name_VI: " Lu\xF4n s\u1EDF h\u1EEFu 1 l\u1ECD n\u01B0\u1EDBc th\xE1nh khi ng\u1EE7
+      (Kh\xF4ng th\u1EC3 b\xE1n) - N\u01B0\u1EDBc th\xE1nh: t\u0103ng th\xEAm 10%
+      s\xE1t th\u01B0\u01A1ng l\xEAn c\xE1c sinh v\u1EADt h\u1EAFc \xE1m khi ch\xFAng
+      d\u01B0\u1EDBi 25% m\xE1u."
+  descriptions_Skill_2:
+    name_EN: Enhances the effect of Holy Water by an additional 5%.
+    name_VI: "T\u0103ng hi\u1EC7u \u1EE9ng c\u1EE7a n\u01B0\u1EDBc th\xE1nh th\xEAm
+      5%."
+  price_Skill_2: 600
+  m_Is_Has_Skill_3: 0
+  price_Skill_3: 0
+  descriptions_Skill_3:
+    name_EN: 
+    name_VI: 
+  m_Hp: 80
+  m_Atk: 25
+  m_Rank_Character: 0
+  mTypeSkillIcons: 0500000006000000
