@@ -240,10 +240,7 @@ public class Bed_Controller : Base_Turret_Can_Upgrade
                 m_Live_Data_Active_Skill_2.OnValueChanged.AddListener(On_Active_Skill_2);
             }
 
-            if (m_Live_Data_Index_Claimed_Mission_Tutorial && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 && !DataSaved.Get_Is_Complete_Tutorial())
-            {
-                m_Live_Data_Index_Claimed_Mission_Tutorial.OnValueChanged.AddListener(Listener_Live_Data_Index_Claimed_Mission_Tutorial);
-            }
+        
 
             m_Live_Data_Using_Item_SP_Money_X2 = data_Player.Get_Live_Data_Item_Support_Money_X2();
             if (m_Live_Data_Using_Item_SP_Money_X2)
@@ -332,10 +329,7 @@ public class Bed_Controller : Base_Turret_Can_Upgrade
             m_Live_Data_Using_Item_SP_Money_X2.OnValueChanged.RemoveListener(Listener_Live_Data_Using_Item_SP_Money_X2);
         }
 
-        if (m_Live_Data_Index_Claimed_Mission_Tutorial)
-        {
-            m_Live_Data_Index_Claimed_Mission_Tutorial.OnValueChanged.RemoveListener(Listener_Live_Data_Index_Claimed_Mission_Tutorial);
-        }
+ 
 
         m_Tween_Start_Count_Down_Spawn_Golem.Do_Kill();
         m_Tween_Loop_Check_Spawn_Energy_From_Sami.Do_Kill();
@@ -355,23 +349,7 @@ public class Bed_Controller : Base_Turret_Can_Upgrade
         }
     }
 
-    private void Listener_Live_Data_Index_Claimed_Mission_Tutorial()
-    {
-        if (!data_Player.Get_Is_AI())
-        {
-            foreach (Transform item in m_Pos_Tut)
-            {
-                Destroy(item.gameObject);
-            }
 
-            // Show Tut 2: Upgrade Bed
-            if (Check_Show_Tut_2())
-            {
-                var obj_Tut = Instantiate(Data_In_Game.Instance.Get_Data_Prefaps().Get_Pref_Hand_Tut(), m_Pos_Tut);
-                obj_Tut.transform.localPosition = Vector3.zero;
-            }
-        }
-    }
 
     private void Remove_All_Effect_Coin()
     {
@@ -381,10 +359,6 @@ public class Bed_Controller : Base_Turret_Can_Upgrade
         }
     }
 
-    private bool Check_Show_Tut_2()
-    {
-        return !DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 1 && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story;
-    }
 
     public Vector3 Get_Pos_Character()
     {
@@ -403,22 +377,9 @@ public class Bed_Controller : Base_Turret_Can_Upgrade
             Check_Data_Player();
             if (data_Player)
             {
-                if (!data_Player.Get_Is_AI() && Check_Show_Tut_2())
-                {
-                    m_Obj_Upgrade.Set_Active(true);
-                }
-                else
-                {
-                    m_Obj_Upgrade.Set_Active(Check_Can_Upgrade());
-                }
+                m_Obj_Upgrade.Set_Active(Check_Can_Upgrade());
 
-                if (!data_Player.Get_Is_AI())
-                {
-                    if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Instance && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 6 && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story)
-                    {
-                        DataSaved.Instance.Notify_Data_Can_Build_Crucific_Tutorial_Change(data_Player.Get_Sum_Energy() >= 64);
-                    }
-                }
+             
             }
         }
     }
@@ -475,22 +436,10 @@ public class Bed_Controller : Base_Turret_Can_Upgrade
         base.InCrease_Level();
 
         Check_Data_Player();
-        if (Game_Controller.Instance && data_Player && !data_Player.Get_Is_AI()
-            && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story
-            && DataSaved.Get_Current_Loading_Level() == 0 && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 1)
-        {
-            Game_Controller.Instance.Set_Complete_Mission_Tutorial(Type_Mission_Tut.Mission_2, type_Player);
-        }
-
+       
       
 
-        if (data_Player && !data_Player.Get_Is_AI() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story_Level)
-        {
-
-            TypeBedMission();
-        }
-
-
+   
 
     }
 

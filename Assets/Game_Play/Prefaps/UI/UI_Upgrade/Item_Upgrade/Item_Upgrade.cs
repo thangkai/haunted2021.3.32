@@ -474,13 +474,7 @@ public class Item_Upgrade : MonoBehaviour
             label_Price_Coin = m_Price_Coin;
             label_Price_Energy = m_Price_Energy;
 
-            if (Check_Condition_Tut())
-            {
-                label_Price_Coin = 0;
-                label_Price_Energy = 0;
-                m_Obj_Anim_Tut_Hand.Set_Active(true);
-            }
-            else if (DataSaved.Get_Unlock_Skill_Tree_Gem_Player(Type_Skill_Tree_Gem.Skill_6_Upgrade_Free) &&
+          if (DataSaved.Get_Unlock_Skill_Tree_Gem_Player(Type_Skill_Tree_Gem.Skill_6_Upgrade_Free) &&
                      DataSaved.Get_Count_Other_Player_Die() > 0)
             {
                 label_Price_Coin = 0;
@@ -565,19 +559,6 @@ public class Item_Upgrade : MonoBehaviour
         }
     }
 
-    public virtual bool Check_Condition_Tut()
-    {
-        return !DataSaved.Get_Is_Complete_Tutorial() &&
-               DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story &&
-               DataSaved.Get_Current_Loading_Level() == 0 &&
-               ((m_Model_Info_Turret.type_Turret == Type_Turret.Bed &&
-                 DataSaved.Get_Index_Claimed_Mission_Tutorial() == 1) ||
-                (m_Model_Info_Turret.type_Turret == Type_Turret.Door &&
-                 DataSaved.Get_Index_Claimed_Mission_Tutorial() == 2) ||
-                (m_Model_Info_Turret.type_Turret == Type_Turret.Turret &&
-                 DataSaved.Get_Index_Claimed_Mission_Tutorial() == 4)
-               );
-    }
 
     List<string> m_Data_Des_Stat = new List<string>();
 
@@ -649,7 +630,7 @@ public class Item_Upgrade : MonoBehaviour
                 m_Model_Info_Turret.requirement_Upgrades);
         }
 
-        if (is_Pass_Requirement && Check_Condition_Tut())
+        if (is_Pass_Requirement )
         {
             return true;
         }

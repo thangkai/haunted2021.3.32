@@ -52,7 +52,7 @@ public class Level_Controller : Singleton<Level_Controller>
                 DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story &&
                 !DataSaved.Get_Is_Complete_Tutorial())
             {
-                DataSaved.Set_Index_Claimed_Mission_Tutorial(0);
+              
                 for (int i = m_All_Room_Empty.Count - 1; i >= 0; i--)
                 {
                     if (m_All_Room_Empty[i].name == "Room_4")

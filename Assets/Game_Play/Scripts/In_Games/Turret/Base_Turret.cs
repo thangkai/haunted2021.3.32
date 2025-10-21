@@ -364,7 +364,7 @@ public class Base_Turret : MonoBehaviour
         }
 
         // Check mission Tut
-        Check_Complete_Mission_Build(type_Turret);
+      
 
         // Remove Ground in Room
         Remove_Ground_In_Room();
@@ -415,33 +415,7 @@ public class Base_Turret : MonoBehaviour
     }
     //turtorial
 
-    private void Check_Complete_Mission_Build(Type_Turret type_Turret)
-    {
-        if (Game_Controller.Instance && data_Player && !data_Player.Get_Is_AI()
-            && DataSaved.Get_Current_Loading_Level() == 0 && !DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story)
-        {
-            switch (type_Turret)
-            {
-                case Type_Turret.Turret:
-                    if (DataSaved.Get_Index_Claimed_Mission_Tutorial() == 3)
-                    {
-                        Game_Controller.Instance.Set_Complete_Mission_Tutorial(Type_Mission_Tut.Mission_4, type_Player);
-                    }
-                    break;
-
-                case Type_Turret.Energy_Tower:
-                    if (DataSaved.Get_Index_Claimed_Mission_Tutorial() == 5)
-                        Game_Controller.Instance.Set_Complete_Mission_Tutorial(Type_Mission_Tut.Mission_6, type_Player);
-                    break;
-
-                case Type_Turret.Cross:
-                    if (DataSaved.Get_Index_Claimed_Mission_Tutorial() == 6)
-                        Game_Controller.Instance.Set_Complete_Mission_Tutorial(Type_Mission_Tut.Mission_7, type_Player);
-                    break;
-            }
-        }
-    }
-
+   
     public virtual void Remove_Ground_In_Room()
     {
 

@@ -436,7 +436,7 @@ public class Character_Controller : Base_Update
 
 
         // Check tut 1
-        Check_Tut_Mission();
+      
 
 
 
@@ -447,11 +447,7 @@ public class Character_Controller : Base_Update
         Destroy(gameObject);
     }
 
-    private void Check_Tut_Mission()
-    {
-        Game_Controller.Instance.Set_Complete_Mission_Tutorial(Type_Mission_Tut.Mission_1, Get_Type_Player());
-        Level_Controller.Instance.Hide_Tut_Find_Empty_Room();
-    }
+
 
     public void Start_Move_By_Joystick()
     {

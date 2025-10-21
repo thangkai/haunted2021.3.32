@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6901623003419322959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6901623003419322952}
+  - component: {fileID: 6901623003419322953}
+  m_Layer: 0
+  m_Name: DATA_IN_GAME
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6901623003419322952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901623003419322959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6901623003419322953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901623003419322959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04829fd26bdd6743b4b6975e9785580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Data_Type_Rank_Character: {fileID: 11400000, guid: c8993bdd1dd7a42449c4e6235e195de4, type: 2}
+  m_Data_Skeleton_Asset: {fileID: 11400000, guid: 5446303bda7c227488da8d6444dbc27e, type: 2}
+  m_Data_Info_Character_Manager: {fileID: 11400000, guid: e023e4bf9e2046c43a3d73c6b4173d8e, type: 2}
+  m_Pref_Point_Test_Line_Up: {fileID: 2307811107186575267, guid: 2a357b80c3776824db8bf2c6b034c62c, type: 3}
+  m_Data_Prefap_In_Game: {fileID: 11400000, guid: c7aa80a025e236842a9626e134084254, type: 2}
+  m_Data_Info_Turret_Manager: {fileID: 11400000, guid: 46bfcff218306fd4484b7cae79e9f676, type: 2}
+  m_Data_Tab_Buy_Turret_Manager: {fileID: 11400000, guid: d511ec4b2826f1143903a931a2fba64e, type: 2}
+  m_Data_Sprite_In_Game: {fileID: 11400000, guid: 932e6d311fd91424dad890a4a249e453, type: 2}
+  m_Data_Sprite_Character: {fileID: 11400000, guid: 64b18536e0aece54d9516565630cfa95, type: 2}
+  m_Data_AI_Character_Manager: {fileID: 11400000, guid: 86cf226c8bbe60442bbab32d023bc9a2, type: 2}
+  m_Data_Alert: {fileID: 11400000, guid: c8af6bf1a5d1c4245a8074d5207a13bb, type: 2}
+  m_Icon_Skill_2:
+  - {fileID: 21300000, guid: 0cecea71e3577b940a0a0c6a5b4d82d4, type: 3}
+  - {fileID: 21300000, guid: fa2e32dcf94686d45a9eb4d4ee4e47a1, type: 3}
+  - {fileID: 21300000, guid: 129589c9194854e41913a81296ee4f27, type: 3}
+  m_Color_Model_Boss:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 0.38431373, b: 0.38431373, a: 1}
+  m_Data_Info_Boss_Manager: {fileID: 11400000, guid: 809a6850bc6399d448ab0629c53dcae0, type: 2}
+  m_Data_Skill_Boss_Manager: {fileID: 11400000, guid: 1760efe2cdac17a48931bc9c40ef8bd7, type: 2}
+  m_Data_Map: {fileID: 11400000, guid: a5de13836f859334f98a940b3a336522, type: 2}
+  m_Data_Anim_Spine: {fileID: 11400000, guid: df2aacd91019b604c9c15b1c815eafb3, type: 2}
+  m_Data_Effect: {fileID: 11400000, guid: d302e7009901be84dac70f1634f747c3, type: 2}
+  m_Live_Data_Loop_Time: {fileID: 11400000, guid: c825ef37af8a45248b639690cfca8243, type: 2}
+  m_All_Map_Challenges:
+  - {fileID: 6852165954294776832, guid: d1a9a6a13959ef74998967e53ed9c182, type: 3}
+  - {fileID: 6852165954294776832, guid: d1a9a6a13959ef74998967e53ed9c182, type: 3}
+  - {fileID: 6852165954294776832, guid: d1a9a6a13959ef74998967e53ed9c182, type: 3}

@@ -454,7 +454,7 @@ public class Game_Controller : Singleton<Game_Controller>
             Level_Controller.Instance.Start_Spawn_Character();
         }
 
-        Canvas_In_Game.Instance.Get_UI_GamePlay().Set_Active_Joystick(false);
+   //     Canvas_In_Game.Instance.Get_UI_GamePlay().Set_Active_Joystick(false);
 
         int total_Player = m_All_Character_Of_Players.Count;
        
@@ -1151,36 +1151,7 @@ public class Game_Controller : Singleton<Game_Controller>
 
     #endregion
 
-    #region =========== Tutorials ================
-
-    public void Set_Complete_Mission_Tutorial(Type_Mission_Tut type_Mission, Type_Player type_Player)
-    {
-        //if (DataSaved.Get_Type_Mode_Play() == Type_Mode_Play.Player 
-        //    && DataSaved.Get_Current_Loading_Level() == 0 
-        //    && type_Player == Get_Player_Curr()
-        //    && !DataSaved.Get_Complete_Mission_Tutorial(type_Mission)
-        //    )
-        //{
-        //    DataSaved.Set_Complete_Mission_Tutorial(type_Mission, true);
-
-        //    if (DataSaved.Get_Index_Claimed_Mission_Tutorial() == (int)type_Mission)
-        //    {
-        //        DataSaved.Increase_Index_Claimed_Mission_Tutorial();
-        //        Canvas_In_Game.Instance.Get_UI_Reward_Mission_Complete().Open_UI(type_Mission);
-        //    }
-        //} 
-        //else 
-        if (DataSaved.Get_Type_Mode_Play() == Type_Mode_Play.Player
-            && DataSaved.Get_Current_Loading_Level() == 0
-            && type_Player == Get_Player_Curr())
-        {
-            DataSaved.Increase_Index_Claimed_Mission_Tutorial();
-            Canvas_In_Game.Instance.Check_Show_Tutorials();
-        }
-    }
-
-    #endregion
-
+  
     #region ============== Start Player Win - Time Out =================
 
     public bool Get_Is_Time_Out()

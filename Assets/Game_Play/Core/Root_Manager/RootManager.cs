@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 using System;
-using DG.Tweening;
+
 
 
 
@@ -40,22 +40,15 @@ public class RootManager : Singleton<RootManager>
     public int m_Max_Energy;
 
   
-    public Type_Level_Play m_Type_Level_Play_Test;
+
 
    
     public bool m_Is_Test_AB_Time_Vampire_Attack;
 
-   
-    public bool isTestAD;
+
 
    
-    public bool isTestInApp;
 
-   
-    public bool isTestNotifile;
-
-    
-    public bool IsRate;
 
    
     public bool is_Full_Coin;

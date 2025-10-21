@@ -5,7 +5,6 @@ using TMPro;
 using DG.Tweening;
 using System;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 using Spine.Unity;
 
@@ -15,8 +14,8 @@ public class Base_Boss : MonoBehaviour
     [SerializeField] private bool m_Is_Boss_ADC;
     [SerializeField] private float m_Distance_ADC_Start_Attack = 5f;
     [SerializeField] public Model_Anim_Boss_Character m_model_Anim_Boss_Character;
-   [SerializeField] Bool_Global_Variable m_Live_Data_Loop_Time;
-   [SerializeField] Bool_Global_Variable m_Live_Data_Item_SP_Stun;
+    [SerializeField] Bool_Global_Variable m_Live_Data_Loop_Time;
+    [SerializeField] Bool_Global_Variable m_Live_Data_Item_SP_Stun;
 
     [SerializeField] Bool_Global_Variable m_Live_Data_Skill_2_Eilif;
 
@@ -24,7 +23,7 @@ public class Base_Boss : MonoBehaviour
     [SerializeField] Bool_Global_Variable m_Live_Data_Skill_2_Safeguard;
     [SerializeField] Bool_Global_Variable m_Live_TakeDame_Penetation;
 
-   [SerializeField] bool m_Is_Tutorials;
+    [SerializeField] bool m_Is_Tutorials;
     bool m_Is_Stun_By_Item_SP_Stun;
     bool m_Is_Stun_By_Skill_2_Eilif;
 
@@ -43,17 +42,17 @@ public class Base_Boss : MonoBehaviour
     public int level_Curr;
     public int curr_Exp;
     [SerializeField] Boss_Animation m_Boss_Animation;
-   [SerializeField] internal TextMeshProUGUI m_Txt_Level;
-   [SerializeField] internal Health_Bar_UI m_Health_Bar_UI;
+    [SerializeField] internal TextMeshProUGUI m_Txt_Level;
+    [SerializeField] internal Health_Bar_UI m_Health_Bar_UI;
     [SerializeField] Transform m_Pos_Health_Bar;
     [SerializeField] Transform m_Pos_Txt_Level;
-   [SerializeField] internal Exp_Bar_UI m_Exp_Bar_UI;
+    [SerializeField] internal Exp_Bar_UI m_Exp_Bar_UI;
     [SerializeField] internal Boss_Movement m_Boss_Movement;
     [SerializeField] Collider_Boss_Detect_Turret m_Collider_Detect_Target;
     [SerializeField] Transform m_Pos_Reward_Anim_When_Die;
     [SerializeField] Skill_Boss_Controller m_Skill_Boss_Controller;
 
- 
+
     [SerializeField]
     Transform m_Pos_Effect_Skill_A;
 
@@ -84,7 +83,7 @@ public class Base_Boss : MonoBehaviour
 
     //Type_Skill_Boss m_Skill_Test = Type_Skill_Boss.Skill_K;
 
-   
+
     [SerializeField]
     internal bool is_Attacking_Player;
 
@@ -99,7 +98,7 @@ public class Base_Boss : MonoBehaviour
     float m_Time_Attack_Door;
 
     //public Data_Boss data_Boss;
-   [SerializeField] internal Bool_Global_Variable m_Live_Data_Boss_Die;
+    [SerializeField] internal Bool_Global_Variable m_Live_Data_Boss_Die;
     public Model_Info_Boss model_Info_Boss_Curr;
     [SerializeField] List<Type_Skill_Boss> m_Pool_Random_Skill = new List<Type_Skill_Boss>();
     [SerializeField] internal bool m_Is_Attacking_Player;
@@ -121,11 +120,9 @@ public class Base_Boss : MonoBehaviour
     [SerializeField] private Transform m_Target_PosADC;
 
 
- 
-    [SerializeField]
-    public List<Transform> m_Pos_Summon_Boss;
 
-    [SerializeField] private bool is_Summon_Boss;
+
+
 
     private void Start()
     {
@@ -133,24 +130,26 @@ public class Base_Boss : MonoBehaviour
         m_Count_Room_Has_Player = 0;
         m_Is_Tutorials = Check_Condition_Tut();
         Init_Turn_Force_Has_Player(Level_Controller.Instance.Get_Count_All_Room_Has_Player());
-
+        Debug.LogError("ConfigMissionUpgrade");
         //m_Mat_Boss = m_Mesh_Anim.material;
 
         //m_Mat_Boss.Update_Color_Materal(m_Mesh_Anim, Color.white);
 
         Init_Data(level_Curr < m_Target_Level);
-
+        Debug.LogError("ConfigMissionUpgrade 16");
         if (level_Curr < m_Target_Level)
         {
             m_Is_Increasing_Level_Auto = true;
             Increase_Level_Auto();
         }
-
+        Debug.LogError("ConfigMissionUpgrade 1");
         m_Effect_Skill_I.PLay_Effect(false);
 
         SoundController.Play_Sounds(Type_Sound.Boss_Appear);
+        Debug.LogError("ConfigMissionUpgrade 2 ");
         m_Boss_Movement.Set_Active_Ammor_Follow(false);
 
+        Debug.LogError("ConfigMissionUpgrade 3");
         m_Live_Data_Boss_Die = Boss_Manager.Instance.Get_Data_Boss(m_Type_Boss).Get_Live_Data_Boss_Die();
 
         if (RootManager.Check_Is_Type_Level_Hard_4_Minutes())
@@ -161,39 +160,40 @@ public class Base_Boss : MonoBehaviour
         {
             m_Time_Attack_Door = 20;
         }
+        Debug.LogError("ConfigMissionUpgrade 4 ");
 
         m_Live_Data_Loop_Time = Data_In_Game.Instance.Get_Live_Data_Loop_Time();
         if (m_Live_Data_Loop_Time)
         {
             m_Live_Data_Loop_Time.OnValueChanged.AddListener(Loop_Time);
         }
-
-        m_Live_Data_Item_SP_Stun = Data_In_Game.Instance.Get_Live_Data_Item_SP_Stun();
-        if (m_Live_Data_Item_SP_Stun)
-        {
-            m_Is_Stun_By_Item_SP_Stun = m_Live_Data_Item_SP_Stun.Value;
-            m_Live_Data_Item_SP_Stun.OnValueChanged.AddListener(Listener_Live_Data_Item_SP_Stun);
-
-            Check_Active_Stun_By_Item_SP();
-        }
-
-        m_Live_Data_Skill_2_Eilif = Data_In_Game.Instance.Get_Live_Data_Skill_2_Eilif();
-        if (m_Live_Data_Skill_2_Eilif)
-        {
-            m_Is_Stun_By_Skill_2_Eilif = m_Live_Data_Skill_2_Eilif.Value;
-            m_Live_Data_Skill_2_Eilif.OnValueChanged.AddListener(Listener_Live_Data_Skill_2_Eilif);
-
-            Check_Active_Stun_By_Item_SP();
-        }
-
-        //updateofjura
-        m_Live_Data_Skill_2_Safeguard = Data_In_Game.Instance.Get_Live_Data_Skill_2_Safeguard();
-        if (m_Live_Data_Skill_2_Safeguard)
-        {
-            m_Is_Stun_By_Skill_2_Safeguard = m_Live_Data_Skill_2_Safeguard.Value;
-            m_Live_Data_Skill_2_Safeguard.OnValueChanged.AddListener(Listener_Live_Data_Skill_2_Safeguard);
-            Check_Active_Stun_By_Item_SP();
-        }
+        //
+        // m_Live_Data_Item_SP_Stun = Data_In_Game.Instance.Get_Live_Data_Item_SP_Stun();
+        // if (m_Live_Data_Item_SP_Stun)
+        // {
+        //     m_Is_Stun_By_Item_SP_Stun = m_Live_Data_Item_SP_Stun.Value;
+        //     m_Live_Data_Item_SP_Stun.OnValueChanged.AddListener(Listener_Live_Data_Item_SP_Stun);
+        //
+        //     Check_Active_Stun_By_Item_SP();
+        // }
+        //
+        // m_Live_Data_Skill_2_Eilif = Data_In_Game.Instance.Get_Live_Data_Skill_2_Eilif();
+        // if (m_Live_Data_Skill_2_Eilif)
+        // {
+        //     m_Is_Stun_By_Skill_2_Eilif = m_Live_Data_Skill_2_Eilif.Value;
+        //     m_Live_Data_Skill_2_Eilif.OnValueChanged.AddListener(Listener_Live_Data_Skill_2_Eilif);
+        //
+        //     Check_Active_Stun_By_Item_SP();
+        // }
+        //
+        // //updateofjura
+        // m_Live_Data_Skill_2_Safeguard = Data_In_Game.Instance.Get_Live_Data_Skill_2_Safeguard();
+        // if (m_Live_Data_Skill_2_Safeguard)
+        // {
+        //     m_Is_Stun_By_Skill_2_Safeguard = m_Live_Data_Skill_2_Safeguard.Value;
+        //     m_Live_Data_Skill_2_Safeguard.OnValueChanged.AddListener(Listener_Live_Data_Skill_2_Safeguard);
+        //     Check_Active_Stun_By_Item_SP();
+        // }
 
 
         m_Is_Penetation = false;
@@ -219,6 +219,7 @@ public class Base_Boss : MonoBehaviour
 
 
         //set anim
+        Debug.LogError("ConfigMissionUpgrade" + m_Type_Boss);
         m_model_Anim_Boss_Character.Set_Data_Boss(m_Type_Boss, () =>
         {
             m_Boss_Animation.Register_Attack_Anim();
@@ -229,15 +230,6 @@ public class Base_Boss : MonoBehaviour
         });
     }
 
-    public bool Get_Summon_Boss()
-    {
-        return is_Summon_Boss;
-    }
-
-    public List<Transform> Pos_Summon_Boss()
-    {
-        return m_Pos_Summon_Boss;
-    }
 
 
     public Transform Get_Model_Boss()
@@ -528,9 +520,9 @@ public class Base_Boss : MonoBehaviour
         if (type_Animation != Type_Animation.Attack && type_Animation != Type_Animation.Attack2)
         {
             CancelInvoke(nameof(Start_Attack));
-           
-            
-        
+
+
+
             m_Is_Lock_Anim_Attack = true;
 
             DOVirtual.DelayedCall(0.01f, () => { Reset_Status_Ready_Anim_Attack(); }, false);
@@ -929,13 +921,14 @@ public class Base_Boss : MonoBehaviour
         m_Is_Spam_Attack = false;
         m_Is_Force_Attack_Player = Game_Controller.Instance.Get_Is_Timing_AB_Vampire_Attack();
 
+        Debug.LogError("ConfigMissionUpgrade 12");
         Update_Data_Boss(false);
-
+        Debug.LogError("ConfigMissionUpgrade 13");
         if (!Is_Increasing_Level_Auto)
         {
             Start_Move_To_Door();
         }
-
+        Debug.LogError("ConfigMissionUpgrade 16");
         if (m_Health_Bar_UI)
         {
             m_Health_Bar_UI.gameObject.SetActive(true);
@@ -945,6 +938,7 @@ public class Base_Boss : MonoBehaviour
         // Init Pool Skill
         m_Pool_Random_Skill.Clear();
         m_Pool_Random_Skill.AddRange(model_Info_Boss_Curr.m_Pool_Skill);
+
     }
 
     bool m_Is_Init_Skill_Hard_4_Minutes;
@@ -1016,6 +1010,7 @@ public class Base_Boss : MonoBehaviour
             damage *= 2f;
             max_Health *= 1.9f;
 
+            Debug.LogError(("Update_Data_Boss"));
             if (RootManager.Check_Is_Type_Level_Hard_4_Minutes())
             {
                 if (level_Curr > 4)
@@ -1030,6 +1025,7 @@ public class Base_Boss : MonoBehaviour
         }
         else
         {
+            Debug.LogError(("Update_Data_Boss 1 3 "));
             m_Data_Info_Boss_Manager = Data_In_Game.Instance.Get_Data_Info_Boss_Manager();
             model_Info_Boss_Curr = m_Data_Info_Boss_Manager.Get_Data_Info_Boss(m_Type_Boss, m_Type_Level);
 
@@ -1048,6 +1044,7 @@ public class Base_Boss : MonoBehaviour
             {
                 max_Exp = 10;
             }
+            Debug.LogError(("Update_Data_Boss 1 2"));
 
             //damage = 100f;
             //max_Health = 25f;
@@ -1140,7 +1137,7 @@ public class Base_Boss : MonoBehaviour
     {
         m_Is_Take_Damaging = false;
     }
-    [SerializeField] SkeletonAnimation mSpineDamePet;
+
     public void Take_Damage(float damage, bool is_From_Player, bool is_Play_Sound = true, float penetation = 0f, bool isFromPet = false, int rank = 1)
     {
         if (!m_Is_Live) return;
@@ -1158,51 +1155,6 @@ public class Base_Boss : MonoBehaviour
                 SoundController.Play_Sounds(Type_Sound.Boss_Receive_Damage);
             }
 
-            if (isFromPet == true)
-            {
-                // BundleObjectLoader.Instance.LoadSkeletonDataAssetFromFile(
-                //     Data_In_Game.Instance.Get_Data_Skeleton_Asset().GetSpineDamePet(),
-                //     result =>
-                //     {
-                //    mSpineDamePet.skeletonDataAsset = result;
-
-                mSpineDamePet.gameObject.SetActive(true);
-
-
-                if (rank == 1)
-                {
-                    mSpineDamePet.AnimationName = "lv1";
-
-                }
-                if (rank == 2)
-                {
-                    mSpineDamePet.AnimationName = "lv2";
-
-                }
-                if (rank == 3)
-                {
-                    mSpineDamePet.AnimationName = "lv3";
-
-                }
-                // Gán parent (object sinh ra)
-                mSpineDamePet.transform.SetParent(transform, false);
-                // false = giữ localPosition/localScale gốc
-
-                // Nếu muốn reset vị trí về (0,0,0) so với parent:
-                mSpineDamePet.transform.localPosition = Vector3.zero;
-                mSpineDamePet.transform.localRotation = Quaternion.identity;
-                mSpineDamePet.transform.localScale = Vector3.one;
-                mSpineDamePet.Initialize(true);
-                // Đăng ký sự kiện Complete
-                mSpineDamePet.AnimationState.Complete += trackEntry =>
-                {
-                    mSpineDamePet.gameObject.SetActive(false);
-                };
-
-                // });
-
-
-            }
 
             float damageDuce;
 
@@ -1591,7 +1543,7 @@ public class Base_Boss : MonoBehaviour
     public void Start_Attack()
     {
         // Debug.LogError("---------------------------------------------------------");
-        Debug.Log("Start_Attack ......1 " + m_Is_Lock_Anim_Attack+ " ====" +this.gameObject.name);
+        Debug.Log("Start_Attack ......1 " + m_Is_Lock_Anim_Attack + " ====" + this.gameObject.name);
         if (Game_Controller.Get_Is_End_Level())
         {
             CancelInvoke(nameof(Start_Attack));
@@ -1639,7 +1591,7 @@ public class Base_Boss : MonoBehaviour
             // Check has Door
             if (m_Room_Attacking.Get_Door_Of_Room() || m_Room_Attacking.Get_Temp_Door_Of_Room())
             {
-                if (  m_Is_Tutorials &&
+                if (m_Is_Tutorials &&
                     m_Room_Attacking.Get_Door_Of_Room().Check_Tut_Move_Other_Door())
                 {
                     Cancle_Start_Move_To_Door();
@@ -1667,7 +1619,7 @@ public class Base_Boss : MonoBehaviour
                     Set_Active_Skill_A();
                 }
 
-                if (  !m_Is_Stun &&
+                if (!m_Is_Stun &&
                     m_Skill_Boss_Controller.Check_Has_Skill(Type_Skill_Boss.Skill_K) && !m_Lock_Use_Skill)
                 {
                     Lock_Use_Skill();
@@ -1708,29 +1660,29 @@ public class Base_Boss : MonoBehaviour
                 // }
                 // else
                 // {
-                    //   Debug.LogError("Room attacking......4");
-                    if (m_Boss_Movement)
-                    {
-                        if (m_Room_Attacking.Get_Door_Of_Room() != null)
-                        {
-                            m_Boss_Movement.Update_Look_At(m_Room_Attacking.Get_Door_Of_Room().transform.position.x);
-                        }
-                        else
-                        {
-                            m_Boss_Movement.Update_Look_At(
-                                m_Room_Attacking.Get_Temp_Door_Of_Room().transform.position.x);
-                        }
-                    }
-
+                //   Debug.LogError("Room attacking......4");
+                if (m_Boss_Movement)
+                {
                     if (m_Room_Attacking.Get_Door_Of_Room() != null)
                     {
-                        m_Pos_Attack = m_Room_Attacking.Get_Door_Of_Room().transform.position;
+                        m_Boss_Movement.Update_Look_At(m_Room_Attacking.Get_Door_Of_Room().transform.position.x);
                     }
                     else
                     {
-                        m_Pos_Attack = m_Room_Attacking.Get_Temp_Door_Of_Room().transform.position;
+                        m_Boss_Movement.Update_Look_At(
+                            m_Room_Attacking.Get_Temp_Door_Of_Room().transform.position.x);
                     }
-              //  }
+                }
+
+                if (m_Room_Attacking.Get_Door_Of_Room() != null)
+                {
+                    m_Pos_Attack = m_Room_Attacking.Get_Door_Of_Room().transform.position;
+                }
+                else
+                {
+                    m_Pos_Attack = m_Room_Attacking.Get_Temp_Door_Of_Room().transform.position;
+                }
+                //  }
 
                 m_Is_Take_Damaged_To_Room = true;
 
@@ -2013,7 +1965,7 @@ public class Base_Boss : MonoBehaviour
 
     public Vector3 Get_Pos_Attack()
     {
-        if (m_Room_Attacking && m_Room_Attacking.Get_Door_Of_Room() && !m_Is_Attacking_Player )
+        if (m_Room_Attacking && m_Room_Attacking.Get_Door_Of_Room() && !m_Is_Attacking_Player)
         {
             return m_Room_Attacking.Get_Door_Of_Room().transform.position;
         }
@@ -2201,12 +2153,15 @@ public class Base_Boss : MonoBehaviour
 
     private void Recheck_Finded_Room()
     {
+        Debug.LogError("Set_Data_Boss 20");
         if (!m_Is_Founded_Room)
         {
             m_Count_Check_Null_Room += 1;
             UI_Log.Add_Logs("Recheck_Finded_Room | Retry = " + m_Count_Check_Null_Room, false);
+            Debug.LogError("Set_Data_Boss 21");
             if (Level_Controller.Instance.Get_Count_All_Room_Has_Player() > 0 && m_Count_Check_Null_Room < 5)
             {
+                Debug.LogError("Set_Data_Boss 22");
                 Start_Move_To_Door();
             }
             else
@@ -2258,7 +2213,8 @@ public class Base_Boss : MonoBehaviour
 
             CancelInvoke(nameof(boss_ADC.Fight_Bullet));
 
-        
+
+            Debug.LogError("Set_Data_Boss 12");
 
             m_Tmp_Moving_From_Health_Point = m_Moving_From_Health_Point;
             UI_Log.Print_Logs("Start_Move_To_Door : Live = " + m_Is_Live
@@ -2269,12 +2225,14 @@ public class Base_Boss : MonoBehaviour
                 Cancle_Start_Move_To_Door();
                 return;
             }
+            Debug.LogError("Set_Data_Boss 13");
 
 
             if (!m_Is_Live)
             {
                 return;
             }
+            Debug.LogError("Set_Data_Boss 14");
 
 
             Set_Active_Anim_Door_Attack(false);
@@ -2289,6 +2247,7 @@ public class Base_Boss : MonoBehaviour
             {
                 m_Moving_From_Health_Point = false;
             }
+            Debug.LogError("Set_Data_Boss 15");
 
             Set_Stop_Attacking_Player();
             listBossSummon.RemoveAll(boss => boss == null);
@@ -2304,15 +2263,19 @@ public class Base_Boss : MonoBehaviour
                 }
             }
 
+            Debug.LogError("Set_Data_Boss 16");
 
 
             UI_Log.Add_Logs("Finding Room ...", false);
-            
+
             m_Is_Founded_Room = false;
 
-          
+            Debug.LogError("Set_Data_Boss 19");
             Invoke(nameof(Recheck_Finded_Room), 1f);
+            Debug.LogError("Set_Data_Boss 18");
+
             m_Room_Attacking = Get_Random_Room_Has_Player();
+            Debug.LogError("Set_Data_Boss 17");
 
             ///Debug.LogError(m_Room_Attacking.transform.GetInstanceID());
             m_Is_Take_Damaged_To_Room = false;
@@ -2331,6 +2294,7 @@ public class Base_Boss : MonoBehaviour
             // Check has Door
             if (m_Room_Attacking)
             {
+                Debug.LogError("Set_Data_Boss 21");
                 Debug.LogError(m_Room_Attacking.name);
 
 
@@ -2373,6 +2337,7 @@ public class Base_Boss : MonoBehaviour
             }
             else
             {
+                Debug.LogError("Set_Data_Boss 20");
                 m_Count_Check_Null_Room += 1;
                 if (Level_Controller.Instance.Get_Count_All_Room_Has_Player() > 0 && m_Count_Check_Null_Room < 5)
                 {
@@ -2383,6 +2348,7 @@ public class Base_Boss : MonoBehaviour
                     Level_Controller.Instance.Recheck_Room_Has_Player();
                     m_List_Room_Will_Attacking.Clear();
                     // Loop 3 lần check null
+                    Debug.LogError("Set_Data_Boss 18");
                     Remove_Tween_DelayedCall(m_Tween_Start_Move_To_Door);
                     m_Tween_Start_Move_To_Door = DOVirtual.DelayedCall(1f, () => { Start_Move_To_Door(); }, false);
                 }
@@ -2490,28 +2456,28 @@ public class Base_Boss : MonoBehaviour
 
                 m_Boss_Movement.Set_Start_Move_To_Point(m_Room_Attacking.Get_Pos_Boss_Fighting(), () =>
                 {
-                   
-                        Debug.LogError("TH: K FAI ADC? K CO GOLEM " + this.gameObject.name);
+
+                    Debug.LogError("TH: K FAI ADC? K CO GOLEM " + this.gameObject.name);
 
 
-                        m_Boss_Movement.Set_Start_Move_To_Point(m_Room_Attacking.Get_Position_Door_Attack(m_Type_Boss),
-                            () =>
+                    m_Boss_Movement.Set_Start_Move_To_Point(m_Room_Attacking.Get_Position_Door_Attack(m_Type_Boss),
+                        () =>
+                        {
+                            Debug.LogError("Di chuyen thanh cong");
+                            m_Is_Lock_Anim_Attack = false;
+                            Play_Animation(Type_Animation.Attack);
+                            On_Ready_Attack_Door(is_After_Attack_Golem);
+
+
+                            if (listBossSummon.Count > 0)
                             {
-                                Debug.LogError("Di chuyen thanh cong");
-                                m_Is_Lock_Anim_Attack = false;
-                                Play_Animation(Type_Animation.Attack);
-                                On_Ready_Attack_Door(is_After_Attack_Golem);
-
-
-                                if (listBossSummon.Count > 0)
+                                foreach (var bossChild in listBossSummon)
                                 {
-                                    foreach (var bossChild in listBossSummon)
-                                    {
-                                        bossChild.On_Ready_Attack_Door(is_After_Attack_Golem);
-                                    }
+                                    bossChild.On_Ready_Attack_Door(is_After_Attack_Golem);
                                 }
-                            });
-                 //   }
+                            }
+                        });
+                    //   }
                 });
             }
             else
@@ -2541,22 +2507,22 @@ public class Base_Boss : MonoBehaviour
                 //
                 // else
                 // {
-                    m_Boss_Movement.Set_Start_Move_To_Point(CaculatorPosAdcNear().position,
-                        () =>
+                m_Boss_Movement.Set_Start_Move_To_Point(CaculatorPosAdcNear().position,
+                    () =>
+                    {
+                        m_Is_Lock_Anim_Attack = false;
+                        On_Ready_Attack_Door(is_After_Attack_Golem);
+
+
+                        if (listBossSummon.Count > 0)
                         {
-                            m_Is_Lock_Anim_Attack = false;
-                            On_Ready_Attack_Door(is_After_Attack_Golem);
-
-
-                            if (listBossSummon.Count > 0)
+                            foreach (var bossChild in listBossSummon)
                             {
-                                foreach (var bossChild in listBossSummon)
-                                {
-                                    bossChild.On_Ready_Attack_Door(is_After_Attack_Golem);
-                                }
+                                bossChild.On_Ready_Attack_Door(is_After_Attack_Golem);
                             }
-                        });
-              //  }
+                        }
+                    });
+                //  }
 
 
                 // if (m_Room_Attacking.Get_Bed_Controller().Get_Golem() &&
@@ -2636,10 +2602,10 @@ public class Base_Boss : MonoBehaviour
 
     public virtual void On_Ready_Attack_Door(bool is_After_Kill_Golem)
     {
-        
+
         Set_Active_Anim_Door_Attack(true);
         is_Attacking_Player = true;
-        Debug.LogError("On_Ready_Attack_Door ......"+m_Is_Spam_Attack);
+        Debug.LogError("On_Ready_Attack_Door ......" + m_Is_Spam_Attack);
         // Start Attack
         if (!m_Is_Spam_Attack)
         {
@@ -2702,10 +2668,10 @@ public class Base_Boss : MonoBehaviour
         {
             Play_Animation(Type_Animation.Run);
 
-           
-                m_Boss_Movement.Set_Start_Move_To_Point(m_Room_Attacking.Get_Position_Door_Attack(m_Type_Boss),
-                    () => { On_Ready_Attack_Temp_Door(); });
-            
+
+            m_Boss_Movement.Set_Start_Move_To_Point(m_Room_Attacking.Get_Position_Door_Attack(m_Type_Boss),
+                () => { On_Ready_Attack_Temp_Door(); });
+
 
 
             if (m_Is_Stun)
@@ -3102,7 +3068,7 @@ public class Base_Boss : MonoBehaviour
 
     #region =============== Stun Boss ===============
 
-  
+
     [SerializeField]
     internal float m_Time_Stun;
 
@@ -3352,7 +3318,7 @@ public class Base_Boss : MonoBehaviour
 
     [SerializeField] bool m_Is_Active_Skill_A;
     [SerializeField] bool m_Is_CD_Skill_A;
-   [SerializeField] float m_CD_SKill_A = -1f;
+    [SerializeField] float m_CD_SKill_A = -1f;
 
     [Header("....... Skill B .....")]
     [SerializeField]
@@ -3360,8 +3326,8 @@ public class Base_Boss : MonoBehaviour
 
     [SerializeField] bool m_Is_Active_Skill_B;
     [SerializeField] bool m_Is_CD_Skill_B;
-   [SerializeField] float m_CD_Skill_B = -1f;
-   [SerializeField] float m_Time_Active_Skill_B = -1f;
+    [SerializeField] float m_CD_Skill_B = -1f;
+    [SerializeField] float m_Time_Active_Skill_B = -1f;
 
     [Header("....... Skill C .....")]
     [SerializeField]
@@ -3369,8 +3335,8 @@ public class Base_Boss : MonoBehaviour
 
     [SerializeField] bool m_Is_Active_Skill_C;
     [SerializeField] bool m_Is_CD_Skill_C;
-   [SerializeField] float m_CD_Skill_C = -1f;
-   [SerializeField] float m_Time_Active_Skill_C = -1f;
+    [SerializeField] float m_CD_Skill_C = -1f;
+    [SerializeField] float m_Time_Active_Skill_C = -1f;
 
     [Header("....... Skill D .....")]
     [SerializeField]
@@ -3389,16 +3355,16 @@ public class Base_Boss : MonoBehaviour
     [SerializeField] bool m_Is_Active_Skill_K;
     [SerializeField] bool m_Is_CD_Skill_K;
 
-   [SerializeField] float m_CD_Skill_K = -1f;
-   [SerializeField] float m_Time_Active_Skill_K = -1f;
+    [SerializeField] float m_CD_Skill_K = -1f;
+    [SerializeField] float m_Time_Active_Skill_K = -1f;
 
     [Header("....... Skill M .....")]
     [SerializeField]
     Model_Info_Skill m_Model_Info_Skill_M;
 
     [SerializeField] bool m_Is_Active_Skill_M;
-   [SerializeField] float m_CD_Skill_M = -1f;
-   [SerializeField] float m_Time_Active_Skill_M = -1f;
+    [SerializeField] float m_CD_Skill_M = -1f;
+    [SerializeField] float m_Time_Active_Skill_M = -1f;
 
     [Header("....... Skill N .....")]
     [SerializeField]
@@ -3407,8 +3373,8 @@ public class Base_Boss : MonoBehaviour
     [SerializeField] bool m_Is_Active_Skill_N;
     [SerializeField] bool m_Is_CD_Skill_N;
     [SerializeField] Transform m_Pos_Start_Skill_N;
-   [SerializeField] float m_CD_Skill_N = -1f;
-   [SerializeField] float m_Time_Active_Skill_N = -1f;
+    [SerializeField] float m_CD_Skill_N = -1f;
+    [SerializeField] float m_Time_Active_Skill_N = -1f;
 
 
     [Header("....... Skill O .....")]
@@ -3418,8 +3384,8 @@ public class Base_Boss : MonoBehaviour
     [SerializeField] bool m_Is_Active_Skill_O;
     [SerializeField] bool m_Is_CD_Skill_O;
     [SerializeField] Transform m_Pos_Start_Skill_O;
-   [SerializeField] float m_CD_Skill_O = -1f;
-   [SerializeField] float m_Time_Active_Skill_O = -1f;
+    [SerializeField] float m_CD_Skill_O = -1f;
+    [SerializeField] float m_Time_Active_Skill_O = -1f;
 
 
     [Header("....... Skill P .....")]
@@ -3429,8 +3395,8 @@ public class Base_Boss : MonoBehaviour
     [SerializeField] bool m_Is_Active_Skill_P;
     [SerializeField] bool m_Is_CD_Skill_P;
     [SerializeField] Transform m_Pos_Start_Skill_P;
-   [SerializeField] float m_CD_Skill_P = -1f;
-   [SerializeField] float m_Time_Active_Skill_P = -1f;
+    [SerializeField] float m_CD_Skill_P = -1f;
+    [SerializeField] float m_Time_Active_Skill_P = -1f;
 
 
     // All skill has CD, when set active will call this mothod
@@ -3679,7 +3645,7 @@ public class Base_Boss : MonoBehaviour
     }
 
     List<Turret_Controller> m_All_Turret_Effect_By_Skill_A = new List<Turret_Controller>();
-   // List<Golem_Controller> m_All_Golem_Effect_By_Skill_A = new List<Golem_Controller>();
+    // List<Golem_Controller> m_All_Golem_Effect_By_Skill_A = new List<Golem_Controller>();
 
     private List<Turret_Penetration> m_All_Turret_Penetation = new List<Turret_Penetration>();
 
@@ -3687,7 +3653,7 @@ public class Base_Boss : MonoBehaviour
     [SerializeField] LayerMask m_Stun_Layer;
     Collider2D[] colliders;
     Turret_Controller turret_Controller;
-   // Golem_Controller m_Tmp_Golem_Controller;
+    // Golem_Controller m_Tmp_Golem_Controller;
 
     Turret_Penetration TurretPenetration;
 
@@ -3701,7 +3667,7 @@ public class Base_Boss : MonoBehaviour
         Show_Alert(Type_Alert.Vampire_Use_Skill_A);
 
         m_All_Turret_Effect_By_Skill_A.Clear();
-   //     m_All_Golem_Effect_By_Skill_A.Clear();
+        //     m_All_Golem_Effect_By_Skill_A.Clear();
         // Tìm tất cả turret trong phạm vi 5
         // 7 : Is Layer Boss
         colliders = Physics2D.OverlapCircleAll(transform.position, 5f, m_Stun_Layer);
@@ -4008,32 +3974,32 @@ public class Base_Boss : MonoBehaviour
                 // }
                 // else
                 // {
-                    if (m_Room_Attacking != null && m_Room_Attacking.Get_Sum_Turret_In_Room() > 0)
+                if (m_Room_Attacking != null && m_Room_Attacking.Get_Sum_Turret_In_Room() > 0)
+                {
+                    m_Is_Active_Skill_K = true;
+                    Start_Using_Skill_K();
+
+                    Show_Alert(Type_Alert.Vampire_Use_Skill_K);
+
+                    if (m_Time_Active_Skill_K <= 0)
                     {
-                        m_Is_Active_Skill_K = true;
-                        Start_Using_Skill_K();
-
-                        Show_Alert(Type_Alert.Vampire_Use_Skill_K);
-
-                        if (m_Time_Active_Skill_K <= 0)
+                        if (RootManager.Check_Is_Type_Level_Hard_4_Minutes())
                         {
-                            if (RootManager.Check_Is_Type_Level_Hard_4_Minutes())
-                            {
-                                m_Time_Active_Skill_K = m_Model_Info_Skill_K.time_Exist / 2f;
-                            }
-                            else
-                            {
-                                m_Time_Active_Skill_K = m_Model_Info_Skill_K.time_Exist;
-                            }
+                            m_Time_Active_Skill_K = m_Model_Info_Skill_K.time_Exist / 2f;
                         }
-
-                        Remove_Tween_DelayedCall(m_Tween_Start_CD_Skill_K);
-                        m_Tween_Start_CD_Skill_K =
-                            DOVirtual.DelayedCall(m_Time_Active_Skill_K, () => { Start_CD_Skill_K(); }, false);
-
-                        Check_Can_Active_Skill();
+                        else
+                        {
+                            m_Time_Active_Skill_K = m_Model_Info_Skill_K.time_Exist;
+                        }
                     }
-              //  }
+
+                    Remove_Tween_DelayedCall(m_Tween_Start_CD_Skill_K);
+                    m_Tween_Start_CD_Skill_K =
+                        DOVirtual.DelayedCall(m_Time_Active_Skill_K, () => { Start_CD_Skill_K(); }, false);
+
+                    Check_Can_Active_Skill();
+                }
+                //  }
             }
         }
     }
@@ -4329,7 +4295,7 @@ public class Base_Boss : MonoBehaviour
         if (Game_Controller.Get_Is_End_Level()) return;
 
         m_All_Turret_Effect_By_Skill_N.Clear();
-    //    m_All_Golem_Effect_By_Skill_N.Clear();
+        //    m_All_Golem_Effect_By_Skill_N.Clear();
 
         level_Skill_N = m_Skill_Boss_Controller.Get_Level_Skill(Type_Skill_Boss.Skill_N);
         if (level_Skill_N > 2)
@@ -4363,18 +4329,18 @@ public class Base_Boss : MonoBehaviour
         // }
         // else
         // {
-            m_All_Turret_Effect_By_Skill_N.AddRange(m_Room_Attacking.Get_All_Turret_In_Room());
+        m_All_Turret_Effect_By_Skill_N.AddRange(m_Room_Attacking.Get_All_Turret_In_Room());
 
-            for (int i = 0; i < m_All_Turret_Effect_By_Skill_N.Count; i++)
+        for (int i = 0; i < m_All_Turret_Effect_By_Skill_N.Count; i++)
+        {
+            if (m_All_Turret_Effect_By_Skill_N[i])
             {
-                if (m_All_Turret_Effect_By_Skill_N[i])
-                {
-                    m_All_Turret_Effect_By_Skill_N[i]
-                        .Set_Charm(m_Pos_Start_Skill_N != null ? m_Pos_Start_Skill_N.position : transform.position,
-                            true);
-                }
+                m_All_Turret_Effect_By_Skill_N[i]
+                    .Set_Charm(m_Pos_Start_Skill_N != null ? m_Pos_Start_Skill_N.position : transform.position,
+                        true);
             }
-       // }
+        }
+        // }
     }
 
     private void Stop_Using_Skill_N()
@@ -4439,7 +4405,7 @@ public class Base_Boss : MonoBehaviour
         {
             if (!m_Is_Active_Skill_O)
             {
-                if (m_Room_Attacking != null && m_Room_Attacking.Get_Door_Of_Room() != null )
+                if (m_Room_Attacking != null && m_Room_Attacking.Get_Door_Of_Room() != null)
                 {
                     m_Is_Active_Skill_O = true;
                     if (Game_Controller.Get_Is_End_Level()) return;
@@ -4709,11 +4675,11 @@ public class Base_Boss : MonoBehaviour
 
     #region ================ Collider Detect Character : Find and Kill ======================
 
-   
+
     [SerializeField]
     Collider_Detect_Character m_Collider_Detect_Character;
 
-   [SerializeField] internal Transform m_Target_Character;
+    [SerializeField] internal Transform m_Target_Character;
 
     public Transform Get_Target_Character()
     {
@@ -4807,11 +4773,13 @@ public class Base_Boss : MonoBehaviour
     {
         try
         {
+            Debug.LogError("Set_Data_Boss 23");
             if (m_Is_Force_Attack_Player)
             {
                 m_Is_Force_Attack_Player = false;
                 return Level_Controller.Instance.Get_Room_Curr_Player();
             }
+            Debug.LogError("Set_Data_Boss 27");
 
             if (RootManager.Check_AB_Boss_Line_Up())
             {
@@ -5216,9 +5184,9 @@ public class Base_Boss : MonoBehaviour
 
     #region ============== Config Attack Golem ==============
 
-  
-  
-   // internal Boss_Attack_Golem m_Boss_Attack_Golem;
+
+
+    // internal Boss_Attack_Golem m_Boss_Attack_Golem;
 
     // [SerializeField] Transform m_Pos_Golem_Left;
     // [SerializeField] Transform m_Pos_Golem_Right;
@@ -5293,7 +5261,7 @@ public class Base_Boss : MonoBehaviour
 
 
     [SerializeField] LayerMask m_Layer_Boss;
-   // Golem_Controller m_Tmp_Golem;
+    // Golem_Controller m_Tmp_Golem;
 
     private void Notify_Golem_Near_Move_To_Default()
     {

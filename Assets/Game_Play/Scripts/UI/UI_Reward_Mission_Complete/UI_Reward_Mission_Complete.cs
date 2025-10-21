@@ -23,7 +23,7 @@ public class UI_Reward_Mission_Complete : Base_UI
     public override void OnReadyOpenUI()
     {
         //m_Is_Waiting_Close_UI = false;
-        Canvas_In_Game.Instance.Get_UI_Notice_Tutorials().Close_UI();
+     
         m_Animator.Play_Animation_Play();
         //m_Txt_Des_Tut.Set_Text(Utils.Get_Content_By_Language(Data_In_Game.Instance.Get_Data_Mission_Tut()
         //    .Get_Des_Mission((int)m_Curr_Mission_Tut)));

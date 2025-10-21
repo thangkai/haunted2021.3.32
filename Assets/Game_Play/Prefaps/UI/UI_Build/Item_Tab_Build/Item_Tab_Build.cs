@@ -22,18 +22,7 @@ public class Item_Tab_Build : MonoBehaviour
 
     public void _Btn_Tab_OnClick()
     {
-        if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0)
-        {
-            if(DataSaved.Get_Index_Claimed_Mission_Tutorial() == 3 || DataSaved.Get_Index_Claimed_Mission_Tutorial() == 5)
-            {
-                return;
-            }
-
-            if (My_Utils.Check_Tut_Mission_7(m_UI_Build.Get_Type_Player()))
-            {
-                return;
-            }
-        }
+      
 
         SoundController.Play_Sound_Clicks();
         if (m_UI_Build)

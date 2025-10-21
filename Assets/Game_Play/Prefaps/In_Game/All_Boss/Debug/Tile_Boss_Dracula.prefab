@@ -15383,18 +15383,11 @@ MonoBehaviour:
   m_Amor: 0
   boss_ADC: {fileID: 0}
   m_Target_PosADC: {fileID: 0}
-  m_Pos_Summon_Boss:
-  - {fileID: 1805018793693815104}
-  - {fileID: 6658490658269698702}
-  - {fileID: 4027079817102514004}
-  - {fileID: 3124501415076793420}
-  is_Summon_Boss: 1
   mPosBulletAdc: {fileID: 0}
   listBossSummon: []
   listBossSummonIndex: 
   listBossSummonIndexHave: 000000000100000002000000
   m_Dame_Penetation: 0
-  mSpineDamePet: {fileID: 0}
   m_Is_Play_Anim_Skill: 0
   m_Room_Attacking: {fileID: 0}
   m_Is_Take_Damaged_To_Room: 0
@@ -15751,9 +15744,13 @@ PrefabInstance:
       value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 499084109079294851, guid: 2d40dec53c66eed4494b8f111652c3ba, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 499084109079294851, guid: 2d40dec53c66eed4494b8f111652c3ba, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: c1ada82fc1c979544ba4dd03bbcb0226, type: 2}
     - target: {fileID: 2027957751179247244, guid: 2d40dec53c66eed4494b8f111652c3ba, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -15801,6 +15798,10 @@ PrefabInstance:
     - target: {fileID: 6037153388037827604, guid: 2d40dec53c66eed4494b8f111652c3ba, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8290943893323125944, guid: 2d40dec53c66eed4494b8f111652c3ba, type: 3}
+      propertyPath: _animationName
+      value: animation
       objectReference: {fileID: 0}
     - target: {fileID: 8790399651067912653, guid: 2d40dec53c66eed4494b8f111652c3ba, type: 3}
       propertyPath: m_Name

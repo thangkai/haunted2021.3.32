@@ -52,68 +52,77 @@ public class UI_Upgrade : Base_UI
         {
             case Type_Turret.Bed:
 
-                if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 1)
-                {
-                    m_All_Item_Upgrade[0].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
-                    m_All_Item_Upgrade[1].gameObject.SetActive(false);
-                }
-                else
-                {
-                    // Add Item Price Update Normal
-                    m_All_Item_Upgrade[0].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
-                    // Add Item Price Update By ADS
-                    m_All_Item_Upgrade[1].gameObject.SetActive(true);
-                    //  m_All_Item_Upgrade[1].Set_Data_Upgrade_By_Ads(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
+                // if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 1)
+                // {
+                //     m_All_Item_Upgrade[0].gameObject.SetActive(true);
+                //     m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
+                //     m_All_Item_Upgrade[1].gameObject.SetActive(false);
+                // }
+                // else
+                // {
+                //   
+                // }
+                //
+                
+                // Add Item Price Update Normal
+                m_All_Item_Upgrade[0].gameObject.SetActive(true);
+                m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
+                // Add Item Price Update By ADS
+                m_All_Item_Upgrade[1].gameObject.SetActive(true);
+                //  m_All_Item_Upgrade[1].Set_Data_Upgrade_By_Ads(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
 
-                    m_All_Item_Upgrade[1].gameObject.SetActive(false);
-                }
+                m_All_Item_Upgrade[1].gameObject.SetActive(false);
 
                 break;
 
             case Type_Turret.Door:
 
-                if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 2)
-                {
-                    m_All_Item_Upgrade[0].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
-                    m_All_Item_Upgrade[1].gameObject.SetActive(false);
-                }
-                else
-                {
-                    // Add Item Price Update Normal
-                    m_All_Item_Upgrade[0].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
-                    // Add Item Price Update By ADS
-                    m_All_Item_Upgrade[1].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[1].gameObject.SetActive(false);
-                    //  m_All_Item_Upgrade[1].Set_Data_Upgrade_By_Ads(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
-                }
+                // if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 2)
+                // {
+                //     m_All_Item_Upgrade[0].gameObject.SetActive(true);
+                //     m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
+                //     m_All_Item_Upgrade[1].gameObject.SetActive(false);
+                // }
+                // else
+                // {
+                //    
+                // }
+                //
+                
+                // Add Item Price Update Normal
+                m_All_Item_Upgrade[0].gameObject.SetActive(true);
+                m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
+                // Add Item Price Update By ADS
+                m_All_Item_Upgrade[1].gameObject.SetActive(true);
+                m_All_Item_Upgrade[1].gameObject.SetActive(false);
+                //  m_All_Item_Upgrade[1].Set_Data_Upgrade_By_Ads(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
                 break;
 
             case Type_Turret.Turret:
                 //updateofjura
-
-                if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 &&
-                ((m_Model_Info_Turret.type_Turret == Type_Turret.Turret && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 4)
-                ))
-                {
-                    // Add Item Price Update Normal
-                    m_All_Item_Upgrade[0].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
-
-                    m_All_Item_Upgrade[1].gameObject.SetActive(false);
-                }
-                else
-                {
-                    // Add Item Price Update Normal
-                    m_All_Item_Upgrade[0].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
-                    // Add Item Destroy
-                    m_All_Item_Upgrade[1].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[1].Set_Data_Remove(this, m_Price_Curr);
-                }
+                //
+                // if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 &&
+                // ((m_Model_Info_Turret.type_Turret == Type_Turret.Turret && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 4)
+                // ))
+                // {
+                //     // Add Item Price Update Normal
+                //     m_All_Item_Upgrade[0].gameObject.SetActive(true);
+                //     m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
+                //
+                //     m_All_Item_Upgrade[1].gameObject.SetActive(false);
+                // }
+                // else
+                // {
+                //    
+                // }
+                
+                
+                // Add Item Price Update Normal
+                m_All_Item_Upgrade[0].gameObject.SetActive(true);
+                m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
+                // Add Item Destroy
+                m_All_Item_Upgrade[1].gameObject.SetActive(true);
+                m_All_Item_Upgrade[1].Set_Data_Remove(this, m_Price_Curr);
                 break;
 
             //updateofjura
@@ -128,49 +137,54 @@ public class UI_Upgrade : Base_UI
                 break;
             case Type_Turret.Turret_Pierce:
                 //updateofjura
-
-                if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 &&
-                    ((m_Model_Info_Turret.type_Turret == Type_Turret.Turret && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 4)
-                    ))
-                {
-                    // Add Item Price Update Normal
-                    m_All_Item_Upgrade[0].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
-
-                    m_All_Item_Upgrade[1].gameObject.SetActive(false);
-                }
-                else
-                {
-                    // Add Item Price Update Normal
-                    m_All_Item_Upgrade[0].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
-                    // Add Item Destroy
-                    m_All_Item_Upgrade[1].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[1].Set_Data_Remove(this, m_Price_Curr);
-                }
+                //
+                // if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 &&
+                //     ((m_Model_Info_Turret.type_Turret == Type_Turret.Turret && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 4)
+                //     ))
+                // {
+                //     // Add Item Price Update Normal
+                //     m_All_Item_Upgrade[0].gameObject.SetActive(true);
+                //     m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
+                //
+                //     m_All_Item_Upgrade[1].gameObject.SetActive(false);
+                // }
+                // else
+                // {
+                //     
+                // }
+                //
+                // Add Item Price Update Normal
+                m_All_Item_Upgrade[0].gameObject.SetActive(true);
+                m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
+                // Add Item Destroy
+                m_All_Item_Upgrade[1].gameObject.SetActive(true);
+                m_All_Item_Upgrade[1].Set_Data_Remove(this, m_Price_Curr);
+                
                 break;
 
             //updateofjura
             case Type_Turret.Energy_Tower:
 
-                if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 &&
-                    ((m_Model_Info_Turret.type_Turret == Type_Turret.Turret && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 4)
-                    ))
-                {
-                    // Add Item Price Update Normal
-                    m_All_Item_Upgrade[0].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
-                    m_All_Item_Upgrade[1].gameObject.SetActive(false);
-                }
-                else
-                {
-                    // Add Item Price Update Normal
-                    m_All_Item_Upgrade[0].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
-                    // Add Item Destroy
-                    m_All_Item_Upgrade[1].gameObject.SetActive(true);
-                    m_All_Item_Upgrade[1].Set_Data_Remove(this, m_Price_Curr);
-                }
+                // if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 &&
+                //     ((m_Model_Info_Turret.type_Turret == Type_Turret.Turret && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 4)
+                //     ))
+                // {
+                //     // Add Item Price Update Normal
+                //     m_All_Item_Upgrade[0].gameObject.SetActive(true);
+                //     m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
+                //     m_All_Item_Upgrade[1].gameObject.SetActive(false);
+                // }
+                // else
+                // {
+                //  
+                // }
+                
+                // Add Item Price Update Normal
+                m_All_Item_Upgrade[0].gameObject.SetActive(true);
+                m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
+                // Add Item Destroy
+                m_All_Item_Upgrade[1].gameObject.SetActive(true);
+                m_All_Item_Upgrade[1].Set_Data_Remove(this, m_Price_Curr);
                 break;
 
             case Type_Turret.Repair_Station:

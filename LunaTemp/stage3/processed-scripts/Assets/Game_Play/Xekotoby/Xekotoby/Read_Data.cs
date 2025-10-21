@@ -1,1 +1,0 @@
-namespace Confifg_BY_ME {}

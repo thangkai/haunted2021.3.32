@@ -19,33 +19,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 161704d46091b3f43a53aeaa0c10657c, type: 3}
   - {fileID: 21300000, guid: 404b6a2d8fcecd041938335b453f024a, type: 3}
   - {fileID: 21300000, guid: c7874b4e0e734004f8c03a162794f52c, type: 3}
-  - {fileID: 21300000, guid: 117e504e53797d246bbd253c31d1b317, type: 3}
-  - {fileID: 21300000, guid: 0e52444f456a07f49932df16a5e4d34e, type: 3}
-  - {fileID: 21300000, guid: 155d3a5a005a2424c96125ecaa525634, type: 3}
-  - {fileID: 21300000, guid: 1e3d57172b9742d4fb957b48a71fdb1a, type: 3}
-  - {fileID: 21300000, guid: 570fe7e46ed24f447a8b2a598deda691, type: 3}
-  - {fileID: 21300000, guid: 3a2f7a690da8bd14d962fc3f5531ebc2, type: 3}
-  - {fileID: 21300000, guid: c799fe6877545934e8e9bf357f9938bc, type: 3}
-  - {fileID: 21300000, guid: 1d13427021eac77489c77d3750c19793, type: 3}
-  - {fileID: 21300000, guid: 363c40817877d8b4a8dd9d01dd66c6b1, type: 3}
-  - {fileID: 21300000, guid: 926e19c96ae5569488cd40a341016d59, type: 3}
-  m_All_Icon_Skin_2_Character_Small:
-  - {fileID: 21300000, guid: 229d9f5ad36dee04bb88c76b6f7c808b, type: 3}
-  - {fileID: 21300000, guid: 49444e1cc79ef864fb04d16ccac2bc09, type: 3}
-  - {fileID: 21300000, guid: cba7e3e662ce43a4ea3eaa8701573273, type: 3}
-  - {fileID: 21300000, guid: 6369ff824231c774581907513663cb29, type: 3}
-  - {fileID: 21300000, guid: f20052c330df704469e9afef84cf923f, type: 3}
-  - {fileID: 21300000, guid: 2afd24d1d2252ce439116ffda83d5a6c, type: 3}
-  - {fileID: 21300000, guid: 117e504e53797d246bbd253c31d1b317, type: 3}
-  - {fileID: 21300000, guid: 0e52444f456a07f49932df16a5e4d34e, type: 3}
-  - {fileID: 21300000, guid: 155d3a5a005a2424c96125ecaa525634, type: 3}
-  - {fileID: 21300000, guid: 1e3d57172b9742d4fb957b48a71fdb1a, type: 3}
-  - {fileID: 21300000, guid: 570fe7e46ed24f447a8b2a598deda691, type: 3}
-  - {fileID: 21300000, guid: 3a2f7a690da8bd14d962fc3f5531ebc2, type: 3}
-  - {fileID: 21300000, guid: c799fe6877545934e8e9bf357f9938bc, type: 3}
-  - {fileID: 21300000, guid: 1d13427021eac77489c77d3750c19793, type: 3}
-  - {fileID: 21300000, guid: 363c40817877d8b4a8dd9d01dd66c6b1, type: 3}
-  - {fileID: 21300000, guid: 926e19c96ae5569488cd40a341016d59, type: 3}
+  - {fileID: 21300000, guid: c7874b4e0e734004f8c03a162794f52c, type: 3}
+  - {fileID: 21300000, guid: c7874b4e0e734004f8c03a162794f52c, type: 3}
+  - {fileID: 21300000, guid: c7874b4e0e734004f8c03a162794f52c, type: 3}
+  - {fileID: 21300000, guid: c7874b4e0e734004f8c03a162794f52c, type: 3}
+  - {fileID: 21300000, guid: c7874b4e0e734004f8c03a162794f52c, type: 3}
+  - {fileID: 21300000, guid: c7874b4e0e734004f8c03a162794f52c, type: 3}
+  - {fileID: 21300000, guid: c7874b4e0e734004f8c03a162794f52c, type: 3}
+  - {fileID: 21300000, guid: c7874b4e0e734004f8c03a162794f52c, type: 3}
+  - {fileID: 21300000, guid: c7874b4e0e734004f8c03a162794f52c, type: 3}
+  - {fileID: 21300000, guid: c7874b4e0e734004f8c03a162794f52c, type: 3}
   m_All_Icon_Character_Small_V2:
   - {fileID: 21300000, guid: dc91cfd9264847e4fb33011543b06726, type: 3}
   - {fileID: 21300000, guid: 6803f2b058eadf644b354a547593f3c7, type: 3}
@@ -53,75 +36,32 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4550c7a23a806bc4ebbb4124941469fb, type: 3}
   - {fileID: 21300000, guid: 279beeda45e22ae4b8e505cc7543ed2a, type: 3}
   - {fileID: 21300000, guid: 6e4018a6679a64b4e879421049572fa3, type: 3}
-  - {fileID: 21300000, guid: 139767e9007dae643949978f85297d95, type: 3}
-  - {fileID: 21300000, guid: 897d4136832a70743a78b4dd110f90d9, type: 3}
-  - {fileID: 21300000, guid: 237556d217d2968448cced34bb372616, type: 3}
-  - {fileID: 21300000, guid: 3cdc9e0ed36359d4eab2887f3edbae2e, type: 3}
-  - {fileID: 21300000, guid: 8ad5ad6731aa0fe4a9e75d36a820b7a9, type: 3}
-  - {fileID: 21300000, guid: 71a6694db3928794da10ddfc73b5092a, type: 3}
-  - {fileID: 21300000, guid: 70bb7e5dd2da637418a62f8da747f34a, type: 3}
-  - {fileID: 21300000, guid: 3f07e615b2c20864d8e373a120e768df, type: 3}
-  - {fileID: 21300000, guid: c3173b3d1e2f1a4448ad15c412814ed5, type: 3}
-  - {fileID: 21300000, guid: 55bcc3e851a788149bed0d9c13a006cb, type: 3}
-  m_All_Icon_Skin_2_Character_Small_V2:
-  - {fileID: 21300000, guid: 6ba1ad762a25fd34fa8ea445edbc6670, type: 3}
-  - {fileID: 21300000, guid: 9e5865eb9ee29bf42852da172aa942dc, type: 3}
-  - {fileID: 21300000, guid: 8e5db3089f0aabd46889bfcbb4058d7c, type: 3}
-  - {fileID: 21300000, guid: 40525b6e86c9e494f8f433f62c881841, type: 3}
-  - {fileID: 21300000, guid: 4842da5cc216b2e4db711815a089db13, type: 3}
-  - {fileID: 21300000, guid: f8145a1931752d34dbdf794c9938de79, type: 3}
+  - {fileID: 21300000, guid: 6e4018a6679a64b4e879421049572fa3, type: 3}
+  - {fileID: 21300000, guid: 6e4018a6679a64b4e879421049572fa3, type: 3}
+  - {fileID: 21300000, guid: 6e4018a6679a64b4e879421049572fa3, type: 3}
+  - {fileID: 21300000, guid: 6e4018a6679a64b4e879421049572fa3, type: 3}
+  - {fileID: 21300000, guid: 6e4018a6679a64b4e879421049572fa3, type: 3}
+  - {fileID: 21300000, guid: 6e4018a6679a64b4e879421049572fa3, type: 3}
+  - {fileID: 21300000, guid: 6e4018a6679a64b4e879421049572fa3, type: 3}
+  - {fileID: 21300000, guid: 6e4018a6679a64b4e879421049572fa3, type: 3}
+  - {fileID: 21300000, guid: 6e4018a6679a64b4e879421049572fa3, type: 3}
+  - {fileID: 21300000, guid: 6e4018a6679a64b4e879421049572fa3, type: 3}
   m_All_Icon_Character_Small_V3_Layout:
   - {fileID: 21300000, guid: 6ab61d310b4c4f14588e2423a524900f, type: 3}
   - {fileID: 21300000, guid: dcacf37dd9309ff42849ef608f3e00e9, type: 3}
   - {fileID: 21300000, guid: 68098a865aaeaf74c8eb9908cdef3827, type: 3}
   - {fileID: 21300000, guid: 4fa88729008124d4680fcfb494c17757, type: 3}
   - {fileID: 21300000, guid: 6a2466b695c401048bd072ae3acdbff1, type: 3}
-  m_All_Icon_Character:
-  - {fileID: 21300000, guid: 8b49b59864b897c408f4a449eb761c7d, type: 3}
-  - {fileID: 21300000, guid: e7a711e76d9f55249b30a29ae969d6d3, type: 3}
-  - {fileID: 21300000, guid: 025e673fb222e10489c710dec2208e80, type: 3}
-  - {fileID: 21300000, guid: 437df34e31e402a4e839043c2c6dad13, type: 3}
-  - {fileID: 21300000, guid: dd506260855402b4d8a1cc547e6b7f37, type: 3}
-  - {fileID: 21300000, guid: e76ef82cd0f415c4986b04be1bcb6e2e, type: 3}
-  - {fileID: 21300000, guid: 18201b14937595c4381d217617991932, type: 3}
-  - {fileID: 21300000, guid: 6a6fe12abe9631546941bb87e78b956d, type: 3}
-  - {fileID: 21300000, guid: 5871f7c7ecf88ba41abac2259d55ef45, type: 3}
-  - {fileID: 21300000, guid: af61e3df0339d3b489aa166d899d90eb, type: 3}
-  - {fileID: 21300000, guid: 5b34a91c7793fe94d8759c8b6ba27e30, type: 3}
-  - {fileID: 21300000, guid: 62ee00f1ac9cbc34e8e5580fd248aab2, type: 3}
-  - {fileID: 21300000, guid: 294f3474aa518474d9e41a5ee9765eb7, type: 3}
-  - {fileID: 21300000, guid: 4a0acdb70d054904fb249fb7b0586005, type: 3}
-  - {fileID: 21300000, guid: 4d551b25925a8794db09058044c5e1ba, type: 3}
-  - {fileID: 21300000, guid: 0bb02822bc9117547ab34e57ee3ee2ef, type: 3}
-  m_All_Icon_Skin_2_Character:
-  - {fileID: 21300000, guid: 6dc4cf5b3e88d024fac23f138a0186e9, type: 3}
-  - {fileID: 21300000, guid: da7d2e9730a437644b0b9acac76b4760, type: 3}
-  - {fileID: 21300000, guid: 50307ea4670ee974b99873039883edd1, type: 3}
-  - {fileID: 21300000, guid: 271e49e1972eef047a83d350a7e395c7, type: 3}
-  - {fileID: 21300000, guid: a92cfdb6d880a7044af80e7fec9d66a8, type: 3}
-  - {fileID: 21300000, guid: f645a4eeebaa998458b6a426b24edc5d, type: 3}
   m_All_Icon_Boss_Small:
   - {fileID: 21300000, guid: 5fe5ab05d3e34b847b4e1f119e179ad2, type: 3}
-  - {fileID: 21300000, guid: c10eb2680ba6ac04bbafb07c132c3324, type: 3}
-  - {fileID: 21300000, guid: 1eaa6c4a3ae7a87408e33c7c9059af29, type: 3}
-  - {fileID: 21300000, guid: f6718aa097df2d940b9ffd7a3da4f127, type: 3}
-  - {fileID: 21300000, guid: a97517beecaabe44ba6cd3a347aa3277, type: 3}
-  - {fileID: 21300000, guid: 640e3467552e86445a953abe8391c0ab, type: 3}
-  - {fileID: 21300000, guid: aa9cf50165940bf48aa3c439dc951e6a, type: 3}
-  - {fileID: 21300000, guid: ddd985ea214e3904c9ac5b3acaba7b38, type: 3}
-  - {fileID: 21300000, guid: 54f9aef0bac8eab4cbcca70d0dd3121d, type: 3}
-  - {fileID: 21300000, guid: ed15b3afdcc0ed24593f0820be2ea1cd, type: 3}
-  - {fileID: 21300000, guid: 9d3f28d00ca22f7499b4433b62d1b8ea, type: 3}
-  - {fileID: 21300000, guid: 640e3467552e86445a953abe8391c0ab, type: 3}
-  m_All_Icon_Boss_Small_V2:
-  - {fileID: 21300000, guid: a3194060552b704449d252bd63775ca0, type: 3}
-  - {fileID: 21300000, guid: 0b2ef40d5cbf3704bbf4244f5d6178d2, type: 3}
-  - {fileID: 21300000, guid: 39dc3d22d1902d24da125f540980a8fa, type: 3}
-  - {fileID: 21300000, guid: 96402203ca1984a418430e73174e2fa2, type: 3}
-  - {fileID: 21300000, guid: a97517beecaabe44ba6cd3a347aa3277, type: 3}
-  - {fileID: 21300000, guid: 640e3467552e86445a953abe8391c0ab, type: 3}
-  m_All_Icon_Boss: []
-  spritesCard: []
-  m_All_Icon_Skill_Tree: []
-  m_All_Icon_Skill_Tree_Gem: []
-  m_Icon_Item_Supports: []
+  - {fileID: 21300000, guid: 5fe5ab05d3e34b847b4e1f119e179ad2, type: 3}
+  - {fileID: 21300000, guid: 5fe5ab05d3e34b847b4e1f119e179ad2, type: 3}
+  - {fileID: 21300000, guid: 5fe5ab05d3e34b847b4e1f119e179ad2, type: 3}
+  - {fileID: 21300000, guid: 5fe5ab05d3e34b847b4e1f119e179ad2, type: 3}
+  - {fileID: 21300000, guid: 5fe5ab05d3e34b847b4e1f119e179ad2, type: 3}
+  - {fileID: 21300000, guid: 5fe5ab05d3e34b847b4e1f119e179ad2, type: 3}
+  - {fileID: 21300000, guid: 5fe5ab05d3e34b847b4e1f119e179ad2, type: 3}
+  - {fileID: 21300000, guid: 5fe5ab05d3e34b847b4e1f119e179ad2, type: 3}
+  - {fileID: 21300000, guid: 5fe5ab05d3e34b847b4e1f119e179ad2, type: 3}
+  - {fileID: 21300000, guid: 5fe5ab05d3e34b847b4e1f119e179ad2, type: 3}
+  - {fileID: 21300000, guid: 5fe5ab05d3e34b847b4e1f119e179ad2, type: 3}

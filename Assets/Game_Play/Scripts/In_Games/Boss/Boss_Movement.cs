@@ -2,10 +2,9 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.AI;
+
 
 using Spine.Unity;
-using Haunted;
 
 public class Boss_Movement : MonoBehaviour
 {

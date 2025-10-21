@@ -15,7 +15,7 @@ public class Data_Sprite_In_Game : ScriptableObject
 
    
     [SerializeField] Sprite[] m_All_Sprite_Character_Sleep;
-    [SerializeField] Sprite[] m_All_Sprite_Character_Sleep_V2;
+ 
 
     public Sprite Get_Sprite_Character_Sleep(Type_Character type_Character, bool is_Use_Skin_2)
     {
@@ -25,11 +25,11 @@ public class Data_Sprite_In_Game : ScriptableObject
             {
                 return m_All_Sprite_Character_Sleep[(int)type_Character % m_All_Sprite_Character_Sleep.Length];
             }
-            return m_All_Sprite_Character_Sleep_V2[(int)type_Character % m_All_Sprite_Character_Sleep_V2.Length];
+            return m_All_Sprite_Character_Sleep[(int)type_Character % m_All_Sprite_Character_Sleep.Length];
         }
         if (is_Use_Skin_2)
         {
-            return m_All_Sprite_Character_Sleep_V2[(int)type_Character % m_All_Sprite_Character_Sleep_V2.Length];
+            return m_All_Sprite_Character_Sleep[(int)type_Character % m_All_Sprite_Character_Sleep.Length];
         }
         return m_All_Sprite_Character_Sleep[(int)type_Character % m_All_Sprite_Character_Sleep.Length];
     }
@@ -74,8 +74,7 @@ public class Data_Sprite_In_Game : ScriptableObject
     [SerializeField] Sprite[] m_All_Icon_Turrets;
     
     
-    [SerializeField] Data_Sprite_By_Levels m_All_Sprite_Bullet_Pet;
-
+   
     
     
     //xekotoby
@@ -94,11 +93,6 @@ public class Data_Sprite_In_Game : ScriptableObject
         return m_All_Sprite_Bullet_Player.Get_Icon(level);
     }
     
-    public Sprite Get_Sprite_Bullet_Pet(PetName petName,   int level )
-    {
-      
-        return m_All_Sprite_Bullet_Pet.Get_Icon(level);
-    }
 
     
     public Sprite Get_Sprite_Bullel_Pierce(Type_Character type_Character, int level , Type_Turret type_Turret)
@@ -221,18 +215,7 @@ public class Data_Sprite_In_Game : ScriptableObject
 
     #endregion
 
-    #region ================== Data Sprite Item Support ==================
-
- 
-    [SerializeField] Sprite[] m_Data_Icon_Item_Support;
-
-    public Sprite Get_Icon_Item_Support(Type_Item_Support type_Item_Support)
-    {
-        return m_Data_Icon_Item_Support[(int)type_Item_Support % m_Data_Icon_Item_Support.Length];
-    }
-
-    #endregion
-
+  
 
     #region  ==============Data_Sprite_Bullet_boss============
  

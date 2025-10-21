@@ -2,10 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
-using DG.Tweening.Plugins.Options;
-using System.Collections.Generic;
+
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
+
 
 public class Item_Shop_Home : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
@@ -27,7 +26,7 @@ public class Item_Shop_Home : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     Status_Item_Shop_Character status_Item;
     Status_Item_Shop_Character status_Item2;
     [SerializeField] private Status_Item_Shop_Character status_Item_Click;
-    private DG.Tweening.Core.TweenerCore<Vector3, Vector3, VectorOptions> m_Tween_Scale;
+   
 
 
     Data_Type_Rank_Character data_Type_Rank_Character;
@@ -49,7 +48,7 @@ public class Item_Shop_Home : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
 
 
-    [FormerlySerializedAs("layoutIcon")][SerializeField] private Image mLayoutIcon;
+   [SerializeField] private Image mLayoutIcon;
     public void Update_State_Data()
     {
         if (is_Start)
@@ -81,10 +80,10 @@ public class Item_Shop_Home : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     private Tween tweenButtonUp;
     public void OnPointerDown(PointerEventData eventData)
     {
-        tweenButtonDown.Kill();
+        tweenButtonDown?.Kill();
         tweenButtonDown = transform.DOScale(new Vector3(0.85f, 0.85f, 0.85f), 0.1f).OnComplete(() =>
         {
-            tweenButtonDown.Kill();
+            tweenButtonDown?.Kill();
             transform.localScale = new Vector3(0.85f, 0.85f, 0.85f); // Thu nhỏ
         });
 
@@ -93,18 +92,19 @@ public class Item_Shop_Home : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     // Khi thả ra
     public void OnPointerUp(PointerEventData eventData)
     {
-        tweenButtonUp.Kill();
+        tweenButtonUp?.Kill();
         tweenButtonUp = transform.DOScale(Vector3.one, 0.1f).OnComplete(() =>
         {
-            tweenButtonUp.Kill();
+            tweenButtonUp?.Kill();
             transform.localScale = Vector3.one;
         });
     }
 
-
+    private Tween m_Tween_Scale;
     private void OnDisable()
     {
-        m_Tween_Scale.Do_Kill();
+        if (m_Tween_Scale != null && m_Tween_Scale.IsActive())
+            m_Tween_Scale?.Kill();
     }
 
     private void On_Ready_Update_UI()
@@ -126,18 +126,8 @@ public class Item_Shop_Home : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
 
 
-        //updateofjura
-
-
-        //if(DataSaved.Get_Try_Skin_Character_Equipped_Home() == m_Type_Character)
-        //{
-        //    m_Label_ADS.SetActive(true);
-        //}
-        //else
-        //{
-        //    m_Label_ADS.SetActive(false);
-        //}
-        m_Tween_Scale.Do_Kill();
+ 
+        m_Tween_Scale?.Kill();
 
 
 
@@ -148,21 +138,10 @@ public class Item_Shop_Home : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     public void Reset_Bg_HighLight()
     {
         m_BG_Highlight.SetActive(false);
-        // if (m_Type_Character == DataSaved.Get_Skin_Character_Equipped())
-        // {
-        //     layout_Equip.SetActive(true);
-        //
-        // }
-        // else
-        // {
-        //     layout_Equip.SetActive(false);
-        // }
+
     }
 
-    public void Reset_Equid()
-    {
-        // layout_Equip.SetActive(false);
-    }
+
     private void Update_UI_Character()
     {
 
@@ -287,7 +266,7 @@ public class Item_Shop_Home : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
         DataSaved.Set_Skin_Character_Equipped(m_Type_Character);
         Debug.Log(m_Type_Character);
-        m_Tween_Scale.Do_Kill();
+        m_Tween_Scale?.Kill();
 
         if (m_Type_Character == Type_Character.Student)
         {
@@ -302,53 +281,12 @@ public class Item_Shop_Home : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         }
 
         Canvas_Home.Instance.Get_UI_Home().m_Layout_Shop_Character.Reset_State_Data();
-
-        // if ( My_Utils.Get_Status_Skin_Character(m_Type_Character) == Status_Item_Shop_Character.Bought )
-        // {
-        //    // Canvas_Home.Instance.Get_UI_Home().m_Layout_Shop_Character.Reset_State_Equid_Data();
-        //     
-        //     
-        //     
-        //     
-        //     if (m_Is_Character)
-        //     {
-        //         DataSaved.Set_Skin_Character_Equipped(m_Type_Character);
-        //     }
-        //     else
-        //     {
-        //         DataSaved.Set_Skin_Boss_Equipped(m_Type_Boss);
-        //     }
-        //
-        //     if (DataSaved.Get_Status_Try_Skin_Character(m_Type_Character) == Status_Item_Shop_Character.Selected)
-        //     {
-        //         DataSaved.Set_Try_Skin_Character_Equipped_Home(m_Type_Character);
-        //     }
-        //     else
-        //     {
-        //         DataSaved.Set_Try_Skin_Character_Equipped_Home(Type_Character.None);
-        //     }
-        //
-        //     DataSaved.Set_Skin_Trying(Type_Character.None);
-        //     Canvas_Home.Instance.Get_UI_Info_Skin().Update_Content();
-        //     Canvas_Home.Instance.Get_UI_Home().Update_UI_Shop_Character();
-        //     
-        //     
-        //     
-        //  //   layout_Equip.SetActive(true);
-        //     
-        // }
+        
         m_BG_Highlight.SetActive(true);
 
     }
 
 
-
-
-
-    public Type_Character Get_Type_Character()
-    {
-        return m_Type_Character;
-    }
 
 
 

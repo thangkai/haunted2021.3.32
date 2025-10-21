@@ -580,12 +580,7 @@ namespace AllIn1SpriteShader
 #endif
         }
 
-        protected virtual void OnDisable()
-        {
-#if UNITY_EDITOR
-            EditorApplication.update -= OnEditorUpdate;
-#endif
-        }
+
 
         bool needToWait;
         int waitingCycles;

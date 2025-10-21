@@ -271,7 +271,7 @@ public class UI_Waiting_Room : Base_UI
 
     private void OnDisable()
     {
-        CancelInvoke(nameof(On_Ready_Load_Scene));
+     
         CancelInvoke(nameof(Update_Timing));
 
         foreach (var item in m_All_Coroutine)

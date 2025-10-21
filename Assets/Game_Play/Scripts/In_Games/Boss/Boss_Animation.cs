@@ -8,7 +8,8 @@ public class Boss_Animation : MonoBehaviour
     [SerializeField] Type_Animation m_Current_Anim = Type_Animation.None;
     [SerializeField] float m_Speed_Attack = 0f;
     [SerializeField] public SkeletonAnimation m_Anim;
-    [SerializeField] SkeletonAnimation m_Anim_Attack;
+  //  [SerializeField] SkeletonAnimation m_Anim_Attack;
+    [SerializeField] private GameObject animAttack;
     bool m_Is_Force_Attack;
     Boss_Movement m_Boss_Movement;
 
@@ -110,11 +111,13 @@ public class Boss_Animation : MonoBehaviour
 
             if (!m_Base_Boss.Get_Boss_ADC())
             {
-                m_Anim_Attack.transform.position = m_Base_Boss.Get_Pos_Attack();
-                m_Anim_Attack.gameObject.SetActive(true);
-                m_Anim_Attack.timeScale = My_Utils.Get_Time_Scale_Anim(0.433f, m_Speed_Attack);
-
-                m_Anim_Attack.Initialize(true);
+                animAttack.transform.position = m_Base_Boss.Get_Pos_Attack();
+                animAttack.gameObject.SetActive(true);
+                // m_Anim_Attack.transform.position = m_Base_Boss.Get_Pos_Attack();
+                // m_Anim_Attack.gameObject.SetActive(true);
+                // m_Anim_Attack.timeScale = My_Utils.Get_Time_Scale_Anim(0.433f, m_Speed_Attack);
+                //
+                // m_Anim_Attack.Initialize(true);
             }
            
         }
@@ -127,8 +130,8 @@ public class Boss_Animation : MonoBehaviour
             //     
             //     
             // }
-
-            m_Anim_Attack.gameObject.SetActive(false);
+            animAttack.gameObject.SetActive(false);
+           // m_Anim_Attack.gameObject.SetActive(false);
         }
     }
 
@@ -191,37 +194,7 @@ public class Boss_Animation : MonoBehaviour
 
 
 
-        if (e.Data.Name == "summon" && m_Base_Boss && !m_Is_Force_Attack)
-        {
-            
-            if(m_Base_Boss.listBossSummon.Count< 3)
-            {
-
-                     int i =3 - ( 3 - m_Base_Boss.listBossSummonIndex.Count );
-                     
-                     
-                     
-                    if (m_Base_Boss.m_Pos_Summon_Boss.Count > 0)
-                    {
-
-                       
-                            
-                            m_Base_Boss.Spawn_Boss_Summon( m_Base_Boss.m_Pos_Summon_Boss[m_Base_Boss.listBossSummonIndexHave[0]] , m_Base_Boss.listBossSummonIndexHave[0] );
-                            
-                     // a P ms bảo sửa như này
-                      
-                    }
-                    
-                  
-                
-            }
-            else
-            {
-                Play_Animation(Type_Animation.Attack, 1f, true);
-
-            }
-            
-        }
+     
     }
 
     #endregion

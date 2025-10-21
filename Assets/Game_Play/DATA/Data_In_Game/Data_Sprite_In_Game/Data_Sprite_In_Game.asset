@@ -20,33 +20,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b5c89f6ee58ee8645ade30f4c42bba08, type: 3}
   - {fileID: 21300000, guid: 631bbe29ef6f16e48b283f4d9032716a, type: 3}
   - {fileID: 21300000, guid: 42a305a962bc91d4c81817ffbe156122, type: 3}
-  - {fileID: 21300000, guid: def1487a2b5ca874d9051c70d88d5534, type: 3}
-  - {fileID: 21300000, guid: 7a5fa08f4254e2943aa6192fdbc43218, type: 3}
-  - {fileID: 21300000, guid: fdf607c0b9b0fcf49a851618be805126, type: 3}
-  - {fileID: 21300000, guid: dff1e31cf0dc6d94ba455a9ad72b8cae, type: 3}
-  - {fileID: 21300000, guid: c08fd41ec5039bf4987f91550c14b809, type: 3}
-  - {fileID: 21300000, guid: 780f97d7fc10cdb498928c914d1180a4, type: 3}
-  - {fileID: 21300000, guid: 5ab9a4f924eddda40a6a066eea27fce8, type: 3}
-  - {fileID: 21300000, guid: 64a60f6ca66dcbc41aa210f7fdfbd235, type: 3}
-  - {fileID: 21300000, guid: bbf370d8ea4eb2741bf571baa6e47a97, type: 3}
-  - {fileID: 21300000, guid: cc8900808031cb145b366f1ad024be8d, type: 3}
-  m_All_Sprite_Character_Sleep_V2:
-  - {fileID: 21300000, guid: 8afc479d189063f41b9583cae6af025b, type: 3}
-  - {fileID: 21300000, guid: 4e67fcdfdd95906479f3109ed784a443, type: 3}
-  - {fileID: 21300000, guid: 3b93f29f666796c44a4b813ed9984bc4, type: 3}
-  - {fileID: 21300000, guid: 5a3d2465a7c24ce4d9bac6e4cb77a5ba, type: 3}
-  - {fileID: 21300000, guid: 9afa544066d80644faa661e9e5a430ef, type: 3}
-  - {fileID: 21300000, guid: 067e96132cb65b34699c40e0c524086f, type: 3}
-  - {fileID: 21300000, guid: def1487a2b5ca874d9051c70d88d5534, type: 3}
-  - {fileID: 21300000, guid: 7a5fa08f4254e2943aa6192fdbc43218, type: 3}
-  - {fileID: 21300000, guid: fdf607c0b9b0fcf49a851618be805126, type: 3}
-  - {fileID: 21300000, guid: dff1e31cf0dc6d94ba455a9ad72b8cae, type: 3}
-  - {fileID: 21300000, guid: c08fd41ec5039bf4987f91550c14b809, type: 3}
-  - {fileID: 21300000, guid: 780f97d7fc10cdb498928c914d1180a4, type: 3}
-  - {fileID: 21300000, guid: 5ab9a4f924eddda40a6a066eea27fce8, type: 3}
-  - {fileID: 21300000, guid: 64a60f6ca66dcbc41aa210f7fdfbd235, type: 3}
-  - {fileID: 21300000, guid: bbf370d8ea4eb2741bf571baa6e47a97, type: 3}
-  - {fileID: 21300000, guid: cc8900808031cb145b366f1ad024be8d, type: 3}
+  - {fileID: 21300000, guid: 42a305a962bc91d4c81817ffbe156122, type: 3}
+  - {fileID: 21300000, guid: 42a305a962bc91d4c81817ffbe156122, type: 3}
+  - {fileID: 21300000, guid: 42a305a962bc91d4c81817ffbe156122, type: 3}
+  - {fileID: 21300000, guid: 42a305a962bc91d4c81817ffbe156122, type: 3}
+  - {fileID: 21300000, guid: 42a305a962bc91d4c81817ffbe156122, type: 3}
+  - {fileID: 21300000, guid: 42a305a962bc91d4c81817ffbe156122, type: 3}
+  - {fileID: 21300000, guid: 42a305a962bc91d4c81817ffbe156122, type: 3}
+  - {fileID: 21300000, guid: 42a305a962bc91d4c81817ffbe156122, type: 3}
+  - {fileID: 21300000, guid: 42a305a962bc91d4c81817ffbe156122, type: 3}
+  - {fileID: 21300000, guid: 42a305a962bc91d4c81817ffbe156122, type: 3}
   m_All_Sprite_Bed_By_Levels:
   - sprite_Bed: {fileID: 21300000, guid: 8e8f24f133e3ed149aa845febeeac4e8, type: 3}
     sprite_Blanket: {fileID: 21300000, guid: c0b9240f0a4cdfe42b8f70f7b678913e, type: 3}
@@ -97,6 +80,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a9e22e3a00caacf4a8b498913ae81183, type: 3}
   - {fileID: 21300000, guid: 9a79827a87348fd4fb6d0266b8cad1aa, type: 3}
   - {fileID: 21300000, guid: 41210b38549f85d4499665abef904ab4, type: 3}
+  m_All_Sprite_Bullet_Pet: {fileID: 0}
   m_All_Icon_Turret_Penetation: {fileID: 11400000, guid: 70646bbb1df49994ba90a55d9d599f9e, type: 2}
   m_All_Chan_De_Turrets:
   - {fileID: 21300000, guid: 46ceb8fdc6ed7bc4b8977c8c77ec4c16, type: 3}
@@ -115,9 +99,4 @@ MonoBehaviour:
   m_Data_Turret_Penetation_By_Levels: {fileID: 11400000, guid: 70646bbb1df49994ba90a55d9d599f9e, type: 2}
   m_Data_Energy_Tower_By_Levels: {fileID: 11400000, guid: 5238792d7beec5a43b8c5883f06cb045, type: 2}
   m_Data_Door_By_Levels: {fileID: 11400000, guid: be582c7f243e98b49b892e0831f38126, type: 2}
-  m_Data_Icon_Item_Support:
-  - {fileID: 21300000, guid: 5286ebaade682e14cb0f5e89d76e4e30, type: 3}
-  - {fileID: 21300000, guid: a1227b61555b8ba4281f7afb1ff75b5d, type: 3}
-  - {fileID: 21300000, guid: e1001a509c66e364685cc9de0c474c44, type: 3}
-  - {fileID: 21300000, guid: 75f2fb6323d118f48a40bba580b9ac67, type: 3}
-  - {fileID: 21300000, guid: fe5ba8d3304bfbc4ab11c0d828594a08, type: 3}
+  m_All_Sprite_Bullet_Boss: {fileID: 0}

@@ -81,7 +81,7 @@ public class Door_Controller : Base_Turret_Can_Upgrade
     [SerializeField]
     Transform m_Pos_Tut;
 
-    [SerializeField] Bool_Global_Variable m_Live_Data_Index_Claimed_Mission_Tutorial;
+  
    [SerializeField] bool m_Is_Tutorials;
     bool m_Is_Unlock_Skill_2_Repairer;
     bool m_Is_Using_Skin_Calidar;
@@ -710,11 +710,7 @@ public class Door_Controller : Base_Turret_Can_Upgrade
 
 
 
-        if (m_Live_Data_Index_Claimed_Mission_Tutorial)
-        {
-            m_Live_Data_Index_Claimed_Mission_Tutorial.OnValueChanged.AddListener(
-                Listener_Live_Data_Index_Claimed_Mission_Tutorial);
-        }
+     
 
         //updateofjura
 
@@ -889,13 +885,7 @@ public class Door_Controller : Base_Turret_Can_Upgrade
         m_Pos_Global = transform.position;
         m_Effect_Upgrade.PLay_Effect(false);
 
-        if (!data_Player.Get_Is_AI() && m_Live_Data_Index_Claimed_Mission_Tutorial &&
-            DataSaved.Get_Current_Loading_Level() == 0 && !DataSaved.Get_Is_Complete_Tutorial() &&
-            DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story)
-        {
-            m_Live_Data_Index_Claimed_Mission_Tutorial.OnValueChanged.AddListener(
-                Listener_Live_Data_Index_Claimed_Mission_Tutorial);
-        }
+    
 
         m_Is_Unlock_Skill_2_Repairer = m_Type_Character == Type_Character.Repairer &&
                                        DataSaved.Get_Is_Unlock_Skill_2(m_Type_Character);
@@ -1044,34 +1034,11 @@ public class Door_Controller : Base_Turret_Can_Upgrade
         }
     }
 
-    private void Listener_Live_Data_Index_Claimed_Mission_Tutorial()
-    {
-        if (!data_Player.Get_Is_AI())
-        {
-            foreach (Transform item in m_Pos_Tut)
-            {
-                Destroy(item.gameObject);
-            }
 
-            // Show Tut 3: Upgrade Door
-            if (Check_Show_Tut_3())
-            {
-                var obj_Tut = Instantiate(Data_In_Game.Instance.Get_Data_Prefaps().Get_Pref_Hand_Tut(), m_Pos_Tut);
-                obj_Tut.transform.localPosition = Vector3.zero;
-
-                Data_Coin_Energy_Change();
-            }
-        }
-    }
 
     #endregion
 
-    private bool Check_Show_Tut_3()
-    {
-        return DataSaved.Get_Current_Loading_Level() == 0 &&
-               DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story &&
-               !DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 2;
-    }
+ 
 
     public override void Data_Coin_Energy_Change()
     {
@@ -1080,14 +1047,7 @@ public class Door_Controller : Base_Turret_Can_Upgrade
             Check_Data_Player();
             if (data_Player)
             {
-                if (!data_Player.Get_Is_AI() && Check_Show_Tut_3())
-                {
-                    m_Obj_Upgrade.Set_Active(true);
-                }
-                else
-                {
-                    m_Obj_Upgrade.Set_Active(Check_Can_Upgrade());
-                }
+                m_Obj_Upgrade.Set_Active(Check_Can_Upgrade());
             }
         }
     }
@@ -1253,12 +1213,7 @@ public class Door_Controller : Base_Turret_Can_Upgrade
         m_Model_Shake.localPosition = Vector3.zero;
         //transform.localPosition = m_Default_Pos;
 
-        if (Game_Controller.Instance && DataSaved.Get_Current_Loading_Level() == 0 && !data_Player.Get_Is_AI()
-            && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story
-            && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 2)
-        {
-            Game_Controller.Instance.Set_Complete_Mission_Tutorial(Type_Mission_Tut.Mission_3, type_Player);
-        }
+   
 
         Check_Data_Player();
 

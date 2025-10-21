@@ -55,27 +55,10 @@ public class Data_Prefap_In_Game : ScriptableObject
     }
 
     [SerializeField] GameObject[] m_All_Pref_Tiles;
-    [SerializeField] GameObject[] m_All_Pref_Tile_Hells;
-    [SerializeField] GameObject[] m_All_Pref_Tile_Spooky_Forests;
-    [SerializeField] GameObject[] m_All_Pref_Tile_Medieval_Villages;
-    [SerializeField] GameObject[] m_All_Pref_Tile_Greek_Mythlogys;
-
+   
     public GameObject Get_Pref_Tile(Type_Map_Mode type_Map_Mode, Type_Tile type_Tile)
     {
-        switch (type_Map_Mode)
-        {
-            case Type_Map_Mode.Hell:
-                return Get_Pref_Tile_By_Type_Map_Mode(m_All_Pref_Tile_Hells, type_Tile);
-
-            case Type_Map_Mode.Spooky_Forest:
-                return Get_Pref_Tile_By_Type_Map_Mode(m_All_Pref_Tile_Spooky_Forests, type_Tile);
-
-            case Type_Map_Mode.Medieval_Village:
-                return Get_Pref_Tile_By_Type_Map_Mode(m_All_Pref_Tile_Medieval_Villages, type_Tile);
-
-            case Type_Map_Mode.Greek_Mythlogy:
-                return Get_Pref_Tile_By_Type_Map_Mode(m_All_Pref_Tile_Greek_Mythlogys, type_Tile);
-        }
+ 
         if (type_Tile == Type_Tile.None)
         {
             return null;
@@ -104,7 +87,7 @@ public class Data_Prefap_In_Game : ScriptableObject
     }
 
     [SerializeField] GameObject[] m_All_Prefap_Boss;
-    [SerializeField] GameObject[] m_All_Prefap_Boss_V2;
+  
  
     public GameObject Get_Prefap_Boss(Type_Player type_Boss)
     {
@@ -112,11 +95,7 @@ public class Data_Prefap_In_Game : ScriptableObject
         if ((int)type_Boss >= (int)min)
         {
             int id_Boss = (int)type_Boss - min;
-            if (RootManager.Check_Is_AB_SKin())
-            {
-                return m_All_Prefap_Boss_V2[id_Boss % m_All_Prefap_Boss_V2.Length];
-            }
-
+         
             //return m_All_Addressable_Boss[id_Boss % m_All_Addressable_Boss.Length];
             return m_All_Prefap_Boss[id_Boss % m_All_Prefap_Boss.Length];
         }
@@ -150,10 +129,10 @@ public class Data_Prefap_In_Game : ScriptableObject
     // }
 
     [SerializeField] GameObject[] m_All_Prefap_Characters;
-    [SerializeField] GameObject[] m_All_Prefap_Characters_V2;
+   
     
     
-    [SerializeField] GameObject[] m_All_Prefap_Pet;
+   
 
     public GameObject Get_Pref_Character(Type_Character type_Character, bool is_Using_Skin_2)
     {
@@ -165,25 +144,18 @@ public class Data_Prefap_In_Game : ScriptableObject
             {
                 return m_All_Prefap_Characters[(int)type_Character % m_All_Prefap_Characters.Length];
             }
-            return m_All_Prefap_Characters_V2[(int)type_Character % m_All_Prefap_Characters_V2.Length];
+            return m_All_Prefap_Characters[(int)type_Character % m_All_Prefap_Characters.Length];
         }
         if (is_Using_Skin_2)
         {
 
             Debug.Log("bug khon nan 9");
-            return m_All_Prefap_Characters_V2[(int)type_Character % m_All_Prefap_Characters_V2.Length];
+            return m_All_Prefap_Characters[(int)type_Character % m_All_Prefap_Characters.Length];
         }
         Debug.Log("bug khon nan 10");
         return m_All_Prefap_Characters[(int)type_Character % m_All_Prefap_Characters.Length];
     }
 
-    public GameObject Get_Pref_Pet(PetType type_Character, bool is_Using_Skin_2)
-    {
-  
-        return m_All_Prefap_Pet[(int)type_Character % (m_All_Prefap_Pet.Length)];
-        //+ 2 vi them lasr first
-        
-    }
 
     
     
@@ -256,13 +228,7 @@ public class Data_Prefap_In_Game : ScriptableObject
         return m_Pref_Day_Leo_Boss;
     }
 
-   
-    [SerializeField] GameObject[] m_All_Pref_Golems;
 
-    public GameObject Get_Pref_Golem(Type_Golem type_Golem)
-    {
-        return m_All_Pref_Golems[(int)type_Golem % m_All_Pref_Golems.Length];
-    }
 
 
 

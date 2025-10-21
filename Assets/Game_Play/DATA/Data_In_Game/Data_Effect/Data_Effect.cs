@@ -237,39 +237,7 @@ public class Data_Effect : ScriptableObject
         return m_Pref_Effect_Rocket;
     }
  
-    
-    
-    [SerializeField] GameObject m_Pref_Effect_Buff_Health_Pet;
 
-    public GameObject Get_Effect_Buff_Health_Pet()
-    {
-        return m_Pref_Effect_Buff_Health_Pet;
-    }
-        
-    [SerializeField] GameObject m_Pref_Effect_Buff_Health_Pet_SeaAngle;
-
-    public GameObject Get_Effect_Buff_Health_Pet_SeaAngle()
-    {
-        return m_Pref_Effect_Buff_Health_Pet_SeaAngle;
-    }
-
-    
-    
-    
-    [SerializeField] GameObject m_Pref_Effect_Buff_Health_Pet_Spine;
-
-    public GameObject Get_Effect_Buff_Health_Pet_Spine()
-    {
-        return m_Pref_Effect_Buff_Health_Pet_Spine;
-    }
-    //safeguard
-
-    [SerializeField] GameObject m_Pref_Effect_Smoke_Temp_Door;
-
-    public GameObject Get_Effect_Smoke_Temp_Door ()
-    {
-        return m_Pref_Effect_Smoke_Temp_Door;
-    }
 
 
 

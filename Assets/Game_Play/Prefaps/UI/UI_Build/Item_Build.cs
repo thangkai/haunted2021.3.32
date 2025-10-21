@@ -68,20 +68,10 @@ public class Item_Build : Item_Upgrade
         m_Layout_Inactive.Set_Active(!m_Is_Show);
         m_Obj_Tut_Hand.Set_Active(false);
 
-        if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 && Check_Condition_Tut() && m_Is_Show)
-        {
-            m_Obj_Tut_Hand.Set_Active(true);
-        }
+       
     }
 
-    public override bool Check_Condition_Tut()
-    {
-        return !DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 &&
-            ((m_Model_Info_Turret.type_Turret == Type_Turret.Turret && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 3) ||
-            (m_Model_Info_Turret.type_Turret == Type_Turret.Energy_Tower && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 5) ||
-            (My_Utils.Check_Tut_Mission_7(m_Type_Player) && m_Model_Info_Turret.type_Turret == Type_Turret.Cross)
-            );
-    }
+
 
     public void _Btn_Item_OnClick()
     {
@@ -104,11 +94,11 @@ public class Item_Build : Item_Upgrade
             m_Tmp_Price_Coin = My_Utils.Get_Price(m_Type_Character, m_Model_Info_Turret.type_Turret, m_Model_Info_Turret.price_Upgrades.price_Coin);
             m_Tmp_Price_Energy = My_Utils.Get_Price(m_Type_Character, m_Model_Info_Turret.type_Turret, m_Model_Info_Turret.price_Upgrades.price_Energy);
 
-            if (Check_Condition_Tut() || DataSaved.Get_Unlock_Skill_Tree_Gem_Player(Type_Skill_Tree_Gem.Skill_6_Upgrade_Free) && DataSaved.Get_Count_Other_Player_Die() > 0)
-            {
-                m_Tmp_Price_Coin = 0;
-                m_Tmp_Price_Energy = 0;
-            }
+            // if (Check_Condition_Tut() || DataSaved.Get_Unlock_Skill_Tree_Gem_Player(Type_Skill_Tree_Gem.Skill_6_Upgrade_Free) && DataSaved.Get_Count_Other_Player_Die() > 0)
+            // {
+            //     m_Tmp_Price_Coin = 0;
+            //     m_Tmp_Price_Energy = 0;
+            // }
 
             if (m_Tmp_Data_Player.Get_Sum_Coin() >= m_Tmp_Price_Coin && m_Tmp_Data_Player.Get_Sum_Energy() >= m_Tmp_Price_Energy)
             {
@@ -133,10 +123,7 @@ public class Item_Build : Item_Upgrade
                 }
             }
 
-            if (Check_Condition_Tut())
-            {
-                m_Tmp_Is_Can_Build = true;
-            }
+         
 
             if (m_Tmp_Is_Can_Build)
             {
@@ -169,12 +156,12 @@ public class Item_Build : Item_Upgrade
 
     public override bool Check_Can_Buy_Or_Upgrade_Item()
     {
-        if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 &&
-            ((m_Model_Info_Turret.type_Turret == Type_Turret.Turret && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 3))
-            )
-        {
-            return true;
-        }
+        // if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 &&
+        //     ((m_Model_Info_Turret.type_Turret == Type_Turret.Turret && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 3))
+        //     )
+        // {
+        //     return true;
+        // }
 
         bool output = base.Check_Can_Buy_Or_Upgrade_Item();
 

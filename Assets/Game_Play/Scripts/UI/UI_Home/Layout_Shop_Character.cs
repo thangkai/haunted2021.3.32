@@ -73,68 +73,10 @@ public class Layout_Shop_Character : Base_UI
 
         }
     }
-    public void Reset_State_Equid_Data()
-    {
 
-        for (int i = 0; i < m_All_Item_Character.Count; i++)
-        {
-
-            m_All_Item_Character[i].Reset_Equid();
-
-        }
-    }
+    
 
 
 
 
-    public Type_Character Get_Next_Character(Type_Character type_Character)
-    {
-        int curr_Index = Get_Index_Type_Character(type_Character);
-        curr_Index += 1;
-        if (curr_Index >= m_All_Type_Characters.Count)
-        {
-            curr_Index = 0;
-        }
-
-        return m_All_Type_Characters[curr_Index];
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public Type_Character Get_Prev_Character(Type_Character type_Character)
-    {
-        int curr_Index = Get_Index_Type_Character(type_Character);
-        curr_Index -= 1;
-        if (curr_Index < 0)
-        {
-            curr_Index = m_All_Type_Characters.Count - 1;
-        }
-
-        return m_All_Type_Characters[curr_Index];
-    }
-
-    private int Get_Index_Type_Character(Type_Character type_Character)
-    {
-        for (int i = 0; i < m_All_Type_Characters.Count; i++)
-        {
-            if (m_All_Type_Characters[i] == type_Character)
-            {
-                return i;
-            }
-        }
-
-        return 0;
-    }
 }

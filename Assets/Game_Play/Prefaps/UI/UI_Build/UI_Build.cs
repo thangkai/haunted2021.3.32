@@ -54,23 +54,22 @@ public class UI_Build : Base_UI
 
     public override void OnReadyOpenUI()
     {
-        if (My_Utils.Check_Tut_Mission_7(m_Type_Player))
-        {
-            m_Tab_Selected = Type_Tab_Buy_Turret.Tab_High_Tech;
-        }
-        else
-        {
-            m_Tab_Selected = Type_Tab_Buy_Turret.Tab_Basic;
-        }
+        // if (My_Utils.Check_Tut_Mission_7(m_Type_Player))
+        // {
+        //     m_Tab_Selected = Type_Tab_Buy_Turret.Tab_High_Tech;
+        // }
+        // else
+        // {
+        //
+        // }
+        m_Tab_Selected = Type_Tab_Buy_Turret.Tab_Basic;
 
         Update_UI_Tab();
 
         CancelInvoke(nameof(Set_Is_Ready_Clickable));
         Invoke(nameof(Set_Is_Ready_Clickable), 0.25f);
 
-        bool is_Tut = Check_Is_Tut();
-        m_Obj_Btn_Close.Set_Active(!is_Tut);
-        m_Obj_Btn_Packback.Set_Active(!is_Tut);
+     
 
         m_Pos_Tut_Hand.Destroy_All_Children();
         if (!DataSaved.Get_Complete_Tut_Use_Packback_Item() && 
@@ -89,12 +88,6 @@ public class UI_Build : Base_UI
         }
     }
 
-    private bool Check_Is_Tut()
-    {
-        return (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0 &&
-            (DataSaved.Get_Index_Claimed_Mission_Tutorial() == 3 || DataSaved.Get_Index_Claimed_Mission_Tutorial() == 5 ||
-            My_Utils.Check_Tut_Mission_7(m_Type_Player)));
-    }
 
     public void Btn_Tab_OnClick(Type_Tab_Buy_Turret m_Type_Tab)
     {
@@ -155,32 +148,14 @@ public class UI_Build : Base_UI
                 m_Base_Turret.m_Type_Character, this,
                 My_Utils.Get_Data_Info_Turret(m_Tmp_Model_Tab_Buy.data_Info_Turret, 0),
                 m_Tmp_Model_Tab_Buy.type_Buy_Turret, m_Tmp_Sum_Turret_Builed,
-                m_Tmp_Model_Tab_Buy.number_Limited, Check_Condition_Tut(m_Tmp_Model_Tab_Buy.type_Turret)
+                m_Tmp_Model_Tab_Buy.number_Limited, true
                 );
         }
 
 
     }
 
-    private bool Check_Condition_Tut(Type_Turret type_Turret)
-    {
-        if (!DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story && DataSaved.Get_Current_Loading_Level() == 0)
-        {
-            if (DataSaved.Get_Index_Claimed_Mission_Tutorial() == 3)
-            {
-                return type_Turret == Type_Turret.Turret;
-            }
-            if (DataSaved.Get_Index_Claimed_Mission_Tutorial() == 5)
-            {
-                return type_Turret == Type_Turret.Energy_Tower;
-            }
-            if (My_Utils.Check_Tut_Mission_7(m_Type_Player))
-            {
-                return type_Turret == Type_Turret.Cross;
-            }
-        }
-        return true;
-    }
+
 
     public void On_Buy_Turret_Success(Type_Turret type_Turret)
     {

@@ -40,11 +40,7 @@ MonoBehaviour:
   m_Pref_Effect_Eilif: {fileID: 8458503709115055557, guid: c6488cb6e256abf42a8aed95ddc968f3, type: 3}
   m_Pref_Effect_Heal_Eilif: {fileID: 152868847150049255, guid: a049e99312f1a3a459589971d600f354, type: 3}
   m_Pref_Effect_Fire: {fileID: 8458503709115055557, guid: 6c8a2a39fe359804996698036fdf499e, type: 3}
-  m_Pref_Effect_Explosion_Fire: {fileID: 8458503709115055557, guid: a3c554fb8c55907419bfaa7ad01abc69, type: 3}
+  m_Pref_Effect_Explosion_Fire: {fileID: 0}
   m_Pref_Effect_Coin_Mining_Machine: {fileID: 4292383520744493550, guid: aa49d2b0268142d459a047e53d5223c0, type: 3}
   m_Pref_Effect_Stun_By_Safeguard: {fileID: 4510352010693214482, guid: 99bc677c09f2d28448b40beca0549378, type: 3}
   m_Pref_Effect_Rocket: {fileID: 3669430098346546373, guid: 99073c9d22ac7e74f86b3821c21abc98, type: 3}
-  m_Pref_Effect_Buff_Health_Pet: {fileID: 2016179313869414083, guid: 14ab8742671cc7b40b00dc0e71381a27, type: 3}
-  m_Pref_Effect_Buff_Health_Pet_SeaAngle: {fileID: 569598440565140537, guid: 18d1d7376ee17c94c878aee35686b38c, type: 3}
-  m_Pref_Effect_Buff_Health_Pet_Spine: {fileID: 1448911221182530642, guid: 0439cf43bf602ec4993b34e0e8d74d87, type: 3}
-  m_Pref_Effect_Smoke_Temp_Door: {fileID: 0}

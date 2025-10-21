@@ -35,14 +35,7 @@ public class Ground_Controller : Base_Turret_Can_Upgrade
         base.Add_Listener();
 
         Check_Data_Player();
-        if (data_Player && !data_Player.Get_Is_AI() && DataSaved.Get_Current_Loading_Level() == 0 && !DataSaved.Get_Is_Complete_Tutorial() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story)
-        {
-            m_Live_Data_Index_Claimed_Mission_Tutorial = Data_In_Game.Instance.Get_Live_Data_Index_Claimed_Mission_Tutorial();
-            if (m_Live_Data_Index_Claimed_Mission_Tutorial)
-            {
-                m_Live_Data_Index_Claimed_Mission_Tutorial.OnValueChanged.AddListener(Remove_Tut);
-            }
-        }
+
 
         Data_Coin_Energy_Change();
     }

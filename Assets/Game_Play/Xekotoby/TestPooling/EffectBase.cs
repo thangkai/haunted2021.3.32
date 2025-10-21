@@ -26,12 +26,7 @@ namespace Game_Play.Xekotoby.Pooling
             //GameplayManager.OnGameOver.AddListener(OnGameOverHandle);
         }
 
-        protected virtual void OnDisable()
-        {
-            SceneManager.sceneUnloaded -= SceneUnloadedHandle;
-            //GameplayManager.OnGameOver.RemoveListener(OnGameOverHandle);
-        }
-
+     
         private void OnGameOverHandle(bool arg0)
         {
             SelfDestroy();

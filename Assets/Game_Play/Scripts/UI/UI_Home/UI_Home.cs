@@ -1,13 +1,11 @@
-using UnityEngine;
-using Spine.Unity;
-
-using System;
-using TMPro;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 using System.Collections;
+using UnityEngine;
+
+using TMPro;
+
 using System.Collections.Generic;
 using DG.Tweening;
+
 public class UI_Home : Base_UI
 {
 
@@ -15,34 +13,18 @@ public class UI_Home : Base_UI
     //[SerializeField] GameObject m_Btn_Remove_Ads;
 
 
-    [SerializeField] Bool_Global_Variable m_Live_Data_Update_Skin_Character;
-
+ 
     [SerializeField] private TMP_Text textTime;
 
     [SerializeField] private TMP_Text textTime2;
 
-    private void Awake()
-    {
 
-
-
-
-        //updateofjura
-       
-       
-        StartCountdown(3, -1, 4f);
-
-        // updateofjura
-        // luc dau de luu du lieu cho ui homne
-
-        //DataSaved.Set_Try_Skin_Character_Equipped_Home(Type_Character.None); 
-
-    }
-
-
-    
  
-
+    private IEnumerator DelayStartCountdown()
+    {
+        yield return null; // đợi 1 frame
+        StartCountdown(3, -1, 4f);
+    }
     public void StartCountdown(float from, float to, float duration)
     {
 
@@ -87,15 +69,15 @@ public class UI_Home : Base_UI
     {
         base.Start();
         SoundController.Play_Musics(true);
-
+        StartCoroutine(DelayStartCountdown()); 
 
         DataSaved.Set_Skin_Trying(Type_Character.None);
 
 
 
-        Check_Null_Canvas_Home();
+      
 
-        Check_Unlock_Mode_Challenge();
+        
 
 
         m_Layout_Shop_Character.OnReadyOpenUI();
@@ -114,27 +96,6 @@ public class UI_Home : Base_UI
 
 
 
-    #region =========== Btn Mode Challenge ===========
-
- 
-
-    [SerializeField] GameObject m_BG_Unlock_Mode_Challenge;
-
-    [SerializeField] private GameObject m_Challenge_Mode;
-    private void Check_Unlock_Mode_Challenge()
-    {
-
-
-
-
-
-
-
-
-        m_Challenge_Mode.gameObject.Set_Active(true);
-    }
-
-    #endregion
 
 
 
@@ -159,47 +120,19 @@ public class UI_Home : Base_UI
 
 
 
-    private void OnDisable()
-    {
 
-        CancelInvoke(nameof(Check_Null_Canvas_Home));
-    }
 
-    private void Check_Null_Canvas_Home()
-    {
-        if (Canvas_Home.Instance)
-        {
-            Canvas_Home.Instance.Check_Time_Spin();
-        }
-        else
-        {
-            CancelInvoke(nameof(Check_Null_Canvas_Home));
-            Invoke(nameof(Check_Null_Canvas_Home), 1f);
-        }
-    }
 
     public override void OnReadyOpenUI()
     {
         Update_UI_Btn_Change_Mode_Play(true);
-
-
-
-        //  m_Label_Night.Set_Text(DataSaved.Get_Max_Level_Unlocked_Index() + 1);
-
+        
         DataSaved.Increase_Count_Open_UI_Home();
 
 
-        //Check_Open_UI_Daily_Gift();
+ 
     }
 
-    public void _Btn_Play_OnCLick()
-    {
-        SoundController.Play_Sound_Plays();
-
-        DataSaved.Set_Type_Mode_Gameplay_Playing(Type_Mode_Gameplay.Story);
-
-
-    }
 
     public void _Btn_Challenge_Mode_On_Click()
     {
@@ -371,76 +304,10 @@ public class UI_Home : Base_UI
 
 
 
-    // public void _Btn_Play_Story_OnCLick()
-    // {
-    //     SoundController.Play_Sound_Plays();
 
 
 
-    //     // if (DataSaved.Get_Sum_Energy() <= 0 && !DataSaved.Get_Is_Energy_Infinity())
-    //     // {
-    //     //     Canvas_Home.Instance.Get_UI_Refill_Energy().Open_UI(() =>
-    //     //     {
-    //     //         DataSaved.Set_Type_Mode_Gameplay_Playing(Type_Mode_Gameplay.Story_Level);
-    //     //         Canvas_Home.Instance.Get_UI_Level_Story_Mode().Open_UI();
-    //     //         // Canvas_Home.Instance.Get_UI_Base().Close_UI();
-    //     //     });
-    //     // }
-    //     // else
-    //     // {
-    //     //     DataSaved.Set_Type_Mode_Gameplay_Playing(Type_Mode_Gameplay.Story_Level);
-    //     //     Canvas_Home.Instance.Get_UI_Level_Story_Mode().Open_UI();
-    //     //     
-    //     //     
-    //     //     // Canvas_Home.Instance.Get_UI_Base().Close_UI();
-    //     // }
-
-
-    //     if (DataSaved.Get_Max_Level_Unlocked_Index() >= 2)
-    //     {
-
-    //         DataSaved.Set_Type_Mode_Gameplay_Playing(Type_Mode_Gameplay.Story_Level);
-
-
-    //     }
-    //     else
-    //     {
-
-    //     }
-
-
-
-    // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public void _Btn_Home_OnClick()
-    {
-        SoundController.Play_Sound_Clicks();
-
-
-
-
-
-
-        Canvas_Home.Instance.Get_UI_Home().Open_UI();
-
-
-
-
-
-    }
-
+ 
 
 
 
@@ -505,24 +372,6 @@ public class UI_Home : Base_UI
         {
 
         }
-
-    }
-
-    public void Update_UI_Shop_Character()
-    {
-        is_Mode_Player = DataSaved.Get_Type_Mode_Play() == Type_Mode_Play.Player;
-        if (is_Mode_Player)
-        {
-            m_Layout_Shop_Character.Update_State_Data();
-            m_Layout_Shop_Character_2.Update_State_Data();
-
-        }
-        else
-        {
-            //m_Layout_Shop_Boss.Update_State_Data();
-        }
-
-
 
     }
 

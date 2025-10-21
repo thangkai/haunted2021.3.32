@@ -859,31 +859,7 @@ public class DataSaved : Singleton<DataSaved>
 
 
 
-    #region // ================================= Index Claimed Mission Tutorial ================================== //
-
-    private const string KEY_Index_Claimed_Mission_Tutorial = "KEY_Index_Claimed_Mission_Tutorial";
-
-    public static void Increase_Index_Claimed_Mission_Tutorial()
-    {
-        Set_Index_Claimed_Mission_Tutorial(Get_Index_Claimed_Mission_Tutorial() + 1);
-
-        if (Instance)
-        {
-            Instance.Notify_Data_Index_Claimed_Mission_Tutorial_Change();
-        }
-    }
-
-    public static void Set_Index_Claimed_Mission_Tutorial(int index)
-    {
-        UtilGame.SetDataInt(KEY_Index_Claimed_Mission_Tutorial, index);
-    }
-
-    public static int Get_Index_Claimed_Mission_Tutorial()
-    {
-        return UtilGame.GetDataInt(KEY_Index_Claimed_Mission_Tutorial, 0);
-    }
-
-    #endregion
+   
 
     #region // ================================= Index Claimed Daily Gift ================================== //
 

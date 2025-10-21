@@ -247,13 +247,7 @@ public class Turret_Penetration : Base_Turret_Can_Upgrade
     {
         base.InCrease_Level();
         Game_Controller game_Controller = Game_Controller.Instance;
-        if (game_Controller && data_Player && !data_Player.Get_Is_AI() && !DataSaved.Get_Is_Complete_Tutorial() &&
-            DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story &&
-            DataSaved.Get_Current_Loading_Level() == 0
-            && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 4)
-        {
-            game_Controller.Set_Complete_Mission_Tutorial(Type_Mission_Tut.Mission_5, type_Player);
-        }
+  
     }
 
     public override void Update_Model_Price()
@@ -988,18 +982,19 @@ public class Turret_Penetration : Base_Turret_Can_Upgrade
                     //  m_Is_Can_Click = false;
                 }
 
-                if (m_Is_Tutorials && !data_Player.Get_Is_AI() &&
-                    DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story &&
-                    DataSaved.Get_Index_Claimed_Mission_Tutorial() == 4)
-                {
-                    m_Is_Can_Upgrade = true;
-                    m_Obj_Upgrade.Set_Active(true);
-                }
-                else
-                {
-                    m_Is_Can_Upgrade = Check_Can_Upgrade();
-                    m_Obj_Upgrade.Set_Active(m_Is_Can_Upgrade);
-                }
+                // if (m_Is_Tutorials && !data_Player.Get_Is_AI() &&
+                //     DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story &&
+                //     DataSaved.Get_Index_Claimed_Mission_Tutorial() == 4)
+                // {
+                //     m_Is_Can_Upgrade = true;
+                //     m_Obj_Upgrade.Set_Active(true);
+                // }
+                // else
+                // {
+                    
+            //    }
+            m_Is_Can_Upgrade = Check_Can_Upgrade();
+            m_Obj_Upgrade.Set_Active(m_Is_Can_Upgrade);
 
                 if (m_Is_Start)
                 {

@@ -1,12 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Model_Anim_Boss_Character : MonoBehaviour
 {
     [SerializeField] Base_Boss m_Base_Boss;
-    [SerializeField] public Transform petSkill;
+   
     public void Set_Data_Boss(Type_Player type_Player, Action action_Done = null)
     {
         // BundleObjectLoader.Instance.LoadFromFile(
@@ -14,10 +13,16 @@ public class Model_Anim_Boss_Character : MonoBehaviour
         //         type_Player), Boss_In_Game =>
         //     {
 
+        
+        
+                Debug.LogError("Set_Data_Boss");
                 GameObject Boss_In_Game = Data_In_Game.Instance.Get_Data_Skeleton_Asset()
                     .Get_GameObject_Reference_Asset_Boss_Anim(
                         type_Player);
+                
                 var obj_Anim_Boss = Instantiate(Boss_In_Game, transform);
+                
+                Debug.LogError("Set_Data_Boss 2");
                 obj_Anim_Boss.transform.localPosition = Vector3.zero;
 
                 Model_Anim_Character model_Anim_Character = obj_Anim_Boss.GetComponent<Model_Anim_Character>();
@@ -39,7 +44,7 @@ public class Model_Anim_Boss_Character : MonoBehaviour
                         );
                     }
 
-                    petSkill = model_Anim_Character.PosSkillPetAnim();
+                  
                     var ammor_Follow = m_Base_Boss.Get_Boss_Movement().Get_Ammor_Follow();
                     if (ammor_Follow)
                     {

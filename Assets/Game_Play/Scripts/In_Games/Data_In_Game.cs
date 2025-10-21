@@ -90,12 +90,7 @@ public class Data_In_Game : Singleton<Data_In_Game>
     }
 
 
-    [SerializeField] Data_Mission_Tut m_Data_Mission_Tut;
-
-    public Data_Mission_Tut Get_Data_Mission_Tut()
-    {
-        return m_Data_Mission_Tut;
-    }
+   
 
     [SerializeField] Data_Alert m_Data_Alert;
 
@@ -110,21 +105,21 @@ public class Data_In_Game : Singleton<Data_In_Game>
     {
         switch (type_Icon_Skill_Tree)
         {
-            // truong hop ngoai le
-            case Type_Icon_Skill_Tree.Skill_2_Student:
-                return m_Icon_Skill_2[0];
-
-            case Type_Icon_Skill_Tree.Skill_2_Vampire_Hunter:
-                return m_Icon_Skill_2[1];
-
-            case Type_Icon_Skill_Tree.Skill_2_Repairer:
-                return m_Icon_Skill_2[2];
-
-            case Type_Icon_Skill_Tree.Skill_2_Eilif:
-                return m_Icon_Skill_2[3];
-
-            case Type_Icon_Skill_Tree.Skill_1_Safeguard:
-                return m_Icon_Skill_2[4];
+            // // truong hop ngoai le
+            // case Type_Icon_Skill_Tree.Skill_2_Student:
+            //     return m_Icon_Skill_2[0];
+            //
+            // case Type_Icon_Skill_Tree.Skill_2_Vampire_Hunter:
+            //     return m_Icon_Skill_2[1];
+            //
+            // case Type_Icon_Skill_Tree.Skill_2_Repairer:
+            //     return m_Icon_Skill_2[2];
+            //
+            // case Type_Icon_Skill_Tree.Skill_2_Eilif:
+            //     return m_Icon_Skill_2[3];
+            //
+            // case Type_Icon_Skill_Tree.Skill_1_Safeguard:
+            //     return m_Icon_Skill_2[4];
         }
         return null;
     }
@@ -206,47 +201,19 @@ public class Data_In_Game : Singleton<Data_In_Game>
         return m_Data_Effect;
     }
 
-    [SerializeField] Bool_Global_Variable m_Live_Data_Index_Claimed_Mission_Tutorial;
-    [SerializeField] Bool_Global_Variable m_Live_Data_Can_Build_Crucific_Tutorial;
+    
     [SerializeField] Bool_Global_Variable m_Live_Data_Loop_Time;
-    [SerializeField] Bool_Global_Variable m_Live_Data_Item_SP_Stun;
-    [SerializeField] Bool_Global_Variable m_Live_Data_Skill_2_Eilif;
-    [SerializeField] Bool_Global_Variable m_Live_Data_Skill_2_Safeguard;
-    [SerializeField] Bool_Global_Variable m_Live_Data_Damagetation;
-
-    public Bool_Global_Variable Get_Live_Data_Index_Claimed_Mission_Tutorial()
-    {
-        return m_Live_Data_Index_Claimed_Mission_Tutorial;
-    }
-
-    public Bool_Global_Variable Get_Live_Data_Can_Build_Crucific_Tutorial()
-    {
-        return m_Live_Data_Can_Build_Crucific_Tutorial;
-    }
+  
 
     public Bool_Global_Variable Get_Live_Data_Loop_Time()
     {
         return m_Live_Data_Loop_Time;
     }
 
-    public Bool_Global_Variable Get_Live_Data_Item_SP_Stun()
-    {
-        return m_Live_Data_Item_SP_Stun;
-    }
 
-    public Bool_Global_Variable Get_Live_Data_Skill_2_Eilif()
-    {
-        return m_Live_Data_Skill_2_Eilif;
-    }
     //updateofjura
-    public Bool_Global_Variable Get_Live_Data_Skill_2_Safeguard()
-    {
-        return m_Live_Data_Skill_2_Safeguard;
-    }
-    public Bool_Global_Variable Get_Live_Data_Damagetation()
-    {
-        return m_Live_Data_Damagetation;
-    }
+
+
 
     [Header("_____ Data Map ______")]
     [SerializeField] GameObject[] m_All_Map_Challenges;

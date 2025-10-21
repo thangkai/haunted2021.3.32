@@ -529,28 +529,27 @@ public class My_Utils : MonoBehaviour
             Get_Price(m_Curr_Turret.m_Type_Character, m_Curr_Turret.type_Turret, model_Price.price_Coin);
         int price_Energy_Upgrade = Get_Price(m_Curr_Turret.m_Type_Character, m_Curr_Turret.type_Turret,
             model_Price.price_Energy);
-        int index_Claimed_Mission = DataSaved.Get_Index_Claimed_Mission_Tutorial();
-
-        if (!is_AI)
-        {
-            if (!DataSaved.Get_Is_Complete_Tutorial() &&
-                DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story &&
-                DataSaved.Get_Current_Loading_Level() == 0 &&
-                ((m_Curr_Turret.type_Turret == Type_Turret.Bed && index_Claimed_Mission == 1) ||
-                 (m_Curr_Turret.type_Turret == Type_Turret.Door && index_Claimed_Mission == 2) ||
-                 (m_Curr_Turret.type_Turret == Type_Turret.Turret && index_Claimed_Mission == 4)
-                ))
-            {
-                price_Coin_Upgrade = 0;
-                price_Energy_Upgrade = 0;
-            }
-            else if (DataSaved.Get_Unlock_Skill_Tree_Gem_Player(Type_Skill_Tree_Gem.Skill_6_Upgrade_Free) &&
-                     DataSaved.Get_Count_Other_Player_Die() > 0)
-            {
-                price_Coin_Upgrade = 0;
-                price_Energy_Upgrade = 0;
-            }
-        }
+   
+        // if (!is_AI)
+        // {
+        //     if (!DataSaved.Get_Is_Complete_Tutorial() &&
+        //         DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story &&
+        //         DataSaved.Get_Current_Loading_Level() == 0 &&
+        //         ((m_Curr_Turret.type_Turret == Type_Turret.Bed && index_Claimed_Mission == 1) ||
+        //          (m_Curr_Turret.type_Turret == Type_Turret.Door && index_Claimed_Mission == 2) ||
+        //          (m_Curr_Turret.type_Turret == Type_Turret.Turret && index_Claimed_Mission == 4)
+        //         ))
+        //     {
+        //         price_Coin_Upgrade = 0;
+        //         price_Energy_Upgrade = 0;
+        //     }
+        //     else if (DataSaved.Get_Unlock_Skill_Tree_Gem_Player(Type_Skill_Tree_Gem.Skill_6_Upgrade_Free) &&
+        //              DataSaved.Get_Count_Other_Player_Die() > 0)
+        //     {
+        //         price_Coin_Upgrade = 0;
+        //         price_Energy_Upgrade = 0;
+        //     }
+        // }
 
         if (data_Player.Get_Sum_Coin() >= price_Coin_Upgrade &&
             data_Player.Get_Sum_Energy() >= price_Energy_Upgrade)
@@ -1149,82 +1148,9 @@ public class My_Utils : MonoBehaviour
 
 
 
-    public static bool Check_Tut_Mission_7(Type_Player m_Type_Player)
-    {
-        return !DataSaved.Get_Is_Complete_Tutorial() &&
-               DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story &&
-               DataSaved.Get_Current_Loading_Level() == 0 &&
-               DataSaved.Get_Index_Claimed_Mission_Tutorial() == 6 &&
-               Player_Manager.Instance.Get_Data_Player(m_Type_Player).Get_Sum_Energy() >= 64;
-    }
-
-    public static Type_Pack Get_Pack_Sale(Type_Pack type_Pack)
-    {
-        switch (type_Pack)
-        {
-
-            case Type_Pack.Pack_Best_Seller: return Type_Pack.Gem_Best_Seller_Sale;
-            case Type_Pack.Pack_Starter: return Type_Pack.Starter_Sale;
-            case Type_Pack.Shield_Pack: return Type_Pack.Shield_Pack_Sale;
-            case Type_Pack.Attack_Pack: return Type_Pack.Attack_Pack_Sale;
-            case Type_Pack.Item_Pack: return Type_Pack.Item_Pack_Sale;
-            case Type_Pack.Legend_Bundles: return Type_Pack.Legend_Bundles_Promotion_Sale;
-            case Type_Pack.Epic_Bundles: return Type_Pack.Epic_Bundles_Promotion_Sale;
-            case Type_Pack.Key_Bundles:
-                if (DataSaved.Get_Key_Type_pack_Key_Bunddle_499() == true)
-                {
-                    return Type_Pack.Key_Bundles_Promotion499_Sale;
-                }
-
-                return Type_Pack.Key_Bundles_Promotion299_Sale;
-
-            case Type_Pack.Common_Key_Bundles: return Type_Pack.Common_Key_Bundles_Sale;
-            case Type_Pack.Rare_Key_Bundles: return Type_Pack.Rare_Key_Bundles_Sale;
-            case Type_Pack.Legendary_Key_Bundles: return Type_Pack.Legendary_Key_Bundles_Sale;
 
 
-            case Type_Pack.Character_Pack:
-                if (DataSaved.Get_AB_IAP_Character_Pack())
-                {
-                    return Type_Pack.Character_Pack_Sale_B;
-                }
-
-                return Type_Pack.Character_Pack_Sale;
-
-
-            case Type_Pack.SubWeeklyDeal:
-
-
-                return Type_Pack.SubWeeklyDealSale;
-
-
-            case Type_Pack.Pack_Remove_Ads:
-                return Type_Pack.Pack_Remove_Ads_Sale;
-            case Type_Pack.Pack_Gem_Small:
-                return Type_Pack.Gem_Small_Sale;
-
-            case Type_Pack.Pack_Gem_Normal:
-                return Type_Pack.Gem_Normal_Sale;
-
-            case Type_Pack.Pack_Gem_Big:
-                return Type_Pack.Gem_Big_Sale;
-            case Type_Pack.Pack_Gem_Huge:
-                return Type_Pack.Gem_Pack_Huge_Sale;
-
-
-            case Type_Pack.Pack_Remove_Ads_Huge:
-                return Type_Pack.Gem_Pack_Huge_Sale;
-
-            case Type_Pack.Pack_Remove_Ads_Normal:
-                return Type_Pack.Gem_Pack_Normal_Sale;
-
-
-        }
-
-        return type_Pack;
-    }
-
-
+  
 
     public static bool Get_Is_Playing_Max_Level()
     {

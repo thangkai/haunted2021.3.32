@@ -1064,26 +1064,6 @@ public class Room_Controller : MonoBehaviour
                 }, false).SetLink(gameObject);
             }
 
-
-            if (data_Player && !data_Player.Get_Is_AI() && DataSaved.Get_Current_Loading_Level() == 0)
-            {
-                m_Live_Data_Index_Claimed_Mission_Tutorial =
-                    Data_In_Game.Instance.Get_Live_Data_Index_Claimed_Mission_Tutorial();
-                if (m_Live_Data_Index_Claimed_Mission_Tutorial)
-                {
-                    m_Live_Data_Index_Claimed_Mission_Tutorial.OnValueChanged.AddListener(
-                        Listener_Live_Data_Index_Claimed_Mission_Tutorial);
-                }
-
-                m_Live_Data_Can_Build_Crucific_Tutorial =
-                    Data_In_Game.Instance.Get_Live_Data_Can_Build_Crucific_Tutorial();
-                if (m_Live_Data_Can_Build_Crucific_Tutorial)
-                {
-                    m_Live_Data_Can_Build_Crucific_Tutorial.OnValueChanged.AddListener(
-                        Listener_Live_Data_Can_Build_Crucific_Tutorial);
-                }
-            }
-
             Check_Skill_1_Raven();
         }
 
@@ -1107,11 +1087,7 @@ public class Room_Controller : MonoBehaviour
 
     private void Remove_All_Listener()
     {
-        if (m_Live_Data_Index_Claimed_Mission_Tutorial)
-        {
-            m_Live_Data_Index_Claimed_Mission_Tutorial.OnValueChanged.RemoveListener(
-                Listener_Live_Data_Index_Claimed_Mission_Tutorial);
-        }
+    
 
         if (m_Live_Data_Can_Build_Crucific_Tutorial)
         {
@@ -1122,28 +1098,7 @@ public class Room_Controller : MonoBehaviour
 
     #region ==================== Listener Live Data ====================
 
-    private void Listener_Live_Data_Index_Claimed_Mission_Tutorial()
-    {
-        Check_Data_Player();
-        if (data_Player && !data_Player.Get_Is_AI())
-        {
-            if (Check_Show_Tut_4())
-            {
-                m_All_Ground_Using_Build_Turret[UnityEngine.Random.Range(0, m_All_Ground_Using_Build_Turret.Count - 1)]
-                    .Show_Tut_4();
-            }
-            else if (Check_Show_Tut_5())
-            {
-                m_All_Turret_In_Room[0].Show_Tut_5();
-            }
-
-            if (Check_Show_Tut_6())
-            {
-                m_All_Ground_Can_Build[UnityEngine.Random.Range(0, m_All_Ground_Can_Build.Count - 1)].Show_Tut_4();
-            }
-        }
-    }
-
+  
     private void Listener_Live_Data_Can_Build_Crucific_Tutorial()
     {
         if (m_Live_Data_Can_Build_Crucific_Tutorial && m_Live_Data_Can_Build_Crucific_Tutorial.Value)
@@ -1175,29 +1130,10 @@ public class Room_Controller : MonoBehaviour
     Ground_Controller m_Ground_Build_Crucific;
 
     // Build Turret
-    private bool Check_Show_Tut_4()
-    {
-        return !DataSaved.Get_Is_Complete_Tutorial() &&
-               DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story &&
-               DataSaved.Get_Current_Loading_Level() == 0 && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 3;
-    }
+
 
     // Upgrade Turret
-    private bool Check_Show_Tut_5()
-    {
-        return !DataSaved.Get_Is_Complete_Tutorial() &&
-               DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story &&
-               DataSaved.Get_Current_Loading_Level() == 0 && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 4;
-    }
-
-    // Build Energy Tower
-    private bool Check_Show_Tut_6()
-    {
-        return !DataSaved.Get_Is_Complete_Tutorial() &&
-               DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story &&
-               DataSaved.Get_Current_Loading_Level() == 0 && DataSaved.Get_Index_Claimed_Mission_Tutorial() == 5;
-    }
-
+   
     public void Check_Data_Player()
     {
         if (data_Player == null)

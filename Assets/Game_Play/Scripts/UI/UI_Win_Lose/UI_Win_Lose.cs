@@ -22,7 +22,7 @@ public class UI_Win_Lose : Base_UI
     [SerializeField] int m_Exp_Reward;
     bool m_Is_Lock_Click;
 
-    [SerializeField] GameObject m_Obj_Btn_Joystick;
+  //  [SerializeField] GameObject m_Obj_Btn_Joystick;
     [SerializeField] Image m_Icon_Title;
     [SerializeField] Image m_Background;
 
@@ -49,7 +49,7 @@ public class UI_Win_Lose : Base_UI
 
 
         m_Layout_Bonus.Set_Active(false);
-        m_Obj_Btn_Joystick.SetActive(false);
+       // m_Obj_Btn_Joystick.SetActive(false);
         m_Is_Lock_Click = false;
         m_Coin_Reward = Get_Reward_Coin();
         m_Blood_Reward = Get_Reward_Money();
