@@ -1,0 +1,1 @@
+namespace AllIn1SpriteShader {}
