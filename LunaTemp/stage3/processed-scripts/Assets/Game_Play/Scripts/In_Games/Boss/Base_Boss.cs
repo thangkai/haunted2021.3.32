@@ -2271,16 +2271,21 @@ public class Base_Boss : MonoBehaviour
             m_Is_Founded_Room = false;
 
             Debug.LogError("Set_Data_Boss 19");
-            Invoke(nameof(Recheck_Finded_Room), 1f);
+            // Invoke(nameof(Recheck_Finded_Room), 1f);
             Debug.LogError("Set_Data_Boss 18");
 
-            m_Room_Attacking = Get_Random_Room_Has_Player();
+            //m_Room_Attacking = Get_Random_Room_Has_Player();
+
+
+
+            m_Room_Attacking =   Level_Controller.Instance.m_All_Room_Has_Player[0];
             Debug.LogError("Set_Data_Boss 17");
 
             ///Debug.LogError(m_Room_Attacking.transform.GetInstanceID());
+
             m_Is_Take_Damaged_To_Room = false;
             m_Is_Founded_Room = true;
-            CancelInvoke(nameof(Recheck_Finded_Room));
+            //  CancelInvoke(nameof(Recheck_Finded_Room));
 
             // Stop Attack
             CancelInvoke(nameof(Start_Attack));

@@ -30,21 +30,7 @@ public class UI_Pause : Base_UI
         Close_UI();
     }
 
-    public void _Btn_Home_On_Click()
-    {
 
-        DataSaved.Set_Try_Skin_Character_Equipped_Home(Type_Character.None);
-        if (DataSaved.Get_Try_Skin_Character_Equipped_Home() != Type_Character.None)
-        {
-            // thu skin euqid
-            DataSaved.Set_Is_Unlock_Skill_2(DataSaved.Get_Try_Skin_Character_Equipped_Home(), false);
-            DataSaved.Set_Is_Unlock_Skill_3(DataSaved.Get_Try_Skin_Character_Equipped_Home(), false);
-        }
-        SoundController.Play_Sound_Backs();
-
-        
-     
-    }
 
     public override void Perpare_Before_Close_UI()
     {

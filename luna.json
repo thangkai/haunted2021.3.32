@@ -163,7 +163,7 @@
         "enableMecanimWASM": true,
         "minify": true,
         "forceUncompressed": false,
-        "forceBase64": true,
+        "forceBase64": false,
         "graphicsConstraint": 28,
         "genericCheck": true,
         "disableAntiAliasing": true,
@@ -7155,10 +7155,6 @@
                 "excluded": true
             },
             {
-                "name": "DG.Tweening.Core.SequenceCallback",
-                "excluded": true
-            },
-            {
                 "name": "DG.Tweening.DOTweenPath",
                 "excluded": true
             },
@@ -7848,10 +7844,6 @@
             },
             {
                 "name": "Were_Wolf_Controller",
-                "excluded": true
-            },
-            {
-                "name": "Bullet_Penetation_Controller",
                 "excluded": true
             },
             {
@@ -8560,11 +8552,11 @@
             },
             {
                 "name": "Air_Conditioner_Controller",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "ATM_Controller",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "Boss_Normal",
@@ -22940,7 +22932,7 @@
                     },
                     {
                         "name": "Get_Data_Effect",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Live_Data_Loop_Time",
@@ -32226,7 +32218,7 @@
                     },
                     {
                         "name": "matchWidthOrHeight#set",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "referencePixelsPerUnit#get",
@@ -36032,7 +36024,7 @@
                 "instanceMethods": [
                     {
                         "name": "Float",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Int",
@@ -36148,7 +36140,7 @@
                     },
                     {
                         "name": "SetLoops$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetEase$2",
@@ -36228,7 +36220,7 @@
                     },
                     {
                         "name": "OnKill",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnWaypointChange",
@@ -36268,7 +36260,7 @@
                     },
                     {
                         "name": "AppendCallback",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "PrependCallback",
@@ -36556,7 +36548,7 @@
                     },
                     {
                         "name": "DoInsertCallback",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "init",
@@ -37476,7 +37468,7 @@
                     },
                     {
                         "name": "Play_Pref_Effect$1",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Play_Pref_Effect_In_Parent",
@@ -37484,7 +37476,7 @@
                     },
                     {
                         "name": "Play_Pref_Effect_No_Destroy",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Play_Pref_Effect_Layer",
@@ -39146,11 +39138,11 @@
                 "instanceMethods": [
                     {
                         "name": "SlotIndex#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "AttachmentNames#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ctor",
@@ -40192,7 +40184,7 @@
                 "instanceMethods": [
                     {
                         "name": "EndSlot#get",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "EndSlot#set",
@@ -42608,7 +42600,7 @@
                     },
                     {
                         "name": "Remove_Item_Success",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "_Btn_Close_OnClick",
@@ -42760,7 +42752,7 @@
                     },
                     {
                         "name": "DOOrthoSize",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DOPixelRect",
@@ -42916,7 +42908,7 @@
                     },
                     {
                         "name": "DOScale",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "DOScaleX",
@@ -43298,7 +43290,7 @@
                     },
                     {
                         "name": "Get_Sprite_Bullel_Pierce",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Sprite_Bullet_Onslaught",
@@ -43326,7 +43318,7 @@
                     },
                     {
                         "name": "Get_Sprite_Turret_Penetation_By_Level",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Sprite_Turret_Bed_By_Level",
@@ -43504,7 +43496,7 @@
                     },
                     {
                         "name": "Get_Pref_Bullet_Player_Penetation",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Pref_Poison_Jug",
@@ -44832,7 +44824,7 @@
                     },
                     {
                         "name": "Change_Penetation",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Reset_Take_Damaging",
@@ -44924,7 +44916,7 @@
                     },
                     {
                         "name": "Get_Speed_By_Air_Conditioner",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Is_Take_Damaged_To_Room",
@@ -45538,7 +45530,7 @@
                     },
                     {
                         "name": "Get_Percent_Health_Feature",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Set_Show_Progress",
@@ -45590,7 +45582,7 @@
                     },
                     {
                         "name": "Set_Immortal",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Update_Progress",
@@ -45852,11 +45844,11 @@
                     },
                     {
                         "name": "Remove_Energy_Tower_In_Room",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Add_Cross_In_Room",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Remove_Cross_In_Room",
@@ -45864,11 +45856,11 @@
                     },
                     {
                         "name": "GetCrossController",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Add_Repair_In_Room",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Remove_Repair_In_Room",
@@ -45876,15 +45868,15 @@
                     },
                     {
                         "name": "GetRepairController",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Add_Turret_Penetration_In_Room",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Remove_Turret_Penetration_In_Room",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Sum_Turret_Penetation_In_Room",
@@ -46292,7 +46284,7 @@
                 "instanceMethods": [
                     {
                         "name": "Set_Room_Controller",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Before_Remove_Item",
@@ -46300,7 +46292,7 @@
                     },
                     {
                         "name": "AnimCrossStart",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ButtonTest",
@@ -46308,7 +46300,7 @@
                     },
                     {
                         "name": "CountDownTimeUse",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "ResetCrossDoorBuild",
@@ -46368,11 +46360,11 @@
                 "instanceMethods": [
                     {
                         "name": "init",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Set_Room_Controller",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Before_Remove_Item",
@@ -46384,23 +46376,23 @@
                     },
                     {
                         "name": "RepairWork",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetHasRepairUsing",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "RepairDoNotWork",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "StartScaling",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "StopScaling",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -46762,11 +46754,11 @@
                     },
                     {
                         "name": "Start_CD_Immortal",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "End_CD_Immortal",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Set_Active_Collider_Lock_Player_Move",
@@ -46814,7 +46806,7 @@
                     },
                     {
                         "name": "Clear_All_Effect_Cross",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Clear_All_Effect_Shield",
@@ -46822,7 +46814,7 @@
                     },
                     {
                         "name": "Clear_All_Effect_Air_Conditioner",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "On_Data_Air_Conditioner_Change",
@@ -46842,7 +46834,7 @@
                     },
                     {
                         "name": "Check_Data_Perk_Skill_27",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "On_Active_Skill_2",
@@ -46952,7 +46944,7 @@
                     },
                     {
                         "name": "Before_Remove_Item",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Init_Data",
@@ -46968,7 +46960,7 @@
                     },
                     {
                         "name": "OnDisable",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Play_Anim_Collect",
@@ -47222,35 +47214,35 @@
                 "instanceMethods": [
                     {
                         "name": "init",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Start",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Set_Room_Controller",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Before_Remove_Item",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnDisable",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Add_Listener",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Listener_Live_Data_Item_SP_Speed_X2",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Listener_Live_Data_Index_Claimed_Mission_Tutorial",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "InCrease_Level",
@@ -47258,11 +47250,11 @@
                     },
                     {
                         "name": "Update_Model_Price",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Update_Model_By_Level",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "OnDrawGizmos",
@@ -47270,11 +47262,11 @@
                     },
                     {
                         "name": "Update_Detect_Target",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Update_Target_To_Turret",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Update_New_Target",
@@ -47282,19 +47274,19 @@
                     },
                     {
                         "name": "Remove_Effect_Electric",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Fight_Bullet",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Spawn_Bullet",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Play_Sound_Shoot",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Thread_Check_Add_Coin_To_ATM",
@@ -47310,19 +47302,19 @@
                     },
                     {
                         "name": "On_Data_Compass_Change",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "On_Data_Bibble_Change",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "On_Data_ATM_Change",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "On_Data_Electric_Change",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Set_Stun",
@@ -47350,11 +47342,11 @@
                     },
                     {
                         "name": "Check_Data_Perk_Increase_Damage",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Check_Data_Perk_Increase_Speed_Atk",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Check_Data_Perk_Skill_28",
@@ -47366,7 +47358,7 @@
                     },
                     {
                         "name": "Data_Coin_Energy_Change",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Energy_Increase",
@@ -47990,11 +47982,11 @@
                     },
                     {
                         "name": "Get_Effect_Cross",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Effect_Air_Condition",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Effect_Scare",
@@ -48380,7 +48372,7 @@
                     },
                     {
                         "name": "Notify_Data_Repair_Station_Change",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Sum_Repair_Station_Builded",
@@ -48388,7 +48380,7 @@
                     },
                     {
                         "name": "Increase_Sum_Repair_Station_Builded",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Decrease_Sum_Repair_Station_Builded",
@@ -48404,7 +48396,7 @@
                     },
                     {
                         "name": "Decrease_Sum_Energy_Tower_Builded",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Check_Has_Turret",
@@ -48472,11 +48464,11 @@
                     },
                     {
                         "name": "Get_Is_Immortal",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Set_Immortal",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Notify_Data_Garlic_Builded_Change",
@@ -48528,7 +48520,7 @@
                     },
                     {
                         "name": "Notify_Data_Turret_Penetation_Change",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Sum_Turret_Penetation_Builded",
@@ -48536,11 +48528,11 @@
                     },
                     {
                         "name": "Increase_Sum_Turret_Penetation_Builded",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Decrease_Sum_Turret_Penetation_Builded",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Notify_Data_Turret_Bed_Builded_Change",
@@ -48560,7 +48552,7 @@
                     },
                     {
                         "name": "Notify_Data_ATM_Builded_Change",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Sum_ATM_Builded",
@@ -48568,7 +48560,7 @@
                     },
                     {
                         "name": "Increase_Sum_ATM_Builded",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Decrease_Sum_ATM_Builded",
@@ -48592,7 +48584,7 @@
                     },
                     {
                         "name": "Notify_Data_Air_Conditioner_Change",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Get_Sum_Air_Conditioner_Builded",
@@ -48600,7 +48592,7 @@
                     },
                     {
                         "name": "Increase_Sum_Air_Conditioner_Builded",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Decrease_Sum_Air_Conditioner_Builded",
@@ -49142,11 +49134,11 @@
                     },
                     {
                         "name": "ApplyAttachmentTimeline",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "SetAttachment",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "QueueEvents",
@@ -49948,7 +49940,7 @@
                     },
                     {
                         "name": "BuildMesh",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "BuildMeshWithArrays",
@@ -52457,6 +52449,34 @@
                         "excluded": true
                     }
                 ]
+            },
+            {
+                "className": "Bullet_Penetation_Controller",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Loop_Fixed_Update",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Set_Target",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Take_Damage_To_Boss",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "DG.Tweening.Core.SequenceCallback",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "ctor",
+                        "excluded": false
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -52513,6 +52533,176 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/Game_Play/Font/Main_Font_Akbar_Number.asset"
+                    },
+                    {
+                        "maxWidth": 448,
+                        "maxHeight": 588,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Animations/Spine/All_Player/thomo/tho_mo.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Effects/Project-Fx/Silent-Castle/Skill/Witch/Materials/soul_trail_1_sheet.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Effects/Project-Fx/Survivor/Effect_Basic/Meteor/Materials/yellow_smokr.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Effects/Project-Fx/rocket/Mat/Yellow_Smoke_Add.png"
+                    },
+                    {
+                        "maxWidth": 538,
+                        "maxHeight": 274,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/UI/UI_Win_Lose/bg_1.png"
+                    },
+                    {
+                        "maxWidth": 32,
+                        "maxHeight": 32,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/TextMesh Pro/Sprites/EmojiOne.png"
+                    },
+                    {
+                        "maxWidth": 64,
+                        "maxHeight": 64,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/In_Game/icon_shield2.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/title.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/UI/Game_Play/popup_setting.png"
+                    },
+                    {
+                        "maxWidth": 32,
+                        "maxHeight": 32,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Scenes/GamePlay.unity/PrefilteredEnvironment.exr"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/UI/UI_Win_Lose/txt_survived.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/UI/Boss/avatar_2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/UI/UI_Win_Lose/txt_gotcaught.png"
+                    },
+                    {
+                        "maxWidth": 128,
+                        "maxHeight": 128,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/AllIn1SpriteShader/Textures/fire2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/Tile/Bed/Lv2/bed_2_b.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/UI/Character/small_hocsinh.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png24",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/UI/XEKOTOBY_UPDATE_070/283070Demo/avatar/avatar_2.png"
                     }
                 ]
             },
@@ -52526,7 +52716,168 @@
                     "script": "",
                     "ext": ""
                 },
-                "overrides": []
+                "overrides": [
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 8,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/GameplayBack.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Nang Cap.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Meteor expolsion.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Turret 2.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Turret 1.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Meteor fall.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 8,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/HomeBack.ogg"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Tieng bip dem nguoc.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Quai Vat Xuat Hien.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Pop-up.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Nut back.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Mua turret.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Nut Play.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Quai Vat Hu.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Skill la het.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Canh Bao.mp3"
+                    }
+                ]
             },
             "font": {
                 "default": {

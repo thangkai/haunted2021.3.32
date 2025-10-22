@@ -1,0 +1,184 @@
+{
+    "BuildID": "49b1672d-5330-403e-92b4-1642dce14a12",
+    "Command": "project:upload",
+    "ProjectID": "8ea37fcdc26c5274ba69a74f99d08e57",
+    "ProjectStateHash": "f202d9ae0fd974673884612e490e7cbfa3f583cddfbb52b23f3ce5e14a919e44",
+    "StageCompletedAt": 3,
+    "EarliestFatalError": 0,
+    "StartTime": 1761132982282,
+    "EndTime": 1761133052201,
+    "PlaygroundUserID": 25488,
+    "OperatingSystem": "win32",
+    "UnityPackageID": null,
+    "TargetPlatform": "playground",
+    "UnityVersion": "2021.3.32f1",
+    "LunaVersion": "6.3.0",
+    "LogCount": 7,
+    "Logs": [
+        {
+            "LogID": "440d9b2b-a5da-43e3-9bf0-25af42fe1aaa",
+            "Order": 6,
+            "Timestamp": 1761133053794,
+            "Stage": 3,
+            "ErrorType": 3,
+            "ErrorCode": "LP3007",
+            "Description": "You are not using any custom events",
+            "Details": [
+                "You are not using any custom events. It is recommended to use custom events to have a better understanding of the playable."
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "8b015a54-0d7b-4704-ba7c-42e9f6bdc785",
+            "Order": 6,
+            "Timestamp": 1761133053795,
+            "Stage": 3,
+            "ErrorType": 3,
+            "ErrorCode": "LP3011",
+            "Description": "You are not using any LunaPlaygroundFields attributes.",
+            "Details": [
+                "You are not using any LunaPlaygroundFields attributes, it allows you to configure your playable to different concepts to find the best variation, which can drastically improve playable performance on all ad networks."
+            ],
+            "DescriptionValues": null,
+            "DetailsValues": null,
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "0085be6a-7f04-415e-ac4d-946efe83afb3",
+            "Order": 0,
+            "Timestamp": 1761133001500,
+            "Stage": 1,
+            "ErrorType": 2,
+            "ErrorCode": "LP1016",
+            "Description": "Extensive usage of ParticleSystem Component",
+            "Details": [
+                "There is extensive usage of the ParticleSystem component.\nExcessive usage of any component can be detrimental to performance on lower and in some cases higher end devices, consider reducing the amount the component is used.\nRecommended count: 10, current count 166."
+            ],
+            "DescriptionValues": [
+                "ParticleSystem"
+            ],
+            "DetailsValues": [
+                "ParticleSystem",
+                "10",
+                "166"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "f16c9778-4d1a-47df-888f-742f87d5e9e0",
+            "Order": 1,
+            "Timestamp": 1761133001501,
+            "Stage": 1,
+            "ErrorType": 2,
+            "ErrorCode": "LP1022",
+            "Description": "Extensive use of shader variants",
+            "Details": [
+                "Extensive usage of shader variants negatively affects playable startup time. Please consider them to be less than 20 (26 found). Check Runtime analysis -> shader tab to see used shaders."
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "20",
+                "26"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "1306c559-d8ef-4911-9faa-624423513e3e",
+            "Order": 2,
+            "Timestamp": 1761133001501,
+            "Stage": 1,
+            "ErrorType": 1,
+            "ErrorCode": "LP1023",
+            "Description": "Too many files for facebook platform",
+            "Details": [
+                "Too many files for facebook platform in use ($339) only $100 available"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "339",
+                "100"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "766d7b0a-0778-4c27-9a20-62522c37f8be",
+            "Order": 3,
+            "Timestamp": 1761133001525,
+            "Stage": 1,
+            "ErrorType": 3,
+            "ErrorCode": "LP1002",
+            "Description": "Repeat wrap mode used on a texture with non power-of-two dimensions, this might not be rendered correctly.",
+            "Details": [
+                "thosanmacrong",
+                "nhakhoahoc",
+                "bg2",
+                "bg3",
+                "ground_out"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [],
+            "LogCount": 5,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "74ea3bd7-c236-4082-a29e-3360551e72a7",
+            "Order": 4,
+            "Timestamp": 1761133001525,
+            "Stage": 1,
+            "ErrorType": 3,
+            "ErrorCode": "LP1008",
+            "Description": "There are missing components on UI_Notice_Tutorials.",
+            "Details": [
+                "There are missing components on UI_Notice_Tutorials."
+            ],
+            "DescriptionValues": [
+                "UI_Notice_Tutorials"
+            ],
+            "DetailsValues": [
+                "UI_Notice_Tutorials",
+                "UI_Notice_Tutorials"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        }
+    ]
+}

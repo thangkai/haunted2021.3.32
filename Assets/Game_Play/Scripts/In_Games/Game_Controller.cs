@@ -118,10 +118,7 @@ public class Game_Controller : Singleton<Game_Controller>
             {
                 UI_Notice_InGame.Instance.Start_Count_Down_Start_Game(() =>
                 {
-                    if (!isCollider)
-                    {
-                        AcitveCollier();
-                    }
+                   
                     if (RootManager.Check_AB_Auto_Sleep())
                     {
                         Check_Auto_Sleep();
@@ -1360,7 +1357,10 @@ public class Game_Controller : Singleton<Game_Controller>
             .OnComplete(() =>
             {
 
-
+                if (!isCollider)
+                {
+                    AcitveCollier();
+                }
 
 
                 m_Obj_Coin.SetActive(true);

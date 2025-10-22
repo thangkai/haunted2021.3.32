@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 116636473
-  m_SortingLayer: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: -9
   m_Sprite: {fileID: 21300000, guid: e8eabc38d62c0144eaf14d5becc64e1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Base_Boss: {fileID: 0}
   m_Is_Can_Click: 1
   m_Is_Remove: 1
+  indexCoinDic: 0
   _rankCharacter: {fileID: 0}
   m_Live_Data_Coin_Change: {fileID: 0}
   m_Live_Data_Energy_Change: {fileID: 0}
@@ -394,7 +395,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 116636473
+  m_SortingLayerID: -184986367
   m_SortingLayer: -1
   m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: ab13f3f0b39c61c4b951ecbc4cc3cdc3, type: 3}

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class UI_Upgrade : Base_UI
 {
@@ -63,7 +64,7 @@ public class UI_Upgrade : Base_UI
                 //   
                 // }
                 //
-                
+
                 // Add Item Price Update Normal
                 m_All_Item_Upgrade[0].gameObject.SetActive(true);
                 m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
@@ -88,7 +89,7 @@ public class UI_Upgrade : Base_UI
                 //    
                 // }
                 //
-                
+
                 // Add Item Price Update Normal
                 m_All_Item_Upgrade[0].gameObject.SetActive(true);
                 m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
@@ -115,8 +116,8 @@ public class UI_Upgrade : Base_UI
                 // {
                 //    
                 // }
-                
-                
+
+
                 // Add Item Price Update Normal
                 m_All_Item_Upgrade[0].gameObject.SetActive(true);
                 m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
@@ -159,7 +160,7 @@ public class UI_Upgrade : Base_UI
                 // Add Item Destroy
                 m_All_Item_Upgrade[1].gameObject.SetActive(true);
                 m_All_Item_Upgrade[1].Set_Data_Remove(this, m_Price_Curr);
-                
+
                 break;
 
             //updateofjura
@@ -178,7 +179,7 @@ public class UI_Upgrade : Base_UI
                 // {
                 //  
                 // }
-                
+
                 // Add Item Price Update Normal
                 m_All_Item_Upgrade[0].gameObject.SetActive(true);
                 m_All_Item_Upgrade[0].Set_Data(this, m_Model_Info_Turret, m_Curr_Turret.m_Type_Character);
@@ -276,6 +277,9 @@ public class UI_Upgrade : Base_UI
                 break;
 
             case Type_Item_Upgrade.Remove_Item:
+                if(Player_Manager.Instance==null) Debug.LogError("lllllllllllllll");
+                Debug.LogError(("Remove_Item") + m_Curr_Turret );
+                
                 Remove_Item_Success();
                 break;
         }
@@ -291,26 +295,39 @@ public class UI_Upgrade : Base_UI
 
     private void Remove_Item_Success()
     {
-        m_Data_Player = Player_Manager.Instance.Get_Data_Player(m_Type_Player);
-        if (m_Price_Curr.price_Coin > 0)
+        try
         {
-            m_Data_Player.Increase_Coin((int)(m_Price_Curr.price_Coin / 2));
-        }
+            Debug.LogError("Remove_Item_Success 1 ");
+            m_Data_Player = Player_Manager.Instance.Get_Data_Player(Type_Player.Player_1);
+            // if (m_Price_Curr.price_Coin > 0)
+            // {
+            //     m_Data_Player.Increase_Coin((int)(m_Price_Curr.price_Coin / 2));
+            // }
+            //
+            // if (m_Price_Curr.price_Energy > 0)
+            // {
+            //     m_Data_Player.Increase_Energy((int)(m_Price_Curr.price_Energy / 2));
+            // }
+            Debug.LogError("Remove_Item_Success 2 ");
 
-        if (m_Price_Curr.price_Energy > 0)
+            if (m_Curr_Turret == null)
+            {
+                Debug.LogError("❌ m_Curr_Turret = null");
+            }
+            else
+            {
+                Debug.LogError("✅ m_Curr_Turret type = " + m_Curr_Turret.GetType().Name);
+                m_Curr_Turret.Remove_Item_Success();
+            }
+            Debug.LogError("Remove_Item_Success 3");
+
+             SoundController.Play_Sounds(Type_Sound.Back);
+            Close_UI(); 
+        }
+        catch (Exception ex)
         {
-            m_Data_Player.Increase_Energy((int)(m_Price_Curr.price_Energy / 2));
+            Debug.LogError("Lỗi trong Remove_Item_Success: " + ex.Message + "\nStackTrace: " + ex.StackTrace);
         }
-
-        // Notify Remove Item Done
-        if (m_Curr_Turret)
-        {
-            m_Curr_Turret.Remove_Item_Success();
-        }
-
-        SoundController.Play_Sounds(Type_Sound.Back);
-
-        Close_UI();
     }
 
     public override void _Btn_Close_OnClick()

@@ -22,7 +22,7 @@ public class LunaManager : MonoBehaviour
 
     [SerializeField] private GameObject uiHomeLanscape;
     [SerializeField] private GameObject uiHomePort;
-  
+    [SerializeField] private CanvasScaler canvasScalerIngame, healBar;
     private void Awake()
     {
         if (instace == null)
@@ -61,13 +61,17 @@ public class LunaManager : MonoBehaviour
             float aspect = (float)Screen.width / Screen.height;
 
             ZoomInCamera(GetOrthoSizeLandscape(aspect) - 0.3f);
+            canvasScalerIngame.matchWidthOrHeight = 1;
+            healBar.matchWidthOrHeight = 1;
 
 
         }
         else
         {
-            // Debug.LogError("CheckAndApplyOrientation");
-            ZoomInCamera(14.5f);
+             Debug.LogError("CheckAndApplyOrientation");
+            ZoomInCamera(8f);
+            canvasScalerIngame.matchWidthOrHeight = 0;
+            healBar   .matchWidthOrHeight = 0;
 
 
         }
@@ -88,14 +92,14 @@ public class LunaManager : MonoBehaviour
 
     private float size1;
     private float size2;
-
+    public Camera cameraGameplay;
     void ZoomInCamera(float target1)
     {
 
-        // float start1 = cameraGameplay.orthographicSize;
-        // float start2 = cameraUi.orthographicSize;
+        float start1 = cameraGameplay.orthographicSize;
+      
 
-        // cameraGameplay.DOOrthoSize(target1, 0.2f).SetEase(Ease.OutQuad);
+         cameraGameplay.DOOrthoSize(target1, 0.2f).SetEase(Ease.OutQuad);
         // cameraUi.DOOrthoSize(target1 - 2f, 0.2f).SetEase(Ease.OutQuad);
     }
 
@@ -108,7 +112,7 @@ public class LunaManager : MonoBehaviour
     {
         // Mặc định: 16:9 → aspect ≈ 1.77, size ≈ 9.68
         // Rộng hơn: 21:9 → aspect ≈ 2.33 → có thể nhỏ hơn chút
-        return Mathf.Lerp(10f, 9f, Mathf.InverseLerp(1.6f, 2.3f, aspect));
+        return Mathf.Lerp(3f, 4f, Mathf.InverseLerp(1.6f, 2.3f, aspect));
     }
 
     public void OnPlayButtonClick()

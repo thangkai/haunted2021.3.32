@@ -1,0 +1,1 @@
+{"id":30026,"path":"Assets\/Game_Play\/Prefaps\/In_Game\/Character\/Collider_Check_Door.prefab","assetBundleId":-1,"components":[{"type":2,"id":30044,"data":[0,0,0,1,1,1,0,0,0,1]},{"type":3,"id":31094,"enabled":1,"class":94,"data":[null,null]},{"type":60,"id":31102,"data":[0.150000005960464,1,1,0,1,0,0,null,null]}],"children":[],"data":["Collider_Check_Door",0,1,0,6]}

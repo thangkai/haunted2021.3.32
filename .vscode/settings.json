@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "HauntedLuna2021.sln"
+    "dotnet.defaultSolution": "haunted2021.3.32.slnx"
 }

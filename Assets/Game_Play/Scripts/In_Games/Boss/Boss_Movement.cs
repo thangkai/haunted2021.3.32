@@ -388,7 +388,7 @@ public class Boss_Movement : MonoBehaviour
             if (dist < 0.1f) break;
 
             dir.Normalize();
-            transform.position += dir * 3f * Time.deltaTime; // 3f = speed
+            transform.position += dir * 5f * Time.deltaTime; // 3f = speed
 
             Update_Look_At(m_Target_Move.position.x);
             yield return null;
@@ -579,7 +579,7 @@ public class Boss_Movement : MonoBehaviour
             m_Base_Boss.Update_Sorting_Order(m_Order_In_Layer);
         }
     }
-    [SerializeField] float m_MoveSpeed = 2.5f;
+    [SerializeField] float m_MoveSpeed = 5f;
     private Vector2 m_MoveDirection;
     private Vector3 m_CurrentTargetPos;
     private float Get_Order_Layer_Default()

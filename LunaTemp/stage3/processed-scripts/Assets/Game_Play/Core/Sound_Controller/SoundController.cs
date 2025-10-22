@@ -218,7 +218,7 @@ public class SoundController : Singleton<SoundController>
         {
             if (type_Sound == Type_Sound.Character_Run)
             {
-                m_Audio_Player_Run.Play();
+              //  m_Audio_Player_Run.Play();
             }
             else
             {
@@ -272,10 +272,10 @@ public class SoundController : Singleton<SoundController>
     {
         if (DataSaved.Get_Status_Sound())
         {
-            if (type_Sound == Type_Sound.Character_Run)
-            {
-                m_Audio_Player_Run.Pause();
-            }
+            // if (type_Sound == Type_Sound.Character_Run)
+            // {
+            //     m_Audio_Player_Run.Pause();
+            // }
         }
     }
 

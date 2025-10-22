@@ -281,7 +281,7 @@ public class Item_Shop_Home : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         }
 
         Canvas_Home.Instance.Get_UI_Home().m_Layout_Shop_Character.Reset_State_Data();
-        
+        Canvas_Home.Instance.Get_UI_Home().m_Layout_Shop_Character_2.Reset_State_Data();
         m_BG_Highlight.SetActive(true);
 
     }

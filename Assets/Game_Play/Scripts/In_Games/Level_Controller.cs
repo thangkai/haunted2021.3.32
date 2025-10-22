@@ -16,14 +16,14 @@ public class Level_Controller : Singleton<Level_Controller>
 
     [SerializeField] private List<Room_Controller> m_All_Room_Empty;
     [SerializeField] private List<Room_Controller> m_All_Room_Not_Has_Player_Move;
-    [SerializeField] private List<Room_Controller> m_All_Room_Has_Player;
+    [SerializeField] public List<Room_Controller> m_All_Room_Has_Player;
 
     Room_Controller m_Room_Tut;
     // NavMeshSurface – để xây dựng và kích hoạt bề mặt navmesh cho một loại tác nhân.---? XÂY DỰNG- KÍCH HOẠT
     // NavMeshModifier – ảnh hưởng đến việc tạo navmesh của các loại vùng navmesh, dựa trên phân cấp chuyển đổi.--> tạo navmesh- dựa trên phân cấp chuyển ổi
     //  NavMeshModifierVolume – ảnh hưởng đến việc tạo navmesh của các loại vùng navmesh, dựa trên thể tích.----> tạo navmesh -> dựa trên thể tích
     // NavMeshLink – kết nối các bề mặt navmesh giống nhau hoặc khác nhau cho một loại tác nhân. ----> kết nối các bề mặt cho 1 loại tác nhân
-
+ 
     private void Start()
     {
         if (m_All_Room_Empty.Count <= 0)

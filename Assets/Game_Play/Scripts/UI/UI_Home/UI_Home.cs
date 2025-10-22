@@ -81,6 +81,7 @@ public class UI_Home : Base_UI
 
 
         m_Layout_Shop_Character.OnReadyOpenUI();
+        m_Layout_Shop_Character_2.OnReadyOpenUI();
 
         //update data;
 
