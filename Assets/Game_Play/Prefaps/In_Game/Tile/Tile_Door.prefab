@@ -774,7 +774,6 @@ MonoBehaviour:
   m_Count_Save_Door_By_Ads: 0
   m_Count_Skill_2_Temp_Door: 0
   m_Pos_Tut: {fileID: 2459851641189790771}
-  m_Live_Data_Index_Claimed_Mission_Tutorial: {fileID: 11400000, guid: f0e4bfa9e73cf104bb8f5cefb52c3d06, type: 2}
   m_Is_Tutorials: 0
   colliderTop: {fileID: 8489328948825612700}
   colliderBottom: {fileID: 8178874862575161322}
@@ -2470,6 +2469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collider_Line_Up
       objectReference: {fileID: 0}
+    - target: {fileID: 5082497678201911698, guid: 5ba82613a34bb604898b4051c751ac8b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7326776262580593693, guid: 5ba82613a34bb604898b4051c751ac8b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2514,8 +2517,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1129000877257413430, guid: 5ba82613a34bb604898b4051c751ac8b, type: 3}
+    - {fileID: 2864625607640607926, guid: 5ba82613a34bb604898b4051c751ac8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5ba82613a34bb604898b4051c751ac8b, type: 3}
+--- !u!1 &1882483739039583045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5082497678201911698, guid: 5ba82613a34bb604898b4051c751ac8b, type: 3}
+  m_PrefabInstance: {fileID: 6671876455042888407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7431897529160380968
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882483739039583045}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.95, y: 0.95, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &4123806838313375434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7326776262580593693, guid: 5ba82613a34bb604898b4051c751ac8b, type: 3}

@@ -41,17 +41,27 @@ public class Base_Turret : MonoBehaviour
 
         Init_Data();
     }
+    
+    public void OnMouseUp()
+    {
+        
+        if (Game_Controller.Instance && Game_Controller.Instance.Get_Is_Time_Out())
+            return;
+
+        if (Camera_Movement.Instance)
+            Camera_Movement.Instance.Wait_Event_Move_Cam(this);
+        else
+            this.On_Ready_Click_Turret();
+    
+
+
+    }
 
     private void Awake()
     {
         type_Player = Type_Player.None;
 
-        if (DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story_Level)
-        {
-
-            //    Debug.LogError("load co bi lap khong");
-            ConfigMissionUpgrade(); // he thong nhiem vu
-        }
+      
 
 
     }
@@ -328,20 +338,7 @@ public class Base_Turret : MonoBehaviour
             }
 
 
-            if (m_Is_Build_From_Skill && type_Turret == Type_Turret.Repair_Station && GetIsUseRepairStation())
-            {
-
-                TypeRepairMission();
-
-            }
-
-
-            if (m_Is_Build_From_Skill && type_Turret == Type_Turret.Energy_Tower && GetIsUseElectric())
-            {
-
-                TypeEnergyTowerMission();
-
-            }
+          
             //updateofjura
 
             if (m_Is_Build_From_Skill && type_Turret == Type_Turret.Turret_Bed && m_Type_Character == Type_Character.Onslaught)
@@ -375,38 +372,6 @@ public class Base_Turret : MonoBehaviour
     }
 
 
-    #region Repair Mission
-    public void TypeRepairMission()
-    {
-        if (!GetIsUseRepairStation()) return; // neu co nhiem vu lien quan den door
-
-
-
-        int levelStoryCur = Database.instance.Get_Current_Loading_Level_Story(Database.instance.GetHardLevel()); // lay level hien tai cua story
-
-        int a = Database.instance.CheckIndexMissionPass(levelStoryCur, 11, Database.instance.GetHardLevel());
-
-        Database.instance.Select_Mission_Complete(levelStoryCur, a, Database.instance.GetHardLevel());
-
-
-        Debug.LogError("load co bi lap khong select  TypeRepairMission");
-    }
-    #endregion
-
-
-    #region Energy Tower Mission
-    public void TypeEnergyTowerMission()
-    {
-        if (!GetIsUseElectric()) return; // neu co nhiem vu lien quan den door
-        int levelStoryCur = Database.instance.Get_Current_Loading_Level_Story(Database.instance.GetHardLevel()); // lay level hien tai cua story
-        Debug.LogError("load co bi lap khong select  TypeEnergyTowerMission");
-
-
-        int a = Database.instance.CheckIndexMissionPass(levelStoryCur, 10, Database.instance.GetHardLevel());
-
-        Database.instance.Select_Mission_Complete(levelStoryCur, a, Database.instance.GetHardLevel());
-    }
-    #endregion
 
 
     public virtual void Create_New_Turret_Success(Base_Turret base_Turret)
@@ -704,138 +669,10 @@ public class Base_Turret : MonoBehaviour
 
 
 
-    #region Check Mission COMPLETE
-
-
-    private bool isUseElectric = false;
-    private bool isDoorMission = false;
-    private bool isBedMission = false;
-    private bool isTurretMission = false;
-    private bool isRepaiStationMission = false;
-
-    // may phat dien // tram sua chua
-    public bool GetIsUseElectric()
-    {
-        if (DataSaved.Get_Type_Mode_Gameplay_Playing() != Type_Mode_Gameplay.Story_Level) return false;
-
-        return isUseElectric;
-    }
-    public void SetIsUseElectric(bool isUse)
-    {
-
-
-        this.isUseElectric = isUse;
-    }
-
-
-
-    public bool GetIsUseRepairStation()
-    {
-        if (DataSaved.Get_Type_Mode_Gameplay_Playing() != Type_Mode_Gameplay.Story_Level) return false;
-
-        return isUseElectric;
-    }
-    public void SetIsUseRepairStation(bool isUse)
-    {
-        this.isUseElectric = isUse;
-    }
-
-
-
-    // door
-    public bool GetIsUseDoor()
-    {
-        if (DataSaved.Get_Type_Mode_Gameplay_Playing() != Type_Mode_Gameplay.Story_Level) return false;
-
-        return isDoorMission;
-    }
-    public void SetIsUseMissionDoor(bool isUse)
-    {
-        this.isDoorMission = isUse;
-    }
-
-
-    // Bed
-    public bool GetIsUseBed()
-    {
-        if (DataSaved.Get_Type_Mode_Gameplay_Playing() != Type_Mode_Gameplay.Story_Level) return false;
-
-        return isDoorMission;
-    }
-    public void SetIsUseMissionBed(bool isUse)
-    {
-        this.isDoorMission = isUse;
-    }
 
 
 
 
-    // turret
-    public bool GetIsUseTurret()
-    {
-        if (DataSaved.Get_Type_Mode_Gameplay_Playing() != Type_Mode_Gameplay.Story_Level) return false;
 
-        return isTurretMission;
-    }
-    public void SetIsUseMissionTurret(bool isUse)
-    {
-        this.isTurretMission = isUse;
-    }
-
-
-    internal List<int> listMission = new List<int>();
-
-
-    public void ListMission()
-    {
-        listMission.AddRange(Database.instance.ListMissionPass(Database.instance.Get_Current_Loading_Level_Story(Database.instance.GetHardLevel()), Database.instance.GetHardLevel()));
-    }
-
-
-    public void ConfigMissionUpgrade()
-    {
-
-
-        ListMission();
-
-        for (int i = 0; i < listMission.Count; i++)
-        {
-            switch (listMission[i])
-            {
-                case 2:
-                case 4:
-                case 6:
-                case 14:
-                    SetIsUseMissionDoor(true);
-                    break;
-                case 7:
-                case 15:
-                    SetIsUseMissionBed(true);
-                    break;
-                case 10:
-                    SetIsUseElectric(true);
-                    break;
-                case 11:
-                    SetIsUseRepairStation(true);
-                    break;
-                case 3:
-                case 5:
-                case 8:
-                    SetIsUseMissionTurret(true);
-                    break;
-                default:
-                    Debug.Log(" Truong hop khong phai turret" + listMission[i]);
-                    // Có thể thêm xử lý cho các trường hợp khác nếu cần
-                    break;
-            }
-        }
-
-
-    }
-
-
-
-
-    #endregion
 
 }

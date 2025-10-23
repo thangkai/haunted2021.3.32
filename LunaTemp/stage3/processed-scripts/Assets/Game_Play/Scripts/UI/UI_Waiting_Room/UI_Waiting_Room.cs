@@ -42,7 +42,7 @@ public class UI_Waiting_Room : Base_UI
         CancelInvoke(nameof(Update_Timing));
 
 
-        SoundController.Play_Musics(false);
+       // SoundController.Play_Musics(false);
         m_Obj_Btn_Back.Set_Active(true);
         m_All_Coroutine.Clear();
         if (DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story)
@@ -543,7 +543,7 @@ public class UI_Waiting_Room : Base_UI
         // }
 
 
-        SoundController.Play_Musics(true);
+      //  SoundController.Play_Musics(true);
     }
 
     

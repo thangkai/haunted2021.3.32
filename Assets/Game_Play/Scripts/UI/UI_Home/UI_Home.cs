@@ -17,7 +17,7 @@ public class UI_Home : Base_UI
     [SerializeField] private TMP_Text textTime;
 
     [SerializeField] private TMP_Text textTime2;
-
+   
 
  
     private IEnumerator DelayStartCountdown()
@@ -134,19 +134,19 @@ public class UI_Home : Base_UI
  
     }
 
-
+    [SerializeField] private GameObject bg_2;
     public void _Btn_Challenge_Mode_On_Click()
     {
 
         Set_Data_Join_Game();
-        SoundController.Play_Sound_Plays();
+     //   SoundController.Play_Sound_Plays();
 
         DataSaved.Set_Type_Mode_Gameplay_Playing(Type_Mode_Gameplay.Challenge);
         DataSaved.Set_Current_Loading_Level_Mode_Challenge(0);
      
 
         Canvas_Home.Instance.gameObject.SetActive(false);
-
+        bg_2 .SetActive(false);
         
         Game_Controller.Instance.EnterGame();
     }

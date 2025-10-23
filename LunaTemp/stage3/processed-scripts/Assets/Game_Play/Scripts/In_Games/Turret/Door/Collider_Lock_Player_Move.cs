@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Collider_Lock_Player_Move : MonoBehaviour
@@ -15,6 +16,8 @@ public class Collider_Lock_Player_Move : MonoBehaviour
         return type_Direction;
     }
 
-
-   
+    private void OnMouseUp()
+    {
+        m_Door_Controller.OnMouseUp();
+    }
 }

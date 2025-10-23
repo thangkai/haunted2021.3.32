@@ -332,6 +332,7 @@ public class UI_Upgrade : Base_UI
 
     public override void _Btn_Close_OnClick()
     {
+        Debug.LogError("_Btn_Close_OnClick");
         Close_UI();
     }
 

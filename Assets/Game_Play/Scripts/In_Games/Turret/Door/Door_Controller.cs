@@ -1027,7 +1027,7 @@ public class Door_Controller : Base_Turret_Can_Upgrade
                     }
                 }
 
-                SoundController.Play_Sounds(Type_Sound.Meteor_Explosion);
+            //    SoundController.Play_Sounds(Type_Sound.Meteor_Explosion);
 
                 Destroy(obj_Thien_Thach.gameObject);
             });
@@ -1057,7 +1057,7 @@ public class Door_Controller : Base_Turret_Can_Upgrade
         if (data_Player.Get_Is_AI() == false)
         {
             float m_hp_Bonus = 0;
-            Debug.LogError("Xekotoby door player");
+         
             _rankCharacter = Data_In_Game.Instance.Get_Data_Type_Rank_Character().Get_Data_Info_Character(
                 Data_In_Game.Instance.Get_All_Data_Character().Get_Data_Info_Character(m_Type_Character)
                     .m_Rank_Character);
@@ -1218,11 +1218,7 @@ public class Door_Controller : Base_Turret_Can_Upgrade
         Check_Data_Player();
 
 
-        if (data_Player && !data_Player.Get_Is_AI() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story_Level)
-        {
-
-            TypeDoorMission();
-        }
+     
     }
 
     #region ============== Config Repair_Station ==============
@@ -2188,64 +2184,6 @@ public class Door_Controller : Base_Turret_Can_Upgrade
 
     #endregion
 
-
-    #region Door Mission
-
-
-
-    public Vector2Int ConfigMission()
-    {
-
-
-
-        Vector2Int valueindex = new Vector2Int();
-        bool isCheck = false;
-        for (int i = 0; i < listMission.Count && !isCheck; i++)
-        {
-            switch (listMission[i])
-            {
-                case 2:
-                    valueindex = new Vector2Int(listMission[i], 2);
-
-                    isCheck = true;
-                    break;
-                case 4:
-                    valueindex = new Vector2Int(listMission[i], 5);
-                    isCheck = true;
-                    break;
-                case 6:
-                    valueindex = new Vector2Int(listMission[i], 9);
-                    isCheck = true;
-                    break;
-                case 14:
-                    valueindex = new Vector2Int(listMission[i], 10);
-                    isCheck = true;
-                    break;
-            }
-
-
-        }
-
-
-
-        return valueindex;
-    }
-    public void TypeDoorMission()
-    {
-        if (!GetIsUseDoor()) return; // neu co nhiem vu lien quan den door
-
-        int levelStoryCur = Database.instance.Get_Current_Loading_Level_Story(Database.instance.GetHardLevel()); // lay level hien tai cua story
-        int level = ConfigMission().y;// xem no co bang level hay khong da duoc bien dich // level hien tai
-
-        if (level_Curr >= level)
-        {
-            //     Debug.LogError("load co bi lap khong select  Door controller");
-            int a = Database.instance.CheckIndexMissionPass(levelStoryCur, ConfigMission().x, Database.instance.GetHardLevel());
-            //     Debug.LogError("load co bi lap khong select  Door controller" +a+ " - 0- "+ ConfigMission().x+ " --- " + levelStoryCur) ;
-            Database.instance.Select_Mission_Complete(levelStoryCur, a, Database.instance.GetHardLevel());
-        }
-    }
-    #endregion
 
 
     #region textPetBuff

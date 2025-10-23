@@ -1108,7 +1108,7 @@ public class Room_Controller : MonoBehaviour
                 m_Index_Hold_Build_Crucific = UnityEngine.Random.Range(0, m_All_Ground_Can_Build.Count - 1);
                 // Show Hand In Ground
                 m_Ground_Build_Crucific = m_All_Ground_Can_Build[m_Index_Hold_Build_Crucific];
-                m_Ground_Build_Crucific.Show_Tut_4();
+                
                 m_All_Ground_Can_Build.RemoveAt(m_Index_Hold_Build_Crucific);
             }
         }
@@ -1117,7 +1117,7 @@ public class Room_Controller : MonoBehaviour
             // Remove Hand in Ground
             if (m_Ground_Build_Crucific)
             {
-                m_Ground_Build_Crucific.Remove_Tut();
+               
                 m_All_Ground_Can_Build.Add(m_Ground_Build_Crucific);
                 m_Ground_Build_Crucific = null;
             }

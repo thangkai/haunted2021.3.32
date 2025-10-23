@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8968175559116163058}
   - component: {fileID: 3753988566767550652}
-  - component: {fileID: 3270343900316571734}
+  - component: {fileID: 6340667374556707006}
   m_Layer: 8
   m_Name: Tile_Ground
   m_TagString: Untagged
@@ -298,33 +298,19 @@ MonoBehaviour:
   m_Live_Data_Energy_Change: {fileID: 0}
   m_Pos_Tut: {fileID: 1796115626611902426}
   m_Pos_BG_Upgrade: {fileID: 4515418468161913942}
-  m_Live_Data_Index_Claimed_Mission_Tutorial: {fileID: 0}
---- !u!61 &3270343900316571734
-BoxCollider2D:
+--- !u!65 &6340667374556707006
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8968175559116163057}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.24, y: 1.24}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 1
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.95, y: 0.95}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.95, y: 0.95, z: 0.95}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8968175559676719078
 GameObject:
   m_ObjectHideFlags: 0

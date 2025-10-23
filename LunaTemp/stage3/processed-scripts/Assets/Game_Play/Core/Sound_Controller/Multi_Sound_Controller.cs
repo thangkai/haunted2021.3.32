@@ -56,6 +56,7 @@ public class Multi_Sound_Controller : MonoBehaviour
 
     public void Play_Sound(bool is_Force_Spam, AudioClip clip = null)
     {
+//        Debug.LogError("Play_Sound MULTI");
         if (!DataSaved.Get_Status_Sound())
         {
             return;

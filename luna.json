@@ -2,7 +2,7 @@
     "version": "6.3.0",
     "projectId": "8ea37fcdc26c5274ba69a74f99d08e57",
     "applicationID": 31205,
-    "creativeName": "haunted",
+    "creativeName": "haunted2",
     "pgServer": "EU",
     "window": {
         "‐″": true
@@ -171,8 +171,8 @@
         "unusedModules": [
             {
                 "name": "physics3d",
-                "excluded": true,
-                "forceIncluded": false
+                "excluded": false,
+                "forceIncluded": true
             },
             {
                 "name": "physics2d",
@@ -2195,10 +2195,6 @@
                 "excluded": true
             },
             {
-                "name": "UnityEngine.Collider",
-                "excluded": true
-            },
-            {
                 "name": "UnityEngine.Joint",
                 "excluded": true
             },
@@ -2228,10 +2224,6 @@
             },
             {
                 "name": "Luna.Unity.DTO.UnityEngine.Components.TargetJoint2D",
-                "excluded": true
-            },
-            {
-                "name": "UnityEngine.BoxCollider",
                 "excluded": true
             },
             {
@@ -4992,7 +4984,7 @@
             },
             {
                 "name": "UnityEngine.RigidbodyConstraints",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.RigidbodyConstraints2D",
@@ -5000,7 +4992,7 @@
             },
             {
                 "name": "UnityEngine.RigidbodyInterpolation",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.RigidbodyInterpolation2D",
@@ -5032,7 +5024,7 @@
             },
             {
                 "name": "UnityEngine.RuntimePlatform",
-                "excluded": true
+                "excluded": false
             },
             {
                 "name": "UnityEngine.ScaleMode",
@@ -7739,10 +7731,6 @@
                 "excluded": true
             },
             {
-                "name": "Mine_Controller",
-                "excluded": true
-            },
-            {
                 "name": "Mining_Machine_Controller",
                 "excluded": true
             },
@@ -9541,6 +9529,14 @@
             {
                 "name": "AllIn1SpriteShader.AllIn1Shader.ShaderTypes",
                 "excluded": false
+            },
+            {
+                "name": "pc.Debugger.Components.EditorCamera",
+                "excluded": true
+            },
+            {
+                "name": "pc.Debugger.Components.EditorGUI",
+                "excluded": true
             }
         ],
         "unusedMethods": [
@@ -22684,7 +22680,7 @@
                     },
                     {
                         "name": "Get_Is_Lock_Move_Cam_Free",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "On_Ready_Move_Cam_Free",
@@ -24263,14 +24259,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "Play_Music_In_Game",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Stop_Music_In_Game",
-                        "excluded": false
-                    },
-                    {
                         "name": "EnterGame",
                         "excluded": false
                     },
@@ -25127,32 +25115,12 @@
                         "excluded": false
                     },
                     {
-                        "name": "Play_Sound_Backs",
-                        "excluded": true
-                    },
-                    {
-                        "name": "Play_Sound_Plays",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Toggle_Music_Click",
-                        "excluded": true
-                    },
-                    {
-                        "name": "Toggle_Sound_Click",
-                        "excluded": true
-                    },
-                    {
                         "name": "Play_Sounds",
                         "excluded": false
                     },
                     {
                         "name": "Stop_Sounds",
                         "excluded": false
-                    },
-                    {
-                        "name": "Play_Musics$1",
-                        "excluded": true
                     },
                     {
                         "name": "Play_Musics",
@@ -25175,23 +25143,7 @@
                         "excluded": false
                     },
                     {
-                        "name": "Toggle_Music_OnClick",
-                        "excluded": true
-                    },
-                    {
-                        "name": "Toggle_Sound_OnClick",
-                        "excluded": true
-                    },
-                    {
                         "name": "Play_Sound_Click",
-                        "excluded": false
-                    },
-                    {
-                        "name": "Play_Sound_Back",
-                        "excluded": true
-                    },
-                    {
-                        "name": "Play_Sound_Play",
                         "excluded": false
                     },
                     {
@@ -39246,7 +39198,7 @@
                     },
                     {
                         "name": "Apply",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -42056,7 +42008,7 @@
                     },
                     {
                         "name": "Get_Is_Can_Click",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Set_Current_Position",
@@ -42100,7 +42052,7 @@
                     },
                     {
                         "name": "_On_Item_OnCLick",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Check_Show_Warning",
@@ -42118,7 +42070,7 @@
                     },
                     {
                         "name": "Get_Is_Can_Click_Item_Player",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Set_Data",
@@ -42604,11 +42556,11 @@
                     },
                     {
                         "name": "_Btn_Close_OnClick",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "_Btn_Close_Inter_OnClick",
-                        "excluded": true
+                        "excluded": false
                     }
                 ]
             },
@@ -44435,14 +44387,6 @@
                         "excluded": false
                     },
                     {
-                        "name": "TypeRepairMission",
-                        "excluded": true
-                    },
-                    {
-                        "name": "TypeEnergyTowerMission",
-                        "excluded": true
-                    },
-                    {
                         "name": "Create_New_Turret_Success",
                         "excluded": false
                     },
@@ -44527,52 +44471,8 @@
                         "excluded": true
                     },
                     {
-                        "name": "GetIsUseElectric",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetIsUseElectric",
-                        "excluded": true
-                    },
-                    {
-                        "name": "GetIsUseRepairStation",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetIsUseRepairStation",
-                        "excluded": true
-                    },
-                    {
-                        "name": "GetIsUseDoor",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetIsUseMissionDoor",
-                        "excluded": true
-                    },
-                    {
-                        "name": "GetIsUseBed",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetIsUseMissionBed",
-                        "excluded": true
-                    },
-                    {
-                        "name": "GetIsUseTurret",
-                        "excluded": true
-                    },
-                    {
-                        "name": "SetIsUseMissionTurret",
-                        "excluded": true
-                    },
-                    {
-                        "name": "ListMission",
-                        "excluded": true
-                    },
-                    {
-                        "name": "ConfigMissionUpgrade",
-                        "excluded": true
+                        "name": "OnMouseUp",
+                        "excluded": false
                     }
                 ]
             },
@@ -45448,6 +45348,10 @@
                     },
                     {
                         "name": "Get_Direction",
+                        "excluded": true
+                    },
+                    {
+                        "name": "OnMouseUp",
                         "excluded": true
                     }
                 ]
@@ -46540,7 +46444,7 @@
                     },
                     {
                         "name": "Increase_Coin_From_Other",
-                        "excluded": true
+                        "excluded": false
                     },
                     {
                         "name": "Start_Active_Skill_2",
@@ -46560,14 +46464,6 @@
                     },
                     {
                         "name": "Start_Active_Skill_2_Raven_AI",
-                        "excluded": true
-                    },
-                    {
-                        "name": "ConfigMission",
-                        "excluded": true
-                    },
-                    {
-                        "name": "TypeBedMission",
                         "excluded": true
                     }
                 ]
@@ -46921,14 +46817,6 @@
                         "excluded": true
                     },
                     {
-                        "name": "ConfigMission",
-                        "excluded": true
-                    },
-                    {
-                        "name": "TypeDoorMission",
-                        "excluded": true
-                    },
-                    {
                         "name": "Update_Anim_HP",
                         "excluded": true
                     }
@@ -47019,14 +46907,6 @@
                     {
                         "name": "Data_Coin_Energy_Change",
                         "excluded": false
-                    },
-                    {
-                        "name": "Show_Tut_4",
-                        "excluded": true
-                    },
-                    {
-                        "name": "Remove_Tut",
-                        "excluded": true
                     }
                 ]
             },
@@ -47196,14 +47076,6 @@
                     },
                     {
                         "name": "Get_Energy_Increase",
-                        "excluded": true
-                    },
-                    {
-                        "name": "ConfigMission",
-                        "excluded": true
-                    },
-                    {
-                        "name": "TypeTurretMission",
                         "excluded": true
                     }
                 ]
@@ -52477,6 +52349,124 @@
                         "excluded": false
                     }
                 ]
+            },
+            {
+                "className": "Mine_Controller",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "Init_Data",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Set_Room_Controller",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Add_Listener",
+                        "excluded": false
+                    },
+                    {
+                        "name": "OnDisable",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Play_Anim_Collect",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Increase_Coin_In_Background",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update_Model_Price",
+                        "excluded": false
+                    },
+                    {
+                        "name": "Update_UI",
+                        "excluded": false
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.Collider",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "init",
+                        "excluded": false
+                    },
+                    {
+                        "name": "attachedRigidbody#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "attachedRigidbody#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "bounds#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "isTrigger#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "isTrigger#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "material#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "material#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ClosestPoint",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ClosestPointOnBounds",
+                        "excluded": true
+                    },
+                    {
+                        "name": "Raycast",
+                        "excluded": true
+                    }
+                ]
+            },
+            {
+                "className": "UnityEngine.BoxCollider",
+                "staticMethods": [],
+                "instanceMethods": [
+                    {
+                        "name": "size#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "size#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "center#get",
+                        "excluded": true
+                    },
+                    {
+                        "name": "center#set",
+                        "excluded": true
+                    },
+                    {
+                        "name": "ctor",
+                        "excluded": true
+                    }
+                ]
             }
         ],
         "stubberDataList": [],
@@ -52605,10 +52595,10 @@
                         "name": "Assets/Game_Play/Sprites/In_Game/icon_shield2.png"
                     },
                     {
-                        "maxWidth": 128,
-                        "maxHeight": 128,
+                        "maxWidth": 512,
+                        "maxHeight": 512,
                         "format": "png32",
-                        "compression": "quantSize",
+                        "compression": "quantQuality",
                         "quality": 65,
                         "script": "",
                         "ext": "",
@@ -52635,10 +52625,10 @@
                         "name": "Assets/Game_Play/Scenes/GamePlay.unity/PrefilteredEnvironment.exr"
                     },
                     {
-                        "maxWidth": 128,
-                        "maxHeight": 128,
+                        "maxWidth": 256,
+                        "maxHeight": 256,
                         "format": "png32",
-                        "compression": "quantSize",
+                        "compression": "quantQuality",
                         "quality": 65,
                         "script": "",
                         "ext": "",
@@ -52658,7 +52648,7 @@
                         "maxWidth": 256,
                         "maxHeight": 256,
                         "format": "png32",
-                        "compression": "quantSize",
+                        "compression": "quantQuality",
                         "quality": 65,
                         "script": "",
                         "ext": "",
@@ -52703,6 +52693,116 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/Game_Play/Sprites/UI/XEKOTOBY_UPDATE_070/283070Demo/avatar/avatar_2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/In_Game/UI/small_nhakhoahoc 1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/In_Game/UI/small_hocsinh 1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/UI/Character/small_Boss.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Sprites/In_Game/UI/small_Boss 1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Animations/Spine/All_Player/nhakhoahoc/nhakhoahoc.png"
+                    },
+                    {
+                        "maxWidth": 512,
+                        "maxHeight": 512,
+                        "format": "png32",
+                        "compression": "quantQuality",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Animations/Spine/All_Vampire/Dracura/vampire.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Animations/Spine/thapdien/udien.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Effects/Project-Fx/Survivor/Effect_Basic/Meteor/Materials/UniqueToonProjectilesVol1_10X10_2K_part1.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Effects/Project-Fx/heart/Materials/UniqueToonProjectilesVol1_10X10_2K_part2.PNG"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Effects/Project-Fx/Survivor/Hero/Sấmsét/Materials/LightningAttack_4x2.png"
+                    },
+                    {
+                        "maxWidth": 256,
+                        "maxHeight": 256,
+                        "format": "png32",
+                        "compression": "quantSize",
+                        "quality": 65,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Effects/Project-Fx/Silent-Castle/Skill/Witch/Materials/bretto_heal_spread_sheet.png"
                     }
                 ]
             },
@@ -52876,6 +52976,16 @@
                         "script": "",
                         "ext": "",
                         "name": "Assets/Game_Play/Audio/Canh Bao.mp3"
+                    },
+                    {
+                        "channels": 1,
+                        "startTime": "00:00.000",
+                        "endTime": "00:30.000",
+                        "lengthInSeconds": 30.0,
+                        "bitrate": 24,
+                        "script": "",
+                        "ext": "",
+                        "name": "Assets/Game_Play/Audio/Quai Chet.mp3"
                     }
                 ]
             },
@@ -52884,8 +52994,8 @@
                     "data": {
                         "alphabet": " §1234567890-=qwertyuiop[]asdfghjkl;'\\`zxcvbnm,./±!@#$%^&*()_+QWERTYUIOP{}ASDFGHJKL:\"|~ZXCVBNM<>?",
                         "size": 64,
-                        "textureWidth": 1024,
-                        "textureHeight": 1024
+                        "textureWidth": 256,
+                        "textureHeight": 256
                     }
                 },
                 "overrides": []

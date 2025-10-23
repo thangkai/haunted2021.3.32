@@ -282,11 +282,7 @@ public class Turret_Controller : Base_Turret_Can_Upgrade
         Game_Controller game_Controller = Game_Controller.Instance;
        
 
-        if (data_Player && !data_Player.Get_Is_AI() && DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story_Level)
-        {
-
-            TypeTurretMission();
-        }
+      
 
 
 
@@ -1359,54 +1355,5 @@ public class Turret_Controller : Base_Turret_Can_Upgrade
         return m_Data_Energy[lv % m_Data_Energy.Count];
     }
 
-    public Vector2Int ConfigMission()
-    {
-
-
-
-        Vector2Int valueindex = new Vector2Int();
-        bool isCheck = false;
-        for (int i = 0; i < listMission.Count && !isCheck; i++)
-        {
-            switch (listMission[i])
-            {
-                case 3:
-                    valueindex = new Vector2Int(listMission[i], 2);
-                    isCheck = true;
-                    break;
-                case 5:
-                    valueindex = new Vector2Int(listMission[i], 4);
-                    isCheck = true;
-                    break;
-                case 8:
-                    valueindex = new Vector2Int(listMission[i], 6);
-                    isCheck = true;
-                    break;
-            }
-
-
-        }
-
-
-
-        return valueindex;
-    }
-    public void TypeTurretMission()
-    {
-        if (!GetIsUseTurret()) return; // neu co nhiem vu lien quan turet
-        int levelStoryCur = Database.instance.Get_Current_Loading_Level_Story(Database.instance.GetHardLevel()); // lay level hien tai cua story
-        int level = ConfigMission().y;// xem no co bang level hay khong da duoc bien dich // level hien tai
-
-
-
-        if (level_Curr >= level)
-        {
-            int a = Database.instance.CheckIndexMissionPass(levelStoryCur, ConfigMission().x, Database.instance.GetHardLevel());
-            Debug.LogError("load co bi lap khong select  TypeTurretMission");
-            Database.instance.Select_Mission_Complete(levelStoryCur, a, Database.instance.GetHardLevel());
-        }
-
-
-    }
 
 }

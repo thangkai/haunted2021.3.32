@@ -26,8 +26,8 @@ public enum Type_Sound
     Turret_2,
     Turret_3,
     Alert,
-    Meteor_Fall,
-    Meteor_Explosion,
+    // Meteor_Fall,
+    // Meteor_Explosion,
 }
 
 public class SoundController : Singleton<SoundController>
@@ -47,43 +47,17 @@ public class SoundController : Singleton<SoundController>
 
     public static void Play_Sound_Clicks()
     {
+        
+        
+        Debug.LogError("Play_Sound_Clicks");
         if (Instance)
         {
             Instance.Play_Sound_Click();
         }
     }
 
-    public static void Play_Sound_Backs()
-    {
-        if (Instance)
-        {
-            Instance.Play_Sound_Back();
-        }
-    }
-
-    public static void Play_Sound_Plays()
-    {
-        if (Instance != null)
-        {
-            Instance.Play_Sound_Play();
-        }
-    }
-
-    public static void Toggle_Music_Click()
-    {
-        if (Instance)
-        {
-            Instance.Toggle_Music_OnClick();
-        }
-    }
-
-    public static void Toggle_Sound_Click()
-    {
-        if (Instance)
-        {
-            Instance.Toggle_Sound_OnClick();
-        }
-    }
+  
+ 
 
 
 
@@ -103,19 +77,14 @@ public class SoundController : Singleton<SoundController>
         }
     }
 
-    public static void Play_Musics(Type_Sound type_Sound)
-    {
-        if (Instance)
-        {
-            Instance.Play_Music(type_Sound);
-        }
-    }
+
 
     public static void Play_Musics(bool is_On)
     {
         if (Instance)
         {
-            Instance.Play_Music(is_On);
+            
+          //  Instance.Play_Music(is_On);
         }
     }
 
@@ -140,8 +109,9 @@ public class SoundController : Singleton<SoundController>
         {
             if (is_On)
             {
+                Debug.LogError("Play musics");
                 m_AudioSource_Music.gameObject.SetActive(true);
-                m_AudioSource_Music.clip = Get_AudioClip(Type_Sound.Music);
+               // m_AudioSource_Music.clip = Get_AudioClip(Type_Sound.Music);
                 m_AudioSource_Music.Play();
             }
             else
@@ -159,6 +129,7 @@ public class SoundController : Singleton<SoundController>
     {
         if (DataSaved.Get_Status_Music())
         {
+          
             m_AudioSource_Music.gameObject.SetActive(true);
             m_AudioSource_Music.clip = Get_AudioClip(type_Sound);
             m_AudioSource_Music.Play();
@@ -169,22 +140,11 @@ public class SoundController : Singleton<SoundController>
         }
     }
 
-    public void Toggle_Music_OnClick()
-    {
-        DataSaved.Set_Status_Music(!DataSaved.Get_Status_Music());
-        if (DataSaved.Get_Status_Music())
-        {
-            Play_Music(Type_Sound.Music);
-        }
-        else
-        {
-            m_AudioSource_Music.gameObject.SetActive(false);
-        }
-    }
+
 
     #endregion
 
-    //[Header("---------- Vibration ----------")]
+   
     
 
     #region ============== Sound ==============
@@ -192,28 +152,17 @@ public class SoundController : Singleton<SoundController>
     [Header("---------- Sound ----------")]
     [SerializeField] AudioClip[] m_All_Clips;
 
-    public void Toggle_Sound_OnClick()
-    {
-        DataSaved.Set_Status_Sound(!DataSaved.Get_Status_Sound());
-    }
 
     public void Play_Sound_Click()
     {
         Play_Sound(Type_Sound.Click);
     }
 
-    public void Play_Sound_Back()
-    {
-        Play_Sound(Type_Sound.Back);
-    }
-
-    public void Play_Sound_Play()
-    {
-        Play_Sound(Type_Sound.Play);
-    }
+ 
 
     public void Play_Sound(Type_Sound type_Sound)
     {
+    //    Debug.LogError("Play_Sound Type_Sound ");
         if (DataSaved.Get_Status_Sound())
         {
             if (type_Sound == Type_Sound.Character_Run)
@@ -253,16 +202,18 @@ public class SoundController : Singleton<SoundController>
 
                 if (m_Multi_Sound)
                 {
-                    if (type_Sound == Type_Sound.Meteor_Explosion || type_Sound == Type_Sound.Meteor_Fall)
-                    {
-                        m_Multi_Sound.Play_Sound(
-    true, Get_AudioClip(type_Sound));
-                    }
-                    else
-                    {
-                        m_Multi_Sound.Play_Sound(
-    false, Get_AudioClip(type_Sound));
-                    }
+    //                 if (type_Sound == Type_Sound.Meteor_Explosion || type_Sound == Type_Sound.Meteor_Fall)
+    //                 {
+    //                     m_Multi_Sound.Play_Sound(
+    // true, Get_AudioClip(type_Sound));
+    //                 }
+    //                 else
+    //                 {
+    //                    
+    //                 }
+                    
+                    m_Multi_Sound.Play_Sound(
+                        false, Get_AudioClip(type_Sound));
                 }
             }
         }

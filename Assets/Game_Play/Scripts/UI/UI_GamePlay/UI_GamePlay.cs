@@ -74,7 +74,7 @@ public class UI_GamePlay : MonoBehaviour
 
     public void _Btn_Pause_On_Click()
     {
-        SoundController.Play_Sound_Clicks();
+   //     SoundController.Play_Sound_Clicks();
         LunaManager.instace.OnPlayButtonClick();
 
 

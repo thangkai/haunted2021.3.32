@@ -27,7 +27,7 @@ public class Game_Controller : Singleton<Game_Controller>
     [SerializeField] List<Model_Boss> m_All_Data_Boss = new List<Model_Boss>();
     [SerializeField] List<int> m_Time_Will_Spawn_Boss = new List<int>();
     [SerializeField] List<Model_Info_Level_Boss> m_All_Boss_By_Type = new List<Model_Info_Level_Boss>();
-    [SerializeField] AudioSource m_Music_In_Game;
+  //  [SerializeField] AudioSource m_Music_In_Game;
 
 
 
@@ -82,21 +82,21 @@ public class Game_Controller : Singleton<Game_Controller>
         return m_Time_Spawn_Boss_Start_Game;
     }
 
-    public void Play_Music_In_Game()
-    {
-        if (DataSaved.Get_Status_Music() && m_Music_In_Game)
-        {
-            m_Music_In_Game.Play();
-        }
-    }
-
-    public void Stop_Music_In_Game()
-    {
-        if (DataSaved.Get_Status_Music() && m_Music_In_Game)
-        {
-            m_Music_In_Game.Stop();
-        }
-    }
+    // public void Play_Music_In_Game()
+    // {
+    //     if (DataSaved.Get_Status_Music() && m_Music_In_Game)
+    //     {
+    //         m_Music_In_Game.Play();
+    //     }
+    // }
+    //
+    // public void Stop_Music_In_Game()
+    // {
+    //     if (DataSaved.Get_Status_Music() && m_Music_In_Game)
+    //     {
+    //         m_Music_In_Game.Stop();
+    //     }
+    // }
 
     #endregion
 
@@ -136,7 +136,7 @@ public class Game_Controller : Singleton<Game_Controller>
                 Move_AI_To_Room();
             });
 
-            Play_Music_In_Game();
+         //   Play_Music_In_Game();
            
 
         }

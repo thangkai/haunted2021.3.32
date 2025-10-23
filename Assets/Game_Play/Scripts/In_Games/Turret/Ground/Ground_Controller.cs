@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 
 
@@ -6,13 +7,14 @@ public class Ground_Controller : Base_Turret_Can_Upgrade
 {
     [SerializeField] Transform m_Pos_Tut;
     [SerializeField] Transform m_Pos_BG_Upgrade;
-    [SerializeField] Bool_Global_Variable m_Live_Data_Index_Claimed_Mission_Tutorial;
-
+    
     public override void Start()
     {
         base.Start();
         Data_Coin_Energy_Change();
     }
+
+ 
 
     public override void Set_Room_Controller(Room_Controller room_Controller)
     {
@@ -24,10 +26,7 @@ public class Ground_Controller : Base_Turret_Can_Upgrade
     {
         base.OnDestroy();
 
-        if (m_Live_Data_Index_Claimed_Mission_Tutorial)
-        {
-            m_Live_Data_Index_Claimed_Mission_Tutorial.OnValueChanged.RemoveListener(Remove_Tut);
-        }
+      
     }
 
     public override void Add_Listener()
@@ -63,27 +62,7 @@ public class Ground_Controller : Base_Turret_Can_Upgrade
         }
     }
 
-    public void Show_Tut_4()
-    {
-        Remove_Tut();
 
-        var obj_Tut = Instantiate(Data_In_Game.Instance.Get_Data_Prefaps().Get_Pref_Hand_Tut(), m_Pos_Tut);
-        obj_Tut.transform.localPosition = Vector3.zero;
 
-        var obj_Upgrade = Instantiate(Data_In_Game.Instance.Get_Data_Prefaps().Get_Pref_BG_Upgrade(), m_Pos_BG_Upgrade);
-        obj_Upgrade.transform.localPosition = Vector3.zero;
-    }
 
-    public void Remove_Tut()
-    {
-        foreach (Transform item in m_Pos_Tut)
-        {
-            Destroy(item.gameObject);
-        }
-
-        foreach (Transform item in m_Pos_BG_Upgrade)
-        {
-            Destroy(item.gameObject);
-        }
-    }
 }

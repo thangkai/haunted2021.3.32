@@ -24,13 +24,16 @@ public class UI_Win_Lose : Base_UI
 
   //  [SerializeField] GameObject m_Obj_Btn_Joystick;
     [SerializeField] Image m_Icon_Title;
+    [SerializeField] Image m_Icon_Title2;
     [SerializeField] Image m_Background;
+    [SerializeField] Image m_Background_2;
 
 
     [SerializeField] GameObject m_Obj_Btn_Claim;
 
 
  [SerializeField] GameObject m_Layout_Bonus;
+ [SerializeField] private GameObject bg_2;
 
     public override void Open_UI(Status_Win_Lose status_Win_Lose)
     {
@@ -40,6 +43,7 @@ public class UI_Win_Lose : Base_UI
 
     public override void OnReadyOpenUI()
     {
+        bg_2.SetActive(true);
         Time.timeScale = 0;
         SoundController.Play_Sounds(Type_Sound.End_Game);
         if (Canvas_In_Game.Instance)
@@ -78,7 +82,7 @@ public class UI_Win_Lose : Base_UI
 
 
 
-        Game_Controller.Instance.Stop_Music_In_Game();
+      //  Game_Controller.Instance.Stop_Music_In_Game();
 
         DataSaved.Set_Is_Win_Game(Check_Is_Win());
         DataSaved.Set_Is_Show_Popup_IAP(false);
@@ -365,7 +369,9 @@ public class UI_Win_Lose : Base_UI
                 }
 
                 m_Icon_Title.sprite = m_Sprite_Character_Win.sprite_EN;
+                m_Icon_Title2.sprite = m_Sprite_Character_Win.sprite_EN;
                 m_Background.sprite = m_Sprite_Castle;
+                m_Background_2.sprite = m_Sprite_Castle;
 
 
 
@@ -373,22 +379,28 @@ public class UI_Win_Lose : Base_UI
 
             case Status_Win_Lose.Player_Mode_Lose:
                 m_Icon_Title.sprite = m_Sprite_Character_Lose.sprite_EN;
+                m_Icon_Title2.sprite = m_Sprite_Character_Lose.sprite_EN;
                 m_Background.sprite = m_Sprite_Wolf;
+                m_Background_2.sprite = m_Sprite_Wolf;
 
 
                 break;
 
             case Status_Win_Lose.Vampire_Mode_Win:
                 m_Icon_Title.sprite = m_Sprite_Vampire_Win.sprite_EN;
+                m_Icon_Title2.sprite = m_Sprite_Vampire_Win.sprite_EN;
                 m_Background.sprite = m_Sprite_Wolf;
+                m_Background_2.sprite = m_Sprite_Wolf;
 
 
                 break;
 
             case Status_Win_Lose.Vampire_Mode_Lose:
                 m_Icon_Title.sprite = m_Sprite_Character_Lose.sprite_EN;
+                m_Icon_Title2.sprite =  m_Sprite_Character_Lose.sprite_EN;
+                
                 m_Background.sprite = m_Sprite_Castle;
-
+                m_Background_2.sprite = m_Sprite_Castle;
 
                 break;
         }

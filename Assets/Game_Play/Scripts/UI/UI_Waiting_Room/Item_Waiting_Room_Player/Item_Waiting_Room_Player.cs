@@ -55,7 +55,7 @@ public class Item_Waiting_Room_Player : MonoBehaviour
         {
             m_Anim.enabled = true;
             m_Anim.Play_Animation_Play();
-            SoundController.Play_Sounds(Type_Sound.Pop_Up);
+         //   SoundController.Play_Sounds(Type_Sound.Pop_Up);
         }
     }
 

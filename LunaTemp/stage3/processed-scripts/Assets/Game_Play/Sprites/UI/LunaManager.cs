@@ -20,8 +20,8 @@ public class LunaManager : MonoBehaviour
 
 
 
-    [SerializeField] private GameObject uiHomeLanscape;
-    [SerializeField] private GameObject uiHomePort;
+    [SerializeField] private GameObject uiHomeLanscape, uiIngameLan;
+    [SerializeField] private GameObject uiHomePort, uiIngamePor;
     [SerializeField] private CanvasScaler canvasScalerIngame, healBar;
     private void Awake()
     {
@@ -56,13 +56,17 @@ public class LunaManager : MonoBehaviour
         Debug.LogError("CheckAndApplyOrientation" + Screen.width + " -----" + Screen.height);
         uiHomeLanscape.SetActive(isLandscape);
         uiHomePort.SetActive(!isLandscape);
+        
+        uiIngameLan.SetActive(isLandscape);
+        uiIngamePor.SetActive(!isLandscape);
+        
         if (isLandscape)
         {
             float aspect = (float)Screen.width / Screen.height;
 
             ZoomInCamera(GetOrthoSizeLandscape(aspect) - 0.3f);
-            canvasScalerIngame.matchWidthOrHeight = 1;
-            healBar.matchWidthOrHeight = 1;
+            // canvasScalerIngame.matchWidthOrHeight = 1;
+            // healBar.matchWidthOrHeight = 1;
 
 
         }
@@ -70,8 +74,8 @@ public class LunaManager : MonoBehaviour
         {
              Debug.LogError("CheckAndApplyOrientation");
             ZoomInCamera(8f);
-            canvasScalerIngame.matchWidthOrHeight = 0;
-            healBar   .matchWidthOrHeight = 0;
+            // canvasScalerIngame.matchWidthOrHeight = 0;
+            // healBar   .matchWidthOrHeight = 0;
 
 
         }
