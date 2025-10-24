@@ -12,7 +12,7 @@ public class Point_Display_Player : MonoBehaviour
         Vector3 pos_Cam = Camera.main.transform.position;
         pos_Cam.x = transform.position.x;
         pos_Cam.y = transform.position.y;
-        Camera.main.transform.position = pos_Cam;
+        //Camera.main.transform.position = pos_Cam;
 
         Check_Empty_Point();
     }

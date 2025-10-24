@@ -703,57 +703,5 @@ public class Bed_Controller : Base_Turret_Can_Upgrade
     }
 
 
-    #region Bed Mission
-
-
-
-    public Vector2Int ConfigMission()
-    {
-
-        Vector2Int valueindex = new Vector2Int();
-        bool isCheck = false;
-        for (int i = 0; i < listMission.Count && !isCheck; i++)
-        {
-            switch (listMission[i])
-            {
-                case 7:
-                    valueindex = new Vector2Int(listMission[i], 7);
-                    isCheck = true;
-                    break;
-                case 15:
-                    valueindex = new Vector2Int(listMission[i], 19);
-                    isCheck = true;
-                    break;
-            }
-        }
-
-        return valueindex;
-    }
-    public void TypeBedMission()
-    {
-        if (!GetIsUseBed()) return; // neu co nhiem vu lien quan guong
-        int levelStoryCur = Database.instance.Get_Current_Loading_Level_Story(Database.instance.GetHardLevel()); // lay level hien tai cua story
-        int level = ConfigMission().y;// xem no co bang level hay khong da duoc bien dich // level hien tai
-
-
-
-        if (level_Curr >= level)
-        {
-            int a = Database.instance.CheckIndexMissionPass(levelStoryCur, ConfigMission().x, Database.instance.GetHardLevel());
-
-            Database.instance.Select_Mission_Complete(levelStoryCur, a, Database.instance.GetHardLevel());
-
-
-            Debug.LogError("load co bi lap khong select  TypeBedMission");
-
-        }
-
-
-    }
-
-
-
-    #endregion
-
 
 }

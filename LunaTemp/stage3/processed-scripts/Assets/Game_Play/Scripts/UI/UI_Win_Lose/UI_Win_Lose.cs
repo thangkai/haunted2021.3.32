@@ -43,14 +43,16 @@ public class UI_Win_Lose : Base_UI
 
     public override void OnReadyOpenUI()
     {
-        bg_2.SetActive(true);
+        Update_Icon_Title();
         Time.timeScale = 0;
+     
+     
         SoundController.Play_Sounds(Type_Sound.End_Game);
         if (Canvas_In_Game.Instance)
         {
             Canvas_In_Game.Instance.Get_UI_GamePlay().gameObject.Set_Active(false);
         }
-
+      bg_2.SetActive(true);
 
         m_Layout_Bonus.Set_Active(false);
        // m_Obj_Btn_Joystick.SetActive(false);
@@ -67,7 +69,7 @@ public class UI_Win_Lose : Base_UI
 
 
 
-        Update_Icon_Title();
+      
 
 
 
@@ -85,28 +87,10 @@ public class UI_Win_Lose : Base_UI
       //  Game_Controller.Instance.Stop_Music_In_Game();
 
         DataSaved.Set_Is_Win_Game(Check_Is_Win());
-        DataSaved.Set_Is_Show_Popup_IAP(false);
-        if (Check_Is_Win())
-        {
-            Type_Character type_Character = DataSaved.Get_Type_Character_Playing(Type_Player.Player_1);
-            if ((type_Character == Type_Character.Calida || type_Character == Type_Character.Eilif ||
-                 type_Character == Type_Character.Raven || type_Character == Type_Character.Sami) &&
-                !DataSaved.Get_Skin_Character_Bought(type_Character))
-            {
-                //  DataSaved.Set_Is_Show_Popup_Character_Pack(true);
-                DataSaved.Set_Is_Show_Popup_Character_Pack(false);
+    
+     
 
-            }
-            else
-            {
-                DataSaved.Set_Is_Show_Popup_Character_Pack(false);
-            }
-        }
-
-        DataHomeGame.Instance.ConditionWin(Type_Condition_Title_User_Info.Win_By_Kill_All_The_Monster, m_Status_Win_Lose);
-        DataHomeGame.Instance.ConditionWin(Type_Condition_Title_User_Info.Win_Without_Causing_Damage, m_Status_Win_Lose);
-
-        CheckTut(Check_Is_Win());
+      
 
     }
 
@@ -431,65 +415,5 @@ public class UI_Win_Lose : Base_UI
 
 
 
-    public void CheckTut(bool isWin)
-    {
-        // 1. Nếu thua 2 lần tại lv 1.
-        // 2. Thua tại lv 2.
-        // 3. Hoàn thành lv 2.
-
-        // if (is_Challenge_Mode)
-        // {
-        //     Firebase_Event.Log_Event_Win_Challenge();
-        //     if (!DataSaved.Get_Is_First_Time_Collect_Reward(type_Mode_Gameplay,
-        //             DataSaved.Get_Current_Loading_Level_Mode_Challenge()))
-        //     {
-        //                
-        //
-        //         m_Layout_Bonus.Set_Active(true);
-        //         return 10;
-        //     }
-        // }
-
-
-
-        Debug.LogError(DataSaved.Get_Level_Complete(1) + " hoan thanh level 1 xekotoby");
-
-        Debug.LogError(DataSaved.Get_Level_Complete(0) + " hoan thanh level 0 xekotoby");
-        Debug.LogError(DataSaved.Get_Current_Loading_Level() + "  hoan thanh Get_Current_Loading_Level_Mode_Challenge xekotoby");
-
-        if (DataSaved.Get_Complete_Show_Tut_Chest() == false)
-        {
-            Type_Mode_Gameplay type_Mode_Gameplay = DataSaved.Get_Type_Mode_Gameplay_Playing();
-            bool is_Challenge_Mode = type_Mode_Gameplay == Type_Mode_Gameplay.Challenge;
-            if (is_Challenge_Mode == false)
-            {
-
-                if (isWin)
-                {
-
-                    if (DataSaved.Get_Level_Complete(1))
-                    {
-                        DataSaved.Set_Condition_Show_Tut_Chest(2);
-                    }
-                }
-                else
-                {
-                    if ((DataSaved.Get_Level_Complete(0) && DataSaved.Get_Current_Loading_Level() == 1))
-                    {
-                        DataSaved.Set_Condition_Show_Tut_Chest(2);
-                    }
-                    if ((DataSaved.Get_Level_Complete(0) == false && DataSaved.Get_Current_Loading_Level() == 0))
-                    {
-                        DataSaved.Set_Condition_Show_Tut_Chest(1);
-                    }
-                }
-                Debug.LogError(DataSaved.Get_Condition_Show_Tut_Chest() + " hoan thanh dieu kien show tut chest");
-            }
-        }
-        else
-        {
-            return;
-        }
-
-    }
+   
 }

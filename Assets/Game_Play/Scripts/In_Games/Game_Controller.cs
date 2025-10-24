@@ -489,13 +489,12 @@ public class Game_Controller : Singleton<Game_Controller>
 
                     //                        Debug.LogError("bat joysick");
                     Canvas_In_Game.Instance.Get_UI_GamePlay().Set_Active_UI_Joystick(true);
+                    
+                 
 
-                    Canvas_In_Game.Instance.Get_UI_GamePlay().Set_Active_Joystick(true);
 
-
-
-                    Camera.main.transform.SetParent(m_Character_Current.transform);
-                    Camera.main.transform.localPosition = new Vector3(0, 0, -10);
+               //     Camera.main.transform.SetParent(m_Character_Current.transform);
+              //      Camera.main.transform.localPosition = new Vector3(0, 0, -10);
                 }
 
 
@@ -1349,75 +1348,124 @@ public class Game_Controller : Singleton<Game_Controller>
 
         m_Rect_Layout_Time.transform.position = m_Point_Center.position;
         m_Rect_Layout_Time.localScale = new Vector3(2f, 2f, 2f);
+        
+        
+        
+  bool isTweenFinished = false;
 
-        DOVirtual.DelayedCall(1f, () =>
+// Delay 1s trước khi bắt đầu animation
+var delayTween = DOVirtual.DelayedCall(1f, () =>
+{
+    // --- MOVE tween ---
+    Tween moveTween = m_Rect_Layout_Time.DOMove(m_Point_Layout_Time.position, 1f)
+        .SetEase(Ease.Linear)
+        .OnComplete(() =>
         {
-            m_Rect_Layout_Time.DOMove(m_Point_Layout_Time.position, 1f)
-            .SetEase(Ease.Linear)
-            .OnComplete(() =>
+            if (isTweenFinished) return; // tránh gọi lại nhiều lần
+            isTweenFinished = true;
+
+            SafeOnTweenComplete();
+        })
+        .OnKill(() =>
+        {
+            // Nếu tween bị kill, vẫn đảm bảo gọi completion
+            if (!isTweenFinished)
             {
+                isTweenFinished = true;
+                SafeOnTweenComplete();
+            }
+        })
+        .SetLink(gameObject); // auto-kill nếu object bị destroy
 
-                if (!isCollider)
-                {
-                    AcitveCollier();
-                }
-
-
-                m_Obj_Coin.SetActive(true);
-                m_Obj_Energy.SetActive(true);
-                m_BG_Anim_Time.gameObject.SetActive(false);
-
-                m_Anim_Done.Invoke();
-            });
-
-            float scale = 2;
-            DOTween.To(() => scale, x => scale = x, 1, 0.5f)
-            .SetEase(Ease.Linear)
-            .OnUpdate(() =>
-            {
-                m_Rect_Layout_Time.localScale = new Vector3(scale, scale, scale);
-            }).OnComplete(() =>
-            {
-
-                scale = 1f;
-                DOTween.To(() => scale, x => scale = x, 1.1f, 0.25f)
-                .SetEase(Ease.Linear)
-                .OnUpdate(() =>
-                {
-                    m_Rect_Layout_Time.localScale = new Vector3(scale, scale, scale);
-                })
-                .OnComplete(() =>
-                {
-                    //scale = 1.1f;
-                    DOTween.To(() => scale, x => scale = x, 1f, 0.25f)
+    // --- SCALE animation sequence ---
+    float scale = 2f;
+    DOTween.To(() => scale, x => scale = x, 1f, 0.5f)
+        .SetEase(Ease.Linear)
+        .OnUpdate(() =>
+        {
+            m_Rect_Layout_Time.localScale = new Vector3(scale, scale, scale);
+        })
+        .OnComplete(() =>
+        {
+            DOTween.Sequence()
+                .Append(DOTween.To(() => scale, x => scale = x, 1.1f, 0.25f)
                     .SetEase(Ease.Linear)
                     .OnUpdate(() =>
                     {
                         m_Rect_Layout_Time.localScale = new Vector3(scale, scale, scale);
-                    }).OnComplete(() =>
+                    }))
+                .Append(DOTween.To(() => scale, x => scale = x, 1f, 0.25f)
+                    .SetEase(Ease.Linear)
+                    .OnUpdate(() =>
                     {
-                        m_Anim_Layout_Time.enabled = true;
-                        m_Anim_Layout_Time.Play_Animation_Play();
-                        DOVirtual.DelayedCall(1f, () =>
-                        {
-                            m_Anim_Layout_Time.enabled = false;
-                        }, false).SetLink(gameObject);
-                    });
-                });
-            });
+                        m_Rect_Layout_Time.localScale = new Vector3(scale, scale, scale);
+                    }))
+                .OnComplete(() =>
+                {
+                    m_Anim_Layout_Time.enabled = true;
+                    m_Anim_Layout_Time.Play_Animation_Play();
 
-            float alpha = 175;
-            DOTween.To(() => alpha, x => alpha = x, 0, 1f)
-            .SetEase(Ease.Linear)
-            .OnUpdate(() =>
+                    // Tắt anim sau 1s
+                    DOVirtual.DelayedCall(1f, () =>
+                    {
+                        if (m_Anim_Layout_Time != null)
+                            m_Anim_Layout_Time.enabled = false;
+                    }, false).SetLink(gameObject);
+                })
+                .SetLink(gameObject);
+        })
+        .SetLink(gameObject);
+
+    // --- ALPHA tween ---
+    float alpha = 175f;
+    DOTween.To(() => alpha, x => alpha = x, 0f, 1f)
+        .SetEase(Ease.Linear)
+        .OnUpdate(() =>
+        {
+            if (m_BG_Anim_Time != null)
             {
-               // m_BG_Anim_Time.SetAlpha(alpha / 255f);
-                
-                Color color1 = m_BG_Anim_Time.color;
+                var color1 = m_BG_Anim_Time.color;
                 color1.a = alpha / 255f;
                 m_BG_Anim_Time.color = color1;
-            });
-        }, false);
+            }
+        })
+        .SetLink(gameObject);
+}, false).SetLink(gameObject);
+
+
+
+
+// Hàm an toàn cho logic completion
+void SafeOnTweenComplete()
+{
+    try
+    {
+        if (!isCollider)
+        {
+            AcitveCollier();
+            if (Level_Controller.Instance != null &&
+                Level_Controller.Instance.m_All_Room_Empty.Count > 0)
+            {
+                character_controllerCur.End_Move_To_Bed(Level_Controller.Instance.m_All_Room_Empty[0].Get_Bed_Controller());
+            }
+        }
+
+        m_Obj_Coin?.SetActive(true);
+        m_Obj_Energy?.SetActive(true);
+        if (m_BG_Anim_Time != null)
+            m_BG_Anim_Time.gameObject.SetActive(false);
+
+        m_Anim_Done?.Invoke();
+    }
+    catch (Exception e)
+    {
+        Debug.LogError($"SafeOnTweenComplete Error: {e.Message}");
+    }
+}
+
+        
+        
+        
     }
 
     #endregion

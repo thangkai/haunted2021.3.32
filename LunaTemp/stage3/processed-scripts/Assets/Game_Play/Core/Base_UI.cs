@@ -94,10 +94,10 @@ public abstract class Base_UI : Base_Update
         //xekotoby
    
         //xekotoby
-        Debug.LogError("Close_UI 0");
+    
         Perpare_Before_Close_UI();
         gameObject.SetActive(false);
-        Debug.LogError("Close_UI");
+      
     }
 
     public virtual void _Btn_Close_OnClick()

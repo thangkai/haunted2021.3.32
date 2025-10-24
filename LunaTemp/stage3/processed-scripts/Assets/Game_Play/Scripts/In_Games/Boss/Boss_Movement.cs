@@ -246,7 +246,7 @@ public class Boss_Movement : MonoBehaviour
             //  
             // }
             //
-            
+            Debug.LogError("STOP MOVE");
             m_Is_Moving = false;
             m_Is_Moving_To_Point = false;
             m_MoveDirection = Vector2.zero;

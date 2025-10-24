@@ -77,7 +77,7 @@ public class Door_Controller : Base_Turret_Can_Upgrade
     [SerializeField] int m_Count_Save_Door_By_Ads;
     [SerializeField] int m_Count_Skill_2_Temp_Door;
 
-  
+    [SerializeField]  Transform transform_Door;
     [SerializeField]
     Transform m_Pos_Tut;
 
@@ -243,6 +243,7 @@ public class Door_Controller : Base_Turret_Can_Upgrade
         output.x = m_Pos_Boss_Attack.x;
         output.y = m_Pos_Boss_Attack.y;
         output.z = m_Pos_Boss_Attack.z;
+        Debug.LogError("Get_Position_Door_Attack" + output);
 
         if (m_Type_Direction_Door == Type_Direction.Top || m_Type_Direction_Door == Type_Direction.Bottom)
         {
@@ -264,8 +265,10 @@ public class Door_Controller : Base_Turret_Can_Upgrade
             {
                 output.x += UnityEngine.Random.Range(-4, 4) * 0.1f;
             }
+            
+            
 
-            return output;
+            return transform_Door.position;
         }
 
         if (m_Type_Direction_Door == Type_Direction.Left)
@@ -755,7 +758,7 @@ public class Door_Controller : Base_Turret_Can_Upgrade
                 m_Pos_Global = transform.position;
                 m_Obj_Collider_Detect_Pos_Boss.SetActive(true);
 
-                Destroy(m_Obj_Collider_Detect_Pos_Boss, 3f);
+          //     Destroy(m_Obj_Collider_Detect_Pos_Boss, 3f);
 
                 // Check has character in room
                 if (Game_Controller.Instance.Get_Curr_Character_Controller())

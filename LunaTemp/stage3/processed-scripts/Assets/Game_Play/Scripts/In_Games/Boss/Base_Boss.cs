@@ -213,7 +213,7 @@ public class Base_Boss : MonoBehaviour
         Check_Init_Health_Bar_UI();
 
 
-        ConfigMissionUpgrade();
+      
 
         //var obj_Anim = Instantiate(Data_In_Game.Instance.Get_Data_Prefaps().Get_Pref_Spine_Character(), m_Model);
 
@@ -889,12 +889,11 @@ public class Base_Boss : MonoBehaviour
 
         Debug.Log("bossDied boss base 10");
         m_Health_Bar_UI.Update_State_Die(!m_Need_Spawn_Boss);
-        DataHomeGame.Instance.SetKillBossIcon(m_Type_Boss);
-        Database.instance.IncreaseKillBossKill();
-        Database.instance.SetBossTypeUnlock(m_Type_Boss);
+     
+    
 
 
-        TypeMissionBoss();
+      
         if (m_Health_Bar_UI)
         {
             Destroy(m_Health_Bar_UI.gameObject);
@@ -2462,7 +2461,7 @@ public class Base_Boss : MonoBehaviour
                 m_Boss_Movement.Set_Start_Move_To_Point(m_Room_Attacking.Get_Pos_Boss_Fighting(), () =>
                 {
 
-                    Debug.LogError("TH: K FAI ADC? K CO GOLEM " + this.gameObject.name);
+                    Debug.LogError("TH: K FAI ADC? K CO GOLEM " + this.gameObject.name + "s " + m_Room_Attacking.Get_Position_Door_Attack(m_Type_Boss));
 
 
                     m_Boss_Movement.Set_Start_Move_To_Point(m_Room_Attacking.Get_Position_Door_Attack(m_Type_Boss),
@@ -2809,6 +2808,7 @@ public class Base_Boss : MonoBehaviour
             if (!m_Tmp_Is_Killed_Play)
             {
                 Play_Animation(Type_Animation.Run);
+                Debug.LogError(m_Room_Attacking.Get_Bed_Controller().transform.localPosition  + "m_Room_Attacking.Get_Bed_Controller().transform");
                 m_Boss_Movement.Set_Start_Move_To_Target(m_Room_Attacking.Get_Bed_Controller().transform,
                     () => { Kill_Player_Done(); });
             }
@@ -5374,136 +5374,5 @@ public class Base_Boss : MonoBehaviour
     #endregion
 
 
-    #region mission destrory
-
-    internal List<int> listMission = new List<int>();
-
-
-    public void ListMission()
-    {
-        listMission.AddRange(Database.instance.ListMissionPass(
-            Database.instance.Get_Current_Loading_Level_Story(Database.instance.GetHardLevel()),
-            Database.instance.GetHardLevel()));
-    }
-
-
-    private Vector2Int typeMission = new Vector2Int();
-
-    private int countKillBoss = 0;
-
-    /// <summary>
-    /// load mission voi boss
-    /// </summary>
-    public void TypeMissionBoss()
-    {
-        if (DataSaved.Get_Type_Mode_Gameplay_Playing() != Type_Mode_Gameplay.Story_Level) return;
-        // if(Database.instance.GetHardLevel()&& DataSaved.Get_Type_Mode_Gameplay_Playing() == Type_Mode_Gameplay.Story_Level )return;
-        Debug.LogError("Check so lan khi boss chet bi goi lai");
-        int levelStoryCur = Database.instance.Get_Current_Loading_Level_Story(false); // lay level hien tai cua story
-        switch (typeMission.y)
-        {
-            case 0:
-                countKillBoss = 1;
-                MissionKillNumberBoss(levelStoryCur);
-                break;
-            case 1:
-                MissionKillTargetBoss(levelStoryCur, Type_Player.Bugbear_Butler_Mini_Boss);
-                break;
-            case 2:
-                countKillBoss = 2;
-                MissionKillNumberBoss(levelStoryCur);
-                break;
-            case 3:
-                MissionKillTargetBoss(levelStoryCur, Type_Player.Crazy_Bugbear_Mini_Boss);
-                break;
-            case 4:
-                MissionKillTargetBoss(levelStoryCur, Type_Player.Boss_Dracula);
-
-                break;
-            default: break;
-        }
-    }
-
-    internal void MissionKillNumberBoss(int levelStoryCur)
-    {
-        //giet xong Boss
-        countKillBoss--;
-        if (countKillBoss == 0)
-        {
-            int a = Database.instance.CheckIndexMissionPass(levelStoryCur, typeMission.x,
-                Database.instance.GetHardLevel());
-
-
-            Debug.LogError("load co bi lap khong select  MissionKillNumberBoss");
-            Database.instance.Select_Mission_Complete(levelStoryCur, a, Database.instance.GetHardLevel());
-        }
-    }
-
-    internal void MissionKillTargetBoss(int levelStoryCur, Type_Player typePlayer)
-    {
-        if (m_Type_Boss == typePlayer)
-        {
-            int a = Database.instance.CheckIndexMissionPass(levelStoryCur, typeMission.x,
-                Database.instance.GetHardLevel());
-
-            Debug.LogError("load co bi lap khong select  MissionKillTargetBoss");
-            Database.instance.Select_Mission_Complete(levelStoryCur, a, Database.instance.GetHardLevel());
-        }
-    }
-    // internal void MissionKillTimeBoss(int levelStoryCur, Status_Win_Lose typePlayer)
-    // {
-    //
-    //     if (Game_Controller.Instance.win == typePlayer)
-    //     {
-    //         Database.instance.CheckIndexMissionPass(levelStoryCur,typeMission.x);
-    //     }
-    // }
-
-
-    public void ConfigMissionUpgrade()
-    {
-        if (DataSaved.Get_Type_Mode_Gameplay_Playing() != Type_Mode_Gameplay.Story_Level) return;
-
-        ListMission();
-        bool isCheck = false;
-
-        for (int i = 0; i < listMission.Count && !isCheck; i++)
-        {
-            switch (listMission[i])
-            {
-                case 9:
-                    typeMission = new Vector2Int(listMission[i], 0);
-                    isCheck = true;
-                    break;
-                case 12:
-                    typeMission = new Vector2Int(listMission[i], 1);
-                    isCheck = true;
-                    break;
-                case 13:
-                    typeMission = new Vector2Int(listMission[i], 2);
-                    isCheck = true;
-
-                    break;
-
-                case 16:
-                    typeMission = new Vector2Int(listMission[i], 3);
-                    isCheck = true;
-
-
-                    break;
-
-                case 17:
-                    typeMission = new Vector2Int(listMission[i], 4);
-                    isCheck = true;
-                    break;
-
-                default:
-                    Debug.Log(" Truong hop khong phai nhiem vu tieu diet" + listMission[i]);
-                    // Có thể thêm xử lý cho các trường hợp khác nếu cần
-                    break;
-            }
-        }
-    }
-
-    #endregion
+  
 }

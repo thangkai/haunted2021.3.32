@@ -616,7 +616,8 @@ public class Item_Upgrade : MonoBehaviour
 
     public virtual bool Check_Can_Buy_Or_Upgrade_Item()
     {
-        m_Data_Player = Player_Manager.Instance.Get_Data_Player_Current();
+        m_Data_Player = Player_Manager.Instance.Get_Data_Player(Type_Player.Player_1);
+    //    Debug.LogError(m_Data_Player.Get_Sum_Coin() + " m_Data_Player.Get_Sum_Coin()" +  m_Model_Info_Turret.type_Turret + m_Model_Info_Turret.price_Upgrades.price_Energy );
         bool ouput = m_Data_Player.Get_Sum_Coin() >= My_Utils.Get_Price(m_Type_Character,
                          m_Model_Info_Turret.type_Turret, m_Model_Info_Turret.price_Upgrades.price_Coin)
                      && m_Data_Player.Get_Sum_Energy() >= My_Utils.Get_Price(m_Type_Character,
@@ -630,17 +631,9 @@ public class Item_Upgrade : MonoBehaviour
                 m_Model_Info_Turret.requirement_Upgrades);
         }
 
-        if (is_Pass_Requirement )
-        {
-            return true;
-        }
-
-        if (is_Pass_Requirement &&
-            DataSaved.Get_Unlock_Skill_Tree_Gem_Player(Type_Skill_Tree_Gem.Skill_6_Upgrade_Free) &&
-            DataSaved.Get_Count_Other_Player_Die() > 0)
-        {
-            return true;
-        }
+     
+       
+     
 
         ouput = is_Pass_Requirement && ouput;
 
@@ -649,6 +642,7 @@ public class Item_Upgrade : MonoBehaviour
 
     public void On_Data_Coin_Energy_Change()
     {
+      
         if (type_Item_Upgrade == Type_Item_Upgrade.Upgrade_By_Ads)
         {
             m_Is_Can_Buy_Item = Check_Can_Buy_Or_Upgrade_Item();

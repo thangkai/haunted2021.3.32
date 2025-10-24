@@ -205,7 +205,7 @@ public class Boss_Summon : Base_Boss
         // Database.instance.SetBossTypeUnlock(m_Type_Boss);
 
         Debug.Log("bossDied boss_summon 6 ");
-        TypeMissionBoss();
+    
         Debug.Log("bossDied boss_summon 7 ");
         if (m_Health_Bar_UI)
         {

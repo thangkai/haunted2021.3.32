@@ -23,6 +23,7 @@ public class LunaManager : MonoBehaviour
     [SerializeField] private GameObject uiHomeLanscape, uiIngameLan;
     [SerializeField] private GameObject uiHomePort, uiIngamePor;
     [SerializeField] private CanvasScaler canvasScalerIngame, healBar;
+    [SerializeField] private GameObject build;
     private void Awake()
     {
         if (instace == null)
@@ -59,6 +60,14 @@ public class LunaManager : MonoBehaviour
         
         uiIngameLan.SetActive(isLandscape);
         uiIngamePor.SetActive(!isLandscape);
+        if (isLandscape)
+        {
+            build.transform.localScale = new Vector3(0.70f, 0.7f, 0.7f);
+        }
+        else
+        {
+            build.transform.localScale = new Vector3(1f, 1f, 1f);
+        }
         
         if (isLandscape)
         {

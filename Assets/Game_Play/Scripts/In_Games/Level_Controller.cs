@@ -14,7 +14,7 @@ public class Level_Controller : Singleton<Level_Controller>
     [SerializeField] SpriteRenderer m_Ground_Tile;
     [SerializeField] GameObject m_Obj_Tut_Find_Room;
 
-    [SerializeField] private List<Room_Controller> m_All_Room_Empty;
+    [SerializeField] public List<Room_Controller> m_All_Room_Empty;
     [SerializeField] private List<Room_Controller> m_All_Room_Not_Has_Player_Move;
     [SerializeField] public List<Room_Controller> m_All_Room_Has_Player;
 

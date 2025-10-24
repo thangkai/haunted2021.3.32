@@ -54,6 +54,8 @@ public class Camera_Movement : Singleton<Camera_Movement>
 
     private bool isTweenComplete;
     private Tween _tweenCamera;
+    
+    
     private void OnEnable()
     {
         if (Game_Controller.Instance != null && Game_Controller.Instance.Get_Type_Mode_Play() == Type_Mode_Play.Player)
@@ -72,7 +74,8 @@ public class Camera_Movement : Singleton<Camera_Movement>
                 _tweenCamera =  cam.transform.DOMove(m_Pos_Bed, 0.25f).SetEase(Ease.Linear).OnComplete(() =>
                 {
                     Pan_Camera();
-                    cam.transform.position = m_Pos_Bed;
+                  //  cam.transform.position = m_Pos_Bed;
+                  Clamp_Camera(m_Pos_Bed);
                 
                 
                    
@@ -96,6 +99,9 @@ public class Camera_Movement : Singleton<Camera_Movement>
         }
         
         
+        
+        
+        
         if (Input.GetMouseButtonDown(0))
         {
             if (EventSystem.current.IsPointerOverGameObject())
@@ -110,6 +116,11 @@ public class Camera_Movement : Singleton<Camera_Movement>
             Pan_Camera();
         }
       
+        // var room = Level_Controller.Instance.Get_Room_Curr_Player();
+        // if (room == null)
+        // {
+        //     transform.position=new Vector3(-0.1f, -6.5f, -10f);
+        // }
 
         // if (is_First_Open_Camera)
         // {
@@ -142,6 +153,7 @@ public class Camera_Movement : Singleton<Camera_Movement>
 
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.LogError("GetMouseButtonDown");
             if (EventSystem.current.IsPointerOverGameObject())
             {
                 return;
@@ -156,6 +168,7 @@ public class Camera_Movement : Singleton<Camera_Movement>
 
         if (Input.GetMouseButton(0)) 
         {
+          
             if (EventSystem.current.IsPointerOverGameObject())
             {
                 return;
@@ -181,11 +194,13 @@ public class Camera_Movement : Singleton<Camera_Movement>
             );
 
             // Áp dụng Clamp_Camera
-            cam.transform.position = Clamp_Camera(newPosition);
+          //  cam.transform.position = Clamp_Camera(newPosition);
+            SetPos(Clamp_Camera(newPosition));
         }
 
         if (Input.GetMouseButtonUp(0))
         {
+          
             if (EventSystem.current.IsPointerOverGameObject())
             {
                 return;
@@ -202,6 +217,13 @@ public class Camera_Movement : Singleton<Camera_Movement>
                 m_Turret_Wait_Click = null;
             }
         }
+    }
+
+
+    public void SetPos(Vector3 pos)
+    {
+       
+        cam.transform.position = pos;
     }
 
     float cam_Height;
@@ -231,7 +253,8 @@ public class Camera_Movement : Singleton<Camera_Movement>
         pos_Target.y += m_Delta_Pos_Die.y;
         pos_Target.z = transform.position.z;
 
-        transform.transform.position = pos_Target;
+        //transform.transform.position = pos_Target;
+        SetPos(pos_Target);
 
         if (m_Action_Move_Done != null)
         {

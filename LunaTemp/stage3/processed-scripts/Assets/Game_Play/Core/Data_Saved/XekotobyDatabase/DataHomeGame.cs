@@ -16,7 +16,7 @@ public class DataHomeGame : Singleton<DataHomeGame>
     protected override void Awake()
     {
         base.Awake();
-        SaveTimeSpineShop();
+        
 
         AddIconRankCharacter();
         AddRankCharacter();
@@ -86,137 +86,7 @@ public class DataHomeGame : Singleton<DataHomeGame>
 
 
 
-    #region icon-avatar
-
-    //avatar
-    public SerializableDictionary<Type_Character, List<int>> unlockCharacterMap = new SerializableDictionary<Type_Character, List<int>>();
-
-    public SerializableDictionary<Type_Player, int> killBoss = new SerializableDictionary<Type_Player, int>();
-    public SerializableDictionary<int, int> levelCondition = new SerializableDictionary<int, int>();
-
-
-
-
-
-    /// <summary>
-    /// mua ruong mo tuong
-    /// </summary>
-    /// <param name="typeCharacter"> nhan vat se duoc unlock</param>
-    public void SetUnlockCharacterIcon(Type_Character typeCharacter)
-    {
-        if (unlockCharacterMap.TryGetValue(typeCharacter, out List<int> keys))
-        {
-            foreach (var key in keys)
-            {
-                Database.instance.SetUnlockIcon(key);
-            }
-            Debug.Log($"Đã tìm thấy nhân vật {typeCharacter} với các chỉ số mở khóa: {string.Join(", ", keys)}.");
-        }
-        else
-        {
-            Debug.Log($"Không tìm thấy nhân vật {typeCharacter} trong unlockCharacter.");
-        }
-    }
-
-
-
-
-
-
-    public void SetKillBossIcon(Type_Player typeBoss)
-    {
-
-
-        // Kiểm tra xem typeCharacter có tồn tại trong unlockCharacter không
-        if (killBoss.TryGetValue(typeBoss, out var indexes))
-        {
-            // Nếu tồn tại, in ra khóa và giá trị
-
-            Database.instance.SetUnlockIcon(indexes);
-
-            Debug.Log($"Nhân vật: {typeBoss}, Chỉ số mở khóa: {string.Join(", ", indexes)}");
-        }
-        else
-        {
-            // Nếu không tồn tại, thông báo không tìm thấy
-            Debug.Log($"Không tìm thấy nhân vật {typeBoss} trong Dictionary.");
-        }
-    }
-
-    public void SetLevelIcon(int levelCondiiton)
-    {
-
-
-        if (levelCondiiton >= 5 && levelCondiiton < 10)
-        {
-            levelCondiiton = 5;
-        }
-        if (levelCondiiton > 5 && levelCondiiton <= 10)
-        {
-            levelCondiiton = 10;
-        }
-        else if (levelCondiiton > 10 && levelCondiiton < 20)
-        {
-            //    levelCondiiton = levelCondiiton%10;
-            if (levelCondiiton % 2 != 0)
-            {
-                levelCondiiton -= 1;
-            }
-        }
-        else
-        {
-            // levelCondiiton = levelCondiiton%20;
-            if (levelCondiiton % 2 != 0)
-            {
-                levelCondiiton -= 1;
-            }
-
-        }
-        //        Debug.LogError(levelCondiiton);
-
-
-        foreach (var key in levelCondition.keys)
-        {
-            if (key < levelCondiiton)
-            {
-                if (!Database.instance.GetUnlockIconUnlock(levelCondition[key]))
-                {
-                    Database.instance.SetUnlockIcon(levelCondition[key]);
-                    Debug.Log($"Mở khóa level: {key}, Chỉ số mở khóa chưa unlock: {string.Join(", ", levelCondition[key])}");
-                }
-                else
-                {
-                    Debug.Log($"Level: {key} đã được mở khóa.");
-                }
-            }
-        }
-
-        // Kiểm tra xem typeCharacter có tồn tại trong unlockCharacter không
-        if (levelCondition.TryGetValue(levelCondiiton, out var indexes))
-        {
-            // Nếu tồn tại, in ra khóa và giá trị
-            if (!Database.instance.GetUnlockIconUnlock(indexes))
-            {
-                Database.instance.SetUnlockIcon(indexes);
-                Debug.Log($"level: {levelCondiiton}, Chỉ số mở khóa chua unlock: {string.Join(", ", indexes)}");
-            }
-            else
-            {
-                Debug.Log($"level: {levelCondiiton}, Chỉ số mở khóa: {string.Join(", ", indexes)}");
-            }
-
-
-        }
-        else
-        {
-            // Nếu không tồn tại, thông báo không tìm thấy
-            Debug.Log($"Không tìm thấy level {levelCondiiton} trong Dictionary.");
-        }
-    }
-
-    #endregion
-
-
+    
 
 
 

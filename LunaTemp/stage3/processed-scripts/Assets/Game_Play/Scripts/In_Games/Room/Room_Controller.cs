@@ -105,18 +105,7 @@ public class Room_Controller : MonoBehaviour
     {
         return indexTurretCoin;
     }
-    public void RemoveCoinDicRoom(int index)
-    {
 
-        if (coinDic.ContainsKey(index))
-        {
-            coinDic.Remove(index);
-        }
-        else
-        {
-            Debug.LogWarning("Index " + index + " not found in coinDic.");
-        }
-    }
 
 
 

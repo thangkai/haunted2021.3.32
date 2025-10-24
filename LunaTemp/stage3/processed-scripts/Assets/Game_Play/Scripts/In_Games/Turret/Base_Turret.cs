@@ -130,7 +130,7 @@ public class Base_Turret : MonoBehaviour
     public virtual void On_Died()
     {
         Remove_Item_Success();
-        m_Room_Controller.RemoveCoinDicRoom(indexCoinDic);
+      
     }
 
     public virtual void Before_Destroy_Game_Object() { }
@@ -539,7 +539,7 @@ public class Base_Turret : MonoBehaviour
 
 
 
-                Debug.LogError("indexCoinDic " + indexCoinDic);
+              
                 break;
 
 
